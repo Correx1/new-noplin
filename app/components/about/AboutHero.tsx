@@ -5,7 +5,7 @@ import { EASE } from './AboutShared';
 
 export default function AboutHero() {
   return (
-    <section className="hero-section relative flex items-center justify-center w-full min-h-[40vh] lg:min-h-[45vh] pt-[100px] pb-12 lg:pt-[120px] lg:pb-16 overflow-hidden bg-navy">
+    <section className="hero-section relative flex items-center justify-center w-full min-h-[75vh] lg:min-h-[50vh] pt-28 pb-14 lg:pt-[120px] lg:pb-16 overflow-hidden bg-navy">
       
       {/* ── Background art ── */}
       <div className="pointer-events-none absolute inset-0">
@@ -67,7 +67,7 @@ export default function AboutHero() {
           initial={{ opacity: 0, x: 32 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
-          className="relative w-full max-w-[480px] ml-auto"
+          className="hidden lg:flex relative w-full max-w-[480px] ml-auto"
         >
           {/* OFFSET FRAME */}
           <div className="absolute top-6 left-6 w-full h-full rounded-2xl border-2 border-cyan-400/40 z-0" />

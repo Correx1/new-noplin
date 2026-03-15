@@ -102,7 +102,7 @@ export default function PortfolioTeaser() {
           </div>
 
           {/* Full-width media viewer — taller on mobile */}
-          <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden bg-(--bg-card) border border-(--border-card) shadow-xl isolate">
+          <div className="relative w-full aspect-[5/4] min-h-[280px] rounded-2xl overflow-hidden bg-(--bg-card) border border-(--border-card) shadow-xl isolate">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeProject.id}
@@ -226,7 +226,7 @@ export default function PortfolioTeaser() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: EASE }}
-              className="relative w-full aspect-[16/10] xl:aspect-video rounded-2xl xl:rounded-[2rem] overflow-hidden bg-(--bg-card) border border-(--border-card) shadow-2xl isolate group"
+              className="relative w-full a xl:aspect-video rounded-2xl xl:rounded-[2rem] overflow-hidden bg-(--bg-card) border border-(--border-card) shadow-2xl isolate group"
             >
               <AnimatePresence mode="wait">
                 <motion.div

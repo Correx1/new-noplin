@@ -93,7 +93,7 @@ export default function TestimonialSection() {
           viewport={{ once: true }}
         >
           <div className="mx-auto max-w-xl">
-            <div className="rounded-2xl p-8 lg:p-10 bg-white shadow-xl border border-gray-100">
+            <div className="rounded-2xl p-3 lg:p-6 bg-gray-100 shadow-xl border border-gray-100">
               <Swiper
                 modules={[Autoplay]}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}

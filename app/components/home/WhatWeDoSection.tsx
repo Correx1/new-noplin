@@ -29,7 +29,7 @@ const departments: Dept[] = [
   {
     id: 'development', label: 'Development', headline: 'Websites & Apps That Work',
     desc: 'High-performance digital products engineered for scale, speed, and maximum conversions.',
-    media: '/images/services/dev_banner.png', mediaType: 'image', href: '/services#development',
+    media: '/portfolio/work.mp4', mediaType: 'video', href: '/services#development',
     subservices: [
       { name: 'Website Design', desc: 'Bespoke, conversion-optimized websites.', href: '/services/website-design' },
       { name: 'E-Commerce Development', desc: 'High-performance online stores built to sell.', href: '/services/ecommerce' },
@@ -40,7 +40,7 @@ const departments: Dept[] = [
   {
     id: 'marketing', label: 'Marketing', headline: 'Growth That Scales',
     desc: 'Data-driven marketing strategies that actually move the needle — lower costs, higher authority.',
-    media: '/images/services/marketing_banner.png', mediaType: 'image', href: '/services#marketing',
+    media: '/portfolio/marketing.png', mediaType: 'image', href: '/services#marketing',
     subservices: [
       { name: 'Social Media Management', desc: 'End-to-end channel management and community growth.', href: '/services/social-management' },
       { name: 'Paid Ads Management', desc: 'Meta and Google campaigns engineered for ROAS.', href: '/services/social-ads' },
@@ -51,7 +51,7 @@ const departments: Dept[] = [
   {
     id: 'consulting', label: 'Consulting', headline: 'Expert Guidance',
     desc: 'Strategic insights and 1-on-1 consulting to align your digital footprint with your revenue targets.',
-    media: '/images/services/consulting_banner.png', mediaType: 'image', href: '/services#consulting',
+    media: '/portfolio/consulting.png', mediaType: 'image', href: '/services#consulting',
     subservices: [
       { name: 'Branding Consultation', desc: 'Define your brand architecture, voice, and direction.', href: '/services/branding-consultation' },
       { name: 'Website Strategy Session', desc: 'Map user journeys, structure, and conversion goals.', href: '/services/website-strategy' },
@@ -62,7 +62,7 @@ const departments: Dept[] = [
   {
     id: 'automation', label: 'Automation', headline: 'Streamlined Operations',
     desc: 'Automate repetitive tasks, nurture inbound leads, and scale your operational logistics effortlessly.',
-    media: '/images/services/automation_banner.png', mediaType: 'image', href: '/services#automation',
+    media: '/portfolio/automation.png', mediaType: 'image', href: '/services#automation',
     subservices: [
       { name: 'Marketing Automation Setup', desc: 'Intelligent triggers, workflows, and sequences.', href: '/services/marketing-automation' },
       { name: 'CRM Setup', desc: 'Track and close more deals with the right tools.', href: '/services/crm-setup' },

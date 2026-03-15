@@ -6,7 +6,7 @@ const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 export default function WorkHero() {
   return (
-    <section className="hero-section relative flex items-center justify-center w-full min-h-[40vh] lg:min-h-[45vh] pt-[100px] pb-12 lg:pt-[120px] lg:pb-16 overflow-hidden bg-navy">
+    <section className="hero-section relative flex items-center justify-center w-full min-h-[75vh] lg:min-h-[50vh] pt-28 pb-14 lg:pt-[120px] lg:pb-16 overflow-hidden bg-navy">
       {/* ── Background art ── */}
       <div className="pointer-events-none absolute inset-0">
         <svg
@@ -65,7 +65,7 @@ export default function WorkHero() {
           initial={{ opacity: 0, x: 32 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
-          className="relative mt-10 flex w-full max-w-[480px] ml-auto items-center justify-center lg:mt-0 lg:justify-end"
+          className="hidden lg:flex relative mt-10 w-full max-w-[480px] ml-auto items-center justify-center lg:mt-0 lg:justify-end"
         >
           {/* Subtle glow */}
           <div className="absolute right-16 top-1/2 h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-electric opacity-15 blur-[140px]" />

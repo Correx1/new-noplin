@@ -35,14 +35,7 @@ export default function HeroSection({
       
       {/* ── Content ── */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col gap-6 items-start w-full cursor-default">
-        {/* Service Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest"
-        >
-          Service Details
-        </motion.div>
+       
 
         {/* Turnaround Time Badge */}
         {turnaround && (

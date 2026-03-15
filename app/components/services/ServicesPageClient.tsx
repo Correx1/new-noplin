@@ -137,7 +137,7 @@ function DepartmentBlock({ dept }: { dept: (typeof departments)[0] }) {
                 key={svc.name}
                 href={svc.href}
                 onMouseEnter={() => setActiveIdx(i)}
-                className={`px-5 py-2.5 rounded-full border text-[15px] font-medium transition-all duration-200 ${
+                className={`px-5 xl:px-6 py-2.5 xl:py-3 rounded-full border text-[15px] sm:text-[16px] xl:text-[17px] font-medium transition-all duration-200 ${
                   activeIdx === i
                     ? 'bg-cyan-500 border-cyan-500 text-white'
                     : 'border-(--border-default) text-(--text-secondary) hover:border-cyan-400 hover:text-cyan-400'
@@ -159,27 +159,27 @@ function DepartmentBlock({ dept }: { dept: (typeof departments)[0] }) {
               transition={{ duration: 0.2 }}
               className="flex flex-col gap-3"
             >
-              <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-cyan-500">
+              <p className="text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.14em] text-cyan-500">
                 {dept.label}
               </p>
 
-              <p className="font-body text-[14px] text-(--text-muted) leading-relaxed border-b border-(--border-default) pb-4">
+              <p className="font-body text-[14px] sm:text-[15px] xl:text-[16px] text-(--text-muted) leading-relaxed border-b border-(--border-default) pb-4">
                 {dept.sub}
               </p>
 
-              <h3 className="font-display font-bold text-[18px] text-(--text-primary) leading-snug mt-1">
+              <h3 className="font-display font-bold text-[20px] sm:text-[22px] xl:text-[26px] text-(--text-primary) leading-snug mt-2">
                 {activeService.name}
               </h3>
 
-              <p className="font-body text-[14px] text-(--text-secondary) leading-relaxed">
+              <p className="font-body text-[15px] sm:text-[16px] xl:text-[17px] text-(--text-secondary) leading-relaxed">
                 {activeService.desc}
               </p>
 
               <Link
                 href={activeService.href}
-                className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-amber-500 hover:text-amber-400 transition-colors mt-1"
+                className="inline-flex items-center gap-1.5 text-[14px] sm:text-[15px] font-semibold text-amber-500 hover:text-amber-400 transition-colors mt-2"
               >
-                Learn more <ArrowRight size={13} />
+                Learn more <ArrowRight size={14} />
               </Link>
             </motion.div>
           </AnimatePresence>
@@ -197,7 +197,7 @@ export default function ServicesPageClient() {
 
       {/* ── HERO (MODIFIED) ── */}
     {/* ── HERO ── */}
-<section className="relative flex items-center justify-center w-full min-h-[40vh] lg:min-h-[45vh] pt-[100px] pb-12 lg:pt-[120px] lg:pb-16 overflow-hidden bg-navy">
+<section className="relative flex items-center justify-center w-full min-h-[50vh] lg:min-h-[45vh] pt-28 pb-20 lg:pt-[120px] lg:pb-16 overflow-hidden bg-navy">
       {/* ── Background art ── */}
       <div className="pointer-events-none absolute inset-0">
         <svg
@@ -266,7 +266,7 @@ export default function ServicesPageClient() {
           initial={{ opacity: 0, x: 32 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
-          className="relative mt-10 flex w-full max-w-[480px] ml-auto items-center justify-center lg:mt-0 lg:justify-end"
+          className="hidden sm:flex relative mt-10 w-full max-w-[480px] ml-auto items-center justify-center lg:mt-0 lg:justify-end"
         >
           {/* Subtle glow */}
           <div className="absolute right-16 top-1/2 h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-electric opacity-15 blur-[140px]" />

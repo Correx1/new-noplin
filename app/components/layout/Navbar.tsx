@@ -227,12 +227,6 @@ export default function Navbar() {
         {/* CTA + Hamburger */}
         <div className="flex items-center gap-3">
 
-          <Link
-            href="/contact"
-            className="btn btn-primary hidden lg:inline-flex px-5 py-2.5 text-sm"
-          >
-            Get a Free Quote
-          </Link>
 
           <button
             className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 relative z-50"
