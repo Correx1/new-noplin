@@ -95,34 +95,3 @@ export default function WorkHero() {
 
 
 
-    // {/* TEXT SIDE */}
-    // <motion.div
-    //   initial={{ opacity: 0, y: 24 }}
-    //   animate={{ opacity: 1, y: 0 }}
-    //   transition={{ duration: 0.65, ease: EASE }}
-    //   className="flex flex-col gap-6"
-    // >
-
-    //   <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-    //     What We Do
-    //   </span>
-
-    //   <h1 className="font-display text-[clamp(2.4rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white">
-    //     Digital Growth, Delivered.
-    //   </h1>
-
-    //   <p className="mt-2 font-body text-[17px] leading-[1.6] text-gray-400 max-w-[500px]">
-    //     We design brands, build high-performance websites, and run marketing
-    //     systems that turn attention into customers.
-    //   </p>
-
-    //   <div className="pt-2">
-    //     <Link
-    //       href="/contact"
-    //       className="btn btn-primary"
-    //     >
-    //       Request a consultation <ArrowRight size={16} />
-    //     </Link>
-    //   </div>
-
-    // </motion.div>

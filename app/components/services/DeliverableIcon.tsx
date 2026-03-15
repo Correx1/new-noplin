@@ -27,7 +27,7 @@ const colorMap: Record<ColorVariant, { primary: string, secondary: string }> = {
 const STROKE = "#3A3F58";
 const STROKE_WIDTH = 3.5;
 
-function Face({ x, y }: { x: number, y: number }) {
+function Face({ x, y }: { x: number | string, y: number | string }) {
   return (
     <g transform={`translate(${x}, ${y})`}>
       <circle cx="-6" cy="0" r="2.5" fill={STROKE} />
@@ -66,7 +66,7 @@ export default function DeliverableIcon({ type, color = 'purple', className = ""
             <path d="M-25 -30 L25 -30 L30 15 C30 35 -30 35 -30 15 Z" fill={c.primary} stroke={STROKE} strokeWidth={STROKE_WIDTH} strokeLinejoin="round" />
             <rect x="-8" y="32" width="16" height="15" fill={c.secondary} stroke={STROKE} strokeWidth={STROKE_WIDTH} />
             <rect x="-20" y="47" width="40" height="12" rx="3" fill={c.primary} stroke={STROKE} strokeWidth={STROKE_WIDTH} />
-            <Face x={0} y="-5" />
+            <Face x={0} y={-5} />
           </g>
         );
       case 'magnifier':
@@ -86,7 +86,7 @@ export default function DeliverableIcon({ type, color = 'purple', className = ""
             <path d="M15 -35 L15 -15 L35 -15" fill={c.secondary} stroke={STROKE} strokeWidth={STROKE_WIDTH} strokeLinejoin="round" />
             <line x1="-15" y1="15" x2="15" y2="15" stroke={STROKE} strokeWidth={STROKE_WIDTH} strokeLinecap="round" />
             <line x1="-15" y1="25" x2="5" y2="25" stroke={STROKE} strokeWidth={STROKE_WIDTH} strokeLinecap="round" />
-            <Face x={0} y="-5" />
+            <Face x={0} y={-5} />
           </g>
         );
       case 'mug':
