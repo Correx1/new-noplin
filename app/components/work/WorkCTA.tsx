@@ -25,9 +25,10 @@ export default function WorkCTA() {
           className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 sm:gap-12"
         >
           <div className="flex flex-col items-center text-center sm:items-start sm:text-left gap-2 flex-1">
-            <span className="font-display text-[10px] font-semibold tracking-[0.16em] uppercase text-cyan-400">
-              Next step
-            </span>
+                  <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+  Work with us
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0"></span>
+</span>
             <h2 className="font-display font-bold text-white text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.15]">
               Like what you see? Let&apos;s talk.
             </h2>

@@ -137,7 +137,7 @@ function DepartmentBlock({ dept }: { dept: (typeof departments)[0] }) {
                 key={svc.name}
                 href={svc.href}
                 onMouseEnter={() => setActiveIdx(i)}
-                className={`px-5 xl:px-6 py-2.5 xl:py-3 rounded-full border text-[15px] sm:text-[16px] xl:text-[17px] font-medium transition-all duration-200 ${
+                className={`px-3 xl:px-4 py-1.5 xl:py-2 rounded-md border text-[14px] sm:text-[15px] xl:text-[16px] font-medium transition-all duration-200 ${
                   activeIdx === i
                     ? 'bg-cyan-500 border-cyan-500 text-white'
                     : 'border-(--border-default) text-(--text-secondary) hover:border-cyan-400 hover:text-cyan-400'
@@ -236,9 +236,10 @@ export default function ServicesPageClient() {
       className="flex flex-col gap-6"
     >
 
-      <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-        What We Do
-      </span>
+    <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+What we do
+              <span className="absolute left-0 bottom-0 h-[2px] w-[50%] bg-cyan-600"></span>
+            </span>
 
       <h1 className="font-display text-[clamp(2.4rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white">
         Digital Growth, Delivered.

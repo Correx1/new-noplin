@@ -127,9 +127,10 @@ export default function FeaturedServicesSection() {
       <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-20">
         {/* LEFT */}
         <div className="lg:col-span-4 flex flex-col gap-6">
-          <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-            OUR SERVICES
-          </span>
+          <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+More Services
+<span className="absolute  left-0 bottom-0 h-[2px] w-[50%] bg-cyan-600"></span></span>
+          
 
           <h2 className="font-display font-extrabold text-white text-[clamp(2.2rem,4vw,3.0rem)] leading-[1.1]">
             Focused offerings.

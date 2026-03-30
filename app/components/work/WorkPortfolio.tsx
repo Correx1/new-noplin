@@ -14,7 +14,6 @@ export interface CaseStudy {
   client: string;
   filter: string;
   description: string;
-  highlights: string[];
   images: string[];
   link?: string;
 }
@@ -25,138 +24,74 @@ export const allCaseStudies: CaseStudy[] = [
     name: 'School Pilot', 
     tag: 'Web App', 
     client: 'Education, Nationwide', 
-    filter: 'Web Design',
-    description: 'Designed a premium, trustworthy digital presence for Apex Ventures to attract high-net-worth individuals and showcase their diverse portfolio.',
-    highlights: ['Interactive portfolio showcase', 'High-performance Next.js build', 'Secure client portal UI'],
+    filter: 'Apps',
+    description: 'An all-in-one ERP system that helps schools manage students, staff, finances, and academic activities through dedicated dashboards for admins, teachers, and school owners.',
     images: ['/portfolio/schoolpilot.mp4'],
     link: 'https://schoolpilot.ng'
   },
   { 
-    slug: 'techbridge-website', 
-    name: 'TechBridge Website Redesign', 
-    tag: 'Web Design', 
-    client: 'B2B tech firm, Lagos', 
-    filter: 'Web Design',
-    description: 'A complete technical and visual overhaul of TechBridge\'s corporate website, focusing on driving B2B leads and establishing authority in the local tech sector.',
-    highlights: ['Increased conversion rate by 45%', 'Implemented headless CMS architecture', 'Fully responsive design system'],
-    images: ['/portfolio/web.png', '/portfolio/web2.png', '/portfolio/web3.png'],
-    link: 'https://techbridge.com'
-  },
-  { 
-    slug: 'styleco-brand', 
-    name: 'StyleCo Brand Identity', 
+    slug: 'elegant-cosmetics', 
+    name: ' Beauty Product design', 
     tag: 'Brand Identity', 
-    client: 'Fashion brand, Abuja', 
+    client: 'Elegant Cosmetics', 
     filter: 'Brand Identity',
-    description: 'We crafted a modern, minimalist brand identity for StyleCo that resonates with their target demographic and unified their physical and digital touchpoints.',
-    highlights: ['Comprehensive brand guidelines', 'Custom typography selection', 'Packaging design system'],
-    images: ['/portfolio/web2.png', '/portfolio/web1.png']
+    description: 'Brand identity for Elegant Cosmetics focused on creating a clean, modern, and cohesive visual system that reflects the brand’s elegance and premium positioning across web, packaging, and digital touchpoints.',
+    images: ['/portfolio/branding/Elegant-cosmetics3.png', '/portfolio/branding/Elegant-cosmetics1.png', '/portfolio/branding/Elegant-cosmetics2.png', '/portfolio/branding/Elegant-cosmetics.png', '/portfolio/branding/Elegant-cosmetics4.png']
   },
   { 
-    slug: 'apex-ventures-web', 
-    name: 'Apex Ventures Website', 
+    slug: 'agesteph-website', 
+    name: 'Agesteph website', 
     tag: 'Web Design', 
-    client: 'Investment firm, Port Harcourt', 
+    client: 'Agesteph', 
     filter: 'Web Design',
-    description: 'Designed a premium, trustworthy digital presence for Apex Ventures to attract high-net-worth individuals and showcase their diverse portfolio.',
-    highlights: ['Interactive portfolio showcase', 'High-performance Next.js build', 'Secure client portal UI'],
-    images: ['/portfolio/work.mp4'],
-    link: 'https://apexventures.com'
+    description: 'Web and product design for Agesteph, delivering a clean, user-focused interface and a cohesive digital experience across multiple packages, tailored to support scalability and brand consistency.',
+    images: ['/portfolio/agesteph/agesteph1.png', '/portfolio/agesteph/agesteph4.png', '/portfolio/agesteph/agesteph3.png',  '/portfolio/agesteph/agesteph5R.png'],
+    link: 'https://agesteph.com/'
   },
+  
   { 
-    slug: 'greenleaf-identity', 
-    name: 'GreenLeaf Brand System', 
-    tag: 'Brand Identity', 
-    client: 'Agri-tech startup, Ibadan', 
-    filter: 'Brand Identity',
-    description: 'Developed a vibrant and approachable brand system for GreenLeaf that highlighted their sustainable mission and modern approach to agriculture.',
-    highlights: ['Logo & Iconography design', 'Marketing collateral templates', 'Social media asset kit'],
-    images: ['/portfolio/web.png', '/portfolio/web3.png']
+    slug: 'luxury-lighting', 
+    name: 'Product Showcase Website', 
+    tag: 'Web Design', 
+    client: 'Luxury Lighting ltd', 
+    filter: 'Web Design',
+    description: 'Premium e-commerce website for a luxury lighting brand, focused on clean product browsing, category-based navigation, and a visually rich shopping experience.',
+    images: ['/portfolio/luxury-lighting/luxury-lighting.png', '/portfolio/luxury-lighting/luxury-lighting1.png', '/portfolio/luxury-lighting/luxury-lighting2.png'],
+    link: 'https://luxurylighting.com'
   },
-  { 
-    slug: 'launchpad-app', 
-    name: 'LaunchPad Web App', 
-    tag: 'Apps', 
-    client: 'SaaS startup, Lagos', 
-    filter: 'Apps',
-    description: 'Built a scalable and intuitive SaaS platform interface allowing users to effortlessly manage their campaigns and analytics from a single dashboard.',
-    highlights: ['Complex data visualization', 'Streamlined user onboarding flow', 'Dark mode integration'],
-    images: ['/portfolio/web2.png', '/portfolio/web1.png', '/portfolio/web3.png'],
-    link: 'https://launchpad-app.com'
-  },
-  { 
-    slug: 'nova-social', 
-    name: 'Nova Social Campaign', 
-    tag: 'Social Media', 
-    client: 'Consumer brand, Lagos', 
+  {
+    slug: 'agesteph-skincare-social-media-management',
+    name: 'Agesteph Skincare – Social Media Management',
+    tag: 'Social Media',
+    client: 'Agesteph Skincare Brand',
     filter: 'Social Media',
-    description: 'An aggressive, highly-targeted social media campaign designed to launch Nova’s new product line to younger demographics across Instagram and TikTok.',
-    highlights: ['2M+ organic impressions', 'Viral challenge creation', 'Influencer partnership strategy'],
-    images: ['/portfolio/web3.png']
+    description: 'Managed and grew the Agesteph Skincare Instagram page by creating and structuring skincare-focused content, highlighting product benefits, educating audiences on routines, and building consistent brand storytelling to improve engagement and customer trust.',
+    images: ['/portfolio/agestephsm/agestephsm.png', '/portfolio/agestephsm/agestephsm1.png'],
+    link:'https://www.instagram.com/agesteph.skincare/'
   },
   { 
-    slug: 'brightcorp-web', 
-    name: 'BrightCorp Corporate Site', 
-    tag: 'Web Design', 
-    client: 'Corporate services, Abuja', 
-    filter: 'Web Design',
-    description: 'Revamped BrightCorp\'s legacy site into a modern corporate portal, emphasizing their multi-national reach and deep industry expertise.',
-    highlights: ['Multi-language support ready', 'Optimized SEO performance', 'Bespoke corporate photography'],
-    images: ['/portfolio/web.png', '/portfolio/web2.png'],
-    link: 'https://brightcorp.com'
-  },
+  slug: 'divine-crown-ltd-ecommerce-platform', 
+  name: 'Beauty & Skincare E-commerce Platform', 
+  tag: 'Web App', 
+  client: 'Divine Crown Ltd ', 
+  filter: 'App',
+  description: 'An online store for a skincare and beauty brand featuring multiple product lines, categorized collections, and a structured shopping system for cosmetics, lotions, and personal care products.',
+  images: ['/portfolio/divinecrown/divinecrown.png', '/portfolio/divinecrown/divinecrown2.png','/portfolio/divinecrown/divinecrown1.png'],
+  link:'https://divinecrownltd.com/'
+},
+
+  
   { 
-    slug: 'fundrise-brand', 
-    name: 'FundRise Identity', 
-    tag: 'Brand Identity', 
-    client: 'Fintech startup, Lagos', 
-    filter: 'Brand Identity',
-    description: 'Created a secure, trustworthy, yet innovative brand language for a disruptive new player in the Nigerian fintech space.',
-    highlights: ['Distinct visual identity', 'App UI alignment', 'Investment deck design'],
-    images: ['/portfolio/web2.png']
-  },
-  { 
-    slug: 'craftco-social', 
-    name: 'CraftCo Social Growth', 
-    tag: 'Social Media', 
-    client: 'Artisan brand, Enugu', 
-    filter: 'Social Media',
-    description: 'Managed a consistent, aesthetic-driven social presence highlighting the craftsmanship and quality of locally made artisan products.',
-    highlights: ['300% follower growth', 'High engagement rate formats', 'E-commerce integration'],
-    images: ['/portfolio/web3.png', '/portfolio/web.png']
-  },
-  { 
-    slug: 'marketplace-app', 
-    name: 'NexaMarket App', 
-    tag: 'Apps', 
-    client: 'E-commerce startup, Lagos', 
-    filter: 'Apps',
-    description: 'Designed a highly performant mobile-first e-commerce web application focusing on fast checkouts and personalized product discovery.',
-    highlights: ['Frictionless checkout flow', 'Personalized recommendation UI', 'Progressive Web App (PWA)'],
-    images: ['/portfolio/web.png'],
-    link: 'https://nexamarket.com'
-  },
-  { 
-    slug: 'visabridge-web', 
-    name: 'VisaBridge Website', 
-    tag: 'Web Design', 
-    client: 'Immigration consultancy, London', 
-    filter: 'Web Design',
-    description: 'A global-facing website designed to simplify the complex immigration process into clear, actionable steps for prospective clients.',
-    highlights: ['Clear service tier breakdowns', 'Automated consultation booking', 'Trust-building testimonial section'],
-    images: ['/portfolio/web2.png', '/portfolio/web3.png', '/portfolio/web.png'],
-    link: 'https://visabridge.com'
-  },
-  { 
-    slug: 'primetech-brand', 
-    name: 'PrimeTech Brand Kit', 
-    tag: 'Brand Identity', 
-    client: 'IT services firm, Kano', 
-    filter: 'Brand Identity',
-    description: 'Modernized an established IT firm\'s brand to reflect their pivot towards cloud computing and enterprise cybersecurity solutions.',
-    highlights: ['Brand repositioning', 'Corporate stationery', 'Digital marketing templates'],
-    images: ['/portfolio/web3.png']
-  },
+  slug: 'kuviva-tv-platform', 
+  name: 'Kuviva TV Streaming Platform', 
+  tag: 'Web App', 
+  client: 'Digital media / streaming service', 
+  filter: 'Apps',
+  description: 'A web-based streaming platform for accessing curated video content and online TV experiences, structured around content discovery, playback, and organized media categories for users.',
+    images: ['/portfolio/kuviva/kuviva.png'],
+  link:'https://kuviva.tv'
+}
+  
 ];
 
 export const filters = ['All', 'Web Design', 'Brand Identity', 'Social Media', 'Apps'];
@@ -270,7 +205,7 @@ export default function WorkPortfolio() {
       </div>
 
       {/* ── CASE STUDY LIST ────────────────────── */}
-      <section className="max-w-7xl mx-auto px-6 py-12 lg:py-16 flex flex-col gap-8 lg:gap-12">
+      <section className="max-w-7xl mx-auto px-3 py-12 lg:py-16 flex flex-col gap-8 lg:gap-12">
         {visible.map((cs, i) => {
           const isReversed = i % 2 !== 0; // Alternating layout
           return (
@@ -285,27 +220,27 @@ export default function WorkPortfolio() {
               }`}
             >
               {/* Image Carousel Side */}
-              <div className="w-full lg:w-[55%]">
+              <div className="w-full lg:w-[65%]">
                 <CaseStudyCarousel images={cs.images} name={cs.name} />
               </div>
 
               {/* Content Side */}
               <div className="w-full lg:w-[45%] flex flex-col gap-5 p-7 lg:p-0">
                 <div className="flex flex-col gap-2">
-                  <span
-                    className="self-start text-[11px] px-2.5 py-0.5 rounded-full font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 tracking-wide uppercase"
-                  >
-                    {cs.tag}
-                  </span>
+                     <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+  {cs.tag}
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600  left-0 translate-x-0"></span>
+</span>
+           
                   <h3 className="font-display font-bold text-[clamp(1.5rem,2.5vw,2rem)] text-(--text-primary) leading-[1.2] mt-1">{cs.name}</h3>
-                  <p className="font-body text-[14px] text-(--text-muted)">Client: {cs.client}</p>
+                  <p className="font-body text-[14px] text-(--text-muted) italic">Client: {cs.client}</p>
                 </div>
 
                 <p className="font-body text-[14.5px] text-(--text-secondary) leading-relaxed">
                   {cs.description}
                 </p>
 
-                <ul className="flex flex-col gap-2.5 mt-1">
+                {/* <ul className="flex flex-col gap-2.5 mt-1">
                   {cs.highlights.map((highlight, hIdx) => (
                     <li key={hIdx} className="flex items-start gap-2.5">
                       <div className="mt-1.5 flex-shrink-0 text-cyan-400">
@@ -316,10 +251,10 @@ export default function WorkPortfolio() {
                       <span className="font-body text-[14px] text-(--text-secondary)">{highlight}</span>
                     </li>
                   ))}
-                </ul>
+                </ul> */}
 
                 {cs.link && (
-                  <a href={cs.link} target="_blank" rel="noopener noreferrer" className="mt-4 text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-1.5 self-start font-semibold text-[14px] group">
+                  <a href={cs.link} target="_blank" rel="noopener noreferrer" className="mt-2 text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-1 self-start font-semibold text-[14px] group">
                     View Project
                     <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                   </a>

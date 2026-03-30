@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { motion } from 'framer-motion';
@@ -23,73 +24,79 @@ const items: Item[] = [
 
 export default function WhyNoplinSection() {
   return (
-    <section className="bg-(--bg-page) py-20 relative overflow-hidden">
+    <section className="bg-[#F7F9FC] py-24 relative">
 
-      {/* Ambient glows */}
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_55%_40%_at_5%_50%,rgba(26,86,219,0.05)_0%,transparent_70%)]" />
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_45%_35%_at_95%_60%,rgba(6,182,212,0.04)_0%,transparent_70%)]" />
+      <div className="max-w-7xl mx-auto px-3">
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55, ease: EASE }}
+          className="text-center mb-16"
+        >
+          <h2 className="font-display font-bold text-[clamp(1.75rem,4vw,2.6rem)] text-[#0F172A]">
+            Why Businesses Choose<br />Noplin Digital
+          </h2>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55, ease: EASE }}
-            className="flex flex-col items-center text-center gap-3 mb-14"
-          >
-            <span className="inline-flex items-center text-[11px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-              Why Us
-            </span>
-            <h2 className="font-display font-bold text-[clamp(1.75rem,4vw,2.625rem)] text-(--text-primary)">
-              Why Businesses Choose<br />Noplin Digital
-            </h2>
-            <p className="font-(--font-body) text-(--text-secondary) max-w-md">
-              Eight principles that define how we work — and why clients come back.
-            </p>
-          </motion.div>
+          <p className="text-gray-600 max-w-md mx-auto mt-4">
+            Eight principles that define how we work — and why clients keep coming back.
+          </p>
+        </motion.div>
 
-        {/* ── Items: 2-column split list ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          {items.map((item, i) => {
-            const isLeft = i % 2 === 0;
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.5, ease: EASE, delay: i * 0.055 }}
-                className={`grid grid-cols-[3rem_1fr] gap-6 py-8 border-t border-white/[0.07] cursor-default transition-colors duration-200 hover:bg-blue-700/[0.04] ${
-                  isLeft ? 'pr-0 pl-0 md:pr-12' : 'pl-0 pr-0 md:pl-12 md:border-l'
-                }`}
-              >
-                {/* Icon */}
-                <div className="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/15 flex items-center justify-center shrink-0 mt-0.5">
-                  <item.Icon size={20} color="#22D3EE" strokeWidth={1.6} />
-                </div>
+        {/* Grid Wrapper (Card Container) */}
+        <div className=" overflow-hidden">
 
-                {/* Text */}
-                <div className="flex flex-col gap-1.5">
-                  <div className="flex items-center gap-3">
-                    <h3 className="font-display font-semibold text-[17px] text-(--text-primary) m-0 leading-tight">
-                      {item.title}
-                    </h3>
-                    <span className="font-mono text-[10px] text-white/[0.18] tracking-[0.05em] select-none">
-                      {item.num}
-                    </span>
+          <div className="grid grid-cols-1 md:grid-cols-2">
+
+            {items.map((item, i) => {
+              const isLeft = i % 2 === 0;
+
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, ease: EASE, delay: i * 0.05 }}
+                  className={`
+                    flex gap-5 p-8 items-start
+                    border-t border-gray-100
+                    ${!isLeft ? 'md:border-l' : ''}
+                    
+                  `}
+                >
+
+                  {/* Icon Box (Strong Contrast) */}
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-md shrink-0">
+                    <item.Icon size={20} color="white" strokeWidth={2} />
                   </div>
-                  <p className="font-body text-[15px] text-(--text-secondary) leading-[1.65] m-0 opacity-75">
-                    {item.body}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
 
-        {/* Bottom closing border */}
-        <div className="border-t border-white/[0.07]" />
+                  {/* Content */}
+                  <div className="flex flex-col gap-2">
+
+                    <div className="flex items-center gap-3">
+                      <h3 className="font-semibold text-[16px] text-[#0F172A] leading-tight">
+                        {item.title}
+                      </h3>
+
+                      <span className="text-[10px] font-mono text-gray-300 tracking-widest">
+                        {item.num}
+                      </span>
+                    </div>
+
+                    <p className="text-[14.5px] text-gray-600 leading-relaxed">
+                      {item.body}
+                    </p>
+                  </div>
+
+                </motion.div>
+              );
+            })}
+
+          </div>
+        </div>
 
       </div>
     </section>

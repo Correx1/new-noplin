@@ -26,7 +26,7 @@ const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 export default function AboutTeam() {
   return (
-    <section className="relative overflow-hidden bg-(--bg-section-alt) py-28 sm:py-36">
+    <section className="relative overflow-hidden bg-(--bg-section-alt) py-10">
 
       {/* ── Decorative background grid ── */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line-color)_1px,transparent_1px)] bg-[size:48px_48px] opacity-50" />
@@ -46,9 +46,7 @@ export default function AboutTeam() {
             className="mb-12 flex items-center gap-4"
           >
             <span className="h-px flex-1 max-w-[60px] bg-cyan-500/50" />
-            <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-              Leadership
-            </span>
+           
           </motion.div>
 
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
@@ -124,7 +122,7 @@ export default function AboutTeam() {
         </div>
 
         {/* ════════════════ TEAM HEADER ════════════════ */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -144,10 +142,10 @@ export default function AboutTeam() {
           <p className="max-w-md font-(--font-body) text-[15px] text-(--text-secondary)">
             A cross-functional team built to deliver end-to-end excellence.
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* ════════════════ TEAM GRID ════════════════ */}
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        {/* <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {team.map((member, i) => (
             <motion.div
               key={member.name}
@@ -156,9 +154,9 @@ export default function AboutTeam() {
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: i * 0.06, ease: EASE }}
               className="group relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100 transition-all duration-500 hover:border-zinc-400"
-            >
+            > */}
               {/* Image */}
-              <div className="relative aspect-4/5 overflow-hidden rounded-t-[15px]">
+              {/* <div className="relative aspect-4/5 overflow-hidden rounded-t-[15px]">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -166,15 +164,15 @@ export default function AboutTeam() {
                   className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#0A101D] via-[#0A101D]/40 to-transparent" />
-              </div>
+              </div> */}
 
               {/* Info */}
-              <div className="absolute bottom-0 left-0 w-full px-4 py-4 rounded-b-2xl">
+              {/* <div className="absolute bottom-0 left-0 w-full px-4 py-4 rounded-b-2xl">
                 <p className="font-semibold font-semibold text-white text-[15px] leading-tight">{member.name}</p>
                 <p className="mt-1 font-semibold text-[10px] uppercase tracking-widest text-[#94A3B8]">
                   {member.role}
                 </p>
-              </div>
+              </div> */}
 
               {/* Hover arrow badge */}
               <div className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-cyan opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
@@ -182,12 +180,12 @@ export default function AboutTeam() {
               </div>
 
               {/* Top cyan line reveal */}
-              <span className="absolute left-0 top-0 h-[2px] w-0 bg-cyan transition-all duration-500 group-hover:w-full z-10" />
+              {/* <span className="absolute left-0 top-0 h-[2px] w-0 bg-cyan transition-all duration-500 group-hover:w-full z-10" />
             </motion.div>
           ))}
         </div>
-
+*/}
       </div>
-    </section>
+    </section> 
   );
 }

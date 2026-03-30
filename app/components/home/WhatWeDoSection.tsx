@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Dot } from 'lucide-react';
 
 type MediaType = 'image' | 'video';
 
@@ -110,9 +110,9 @@ export default function WhatWeDoSection() {
                   transition={{ duration: 0.55, ease: EASE, delay: 0.08 }}
                   className={`flex flex-col gap-5 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}
                 >
-                  <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 w-fit uppercase tracking-widest">
-                    {dept.label}
-                  </span>
+  <span className="relative inline-flex items-center text-[12px] font-semibold  py-1.5 tracking-widest text-cyan-600 w-fit capitalize">
+  {dept.label}
+<span className="absolute left-0 bottom-0 h-[2px] w-[50%] bg-cyan-600"></span></span>
 
                   <h2 className="text-[clamp(1.7rem,3.2vw,2.8rem)] font-bold leading-[1.1] tracking-tight text-[#0D0D2B]">
                     {dept.headline}
@@ -132,8 +132,8 @@ export default function WhatWeDoSection() {
                         transition={{ duration: 0.35, ease: EASE, delay: 0.1 + si * 0.07 }}
                       >
                         <Link href={s.href} className="group flex items-start gap-2.5">
-                          <ArrowRight size={13}
-                            className="mt-[3px] shrink-0 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                          <Dot size={20}
+                            className="mt-[3px] shrink-0 text-cyan-400 " />
                           <span className="text-[14px] lg:text-[15px] leading-snug">
                             <span className="font-semibold text-[#0D0D2B] group-hover:text-cyan-600 transition-colors">
                               {s.name}:

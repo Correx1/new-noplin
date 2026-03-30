@@ -88,9 +88,7 @@ export default function PricingFeatures() {
 
           {/* Left — heading col-4 */}
           <div className="lg:col-span-4 flex flex-col gap-5">
-            <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-              Enterprise
-            </span>
+        
             <h2 className="font-display font-bold text-white text-[clamp(1.9rem,3.5vw,2.75rem)] leading-tight">
               Custom solutions for enterprise scale
             </h2>
@@ -99,6 +97,8 @@ export default function PricingFeatures() {
               automate workflows, and scale your brand presence.
             </p>
           </div>
+
+          
 
           {/* Right — features 2×2 col-8 */}
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-10">

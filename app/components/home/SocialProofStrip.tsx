@@ -1,11 +1,15 @@
 'use client';
 
 const clients = [
-  { name: 'Ford',    svg: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg' },
-  { name: 'Google',  svg: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
-  { name: 'Shopify', svg: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg' },
-  { name: 'Stripe',  svg: 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg' },
-  { name: 'Slack',   svg: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg' },
+   { name: 'Veekay',    svg: '/logos/veekay.png' },
+  { name: 'Luxury lighting',  svg: '/logos/luxury-lighting.png' },
+  { name: 'africa-smes', svg: '/logos/africa-smes.png' },
+  { name: 'divinecrown', svg: '/logos/divinecrown.png' },
+  { name: 'Bluvon',  svg: '/logos/Bluvon.png' },
+  { name: 'Happylife',   svg: '/logos/Happylife.png' },
+  { name: 'Health-emergency',   svg: '/logos/Health-emergency.png' },
+  { name: 'Purim',   svg: '/logos/Purim.png' },
+  { name: 'schoolpilot',   svg: '/logos/schoolpilot.png' },
 ];
 
 export default function SocialProofStrip() {
@@ -26,8 +30,8 @@ export default function SocialProofStrip() {
               <img
                 src={c.svg}
                 alt={c.name}
-                className="max-w-[90px] max-h-[26px] object-contain"
-                style={{ filter: 'grayscale(100%)', opacity: 0.45 }}
+                className="max-w-[100px] max-h-[32px] object-contain"
+                style={{  opacity: 0.6 }}
               />
             </div>
           ))}

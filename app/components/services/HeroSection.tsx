@@ -26,11 +26,9 @@ export default function HeroSection({
     >
       {/* ── Background Image & Dark Blue Gradient Overlay ── */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-      //style={{ backgroundImage: `url('${bgImage}')` }}
-      />
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${bgImage}')` }} />
       <div 
-        className="absolute inset-0 z-0 bg-gradient-to-r from-[#0D0D2B]/90 via-[#0D0D2B]/80 to-[#1A56DB]/60"
+        className="absolute inset-0 z-0 bg-linear-to-r from-[#0D0D2B]/90 via-[#0D0D2B]/80 to-[#1A56DB]/60"
       />
       
       {/* ── Content ── */}
@@ -45,10 +43,13 @@ export default function HeroSection({
             transition={{ duration: 0.5, ease: EASE, delay: 0.05 }}
             className="inline-flex items-center gap-2"
           >
-            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-            <span className="text-[13px] font-semibold tracking-wider text-cyan-400">
+           
+              <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
               Expected Delivery: {turnaround}
+
+              <span className="absolute left-0 bottom-0 h-[2px] w-[40%] bg-cyan-600"></span>
             </span>
+          
           </motion.div>
         )}
 

@@ -23,7 +23,10 @@ export default function AboutStoryAndPurpose() {
             className="flex flex-col gap-6"
           >
             <div className="flex flex-col gap-3">
-              <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">Who We Are</span>
+       <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+  Who we are 
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0"></span>
+</span>
               <h2 className="font-display font-bold text-[clamp(1.5rem,4vw,2.75rem)] text-(--text-primary) leading-[1.15]">Built Differently.<br/>Built for Results.</h2>
             </div>
             <div className="flex flex-col gap-4">
@@ -31,7 +34,8 @@ export default function AboutStoryAndPurpose() {
                 Noplin Digital is a premium full-service digital agency built to serve ambitious businesses — from early-stage startups to established companies — that want real, measurable results from their digital investments.
               </p>
               <p className="font-(--font-body) text-[17px] text-(--text-secondary) leading-[1.85]">
-                We specialize in brand identity, web design and development, content creation, and digital marketing. We are not a typical agency. We don&apos;t drag out timelines, hide behind jargon, or disappear after a project ends. We build long-term relationships with clients who want to grow — and we grow with them.
+              We specialize in brand identity, web design and development, content creation,
+              and digital marketing. We are not a typical agency. We don&apos;t drag out timelines, hide behind jargon, or disappear after a project ends. We build long-term relationships with clients who want to grow — and we grow with them.
               </p>
             </div>
           </motion.div>
@@ -39,8 +43,10 @@ export default function AboutStoryAndPurpose() {
           {/* Right: Our Purpose */}
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-3">
-              <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">Our Purpose</span>
-              <h2 className="font-display font-bold text-[clamp(1.5rem,3vw,2.25rem)] text-(--text-primary) leading-[1.15]">Mission & Vision</h2>
+       <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+The goal
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0"></span>
+</span>              <h2 className="font-display font-bold text-[clamp(1.5rem,3vw,2.25rem)] text-(--text-primary) leading-[1.15]">Mission & Vision</h2>
             </div>
             
             <div className="flex flex-col gap-6">

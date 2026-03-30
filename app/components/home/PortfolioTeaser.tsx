@@ -51,7 +51,7 @@ export default function PortfolioTeaser() {
   const activeProject = projects[activeIndex];
 
   return (
-    <section className="bg-(--bg-section) py-24 sm:py-32 xl:py-40 overflow-hidden border-t border-(--grid-line-color)">
+    <section className="bg-(--bg-section) py-20 sm:py-24  overflow-hidden border-t border-(--grid-line-color)">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 xl:px-16">
 
         {/* --- HEADER --- */}
@@ -62,14 +62,12 @@ export default function PortfolioTeaser() {
             transition={{ duration: 0.55, ease: EASE }}
             className="flex flex-col items-center text-center gap-3 mb-14"
           >
-            <span className="inline-flex items-center text-[11px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-              Our Work
-            </span>
+           
             <h2 className="font-display font-bold text-[clamp(1.75rem,4vw,2.625rem)] text-(--text-primary)">
               Work Built to Outperform
             </h2>
             <p className="font-(--font-body) text-(--text-secondary) max-w-md">
-              A collection of our best work across different industries.
+              A collection of our work across different industries.
             </p>
           </motion.div>
 
@@ -84,15 +82,15 @@ export default function PortfolioTeaser() {
                 <button
                   key={project.id}
                   onClick={() => setActiveIndex(index)}
-                  className={`relative shrink-0 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-300 ${
+                  className={`relative shrink-0 px-2 py-1.5 rounded-md text-sm font transition-colors duration-300 ${
                     isActive ? 'text-white' : 'text-(--text-secondary) bg-gray-100/60'
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="mobileActiveTabPill"
-                      className="absolute inset-0 bg-cyan-500 rounded-full"
-                      transition={{ type: 'spring', stiffness: 350, damping: 25 }}
+                      className="absolute inset-0 bg-cyan-500 rounded-md"
+                      transition={{ type: 'spring', stiffness: 250, damping: 25 }}
                     />
                   )}
                   <span className="relative z-10">{project.tabLabel}</span>
@@ -102,7 +100,7 @@ export default function PortfolioTeaser() {
           </div>
 
           {/* Full-width media viewer — taller on mobile */}
-          <div className="relative w-full aspect-[5/4] min-h-[280px] rounded-2xl overflow-hidden bg-(--bg-card) border border-(--border-card) shadow-xl isolate">
+          <div className="relative w-full aspect-5/4 min-h-[280px] rounded-xl overflow-hidden bg-(--bg-card) border border-(--border-card) shadow-xl isolate">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeProject.id}

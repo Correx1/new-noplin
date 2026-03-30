@@ -79,11 +79,11 @@ export default function ServicesFAQ() {
       <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-start">
         <div className="md:w-1/3 shrink-0">
           <div className="mb-6">
-            <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-              FAQ
-            </span>
+            <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+FAQ
+<span className="absolute left-0 bottom-0 h-[2px] w-[50%] bg-cyan-600"></span></span>
           </div>
-          <h2 className="font-semibold font-bold text-[36px] text-(--text-primary) leading-tight tracking-tight">
+          <h2 className=" font-bold text-[36px] text-(--text-primary) leading-tight tracking-tight">
             Common <br className="hidden md:block"/> Questions
           </h2>
           <p className="font-(--font-body) text-[15px] text-(--text-secondary) mt-4">

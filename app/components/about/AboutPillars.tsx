@@ -81,9 +81,10 @@ export default function AboutPillars() {
           className="mb-14 text-center sm:mb-16"
         >
           <div className="mb-4">
-            <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-              Our Foundation
-            </span>
+                  <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+  Our foundation
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-1/2 -translate-x-1/2"></span>
+</span>
           </div>
           <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold leading-tight text-white">
             The Four Pillars

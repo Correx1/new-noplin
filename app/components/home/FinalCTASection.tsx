@@ -28,9 +28,10 @@ export default function FinalCTASection() {
           {/* Left — compact text (centered on mobile, left on desktop) */}
           <div className="flex flex-col items-center text-center sm:items-start sm:text-left gap-2 flex-1">
             <div className="mb-2">
-              <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-                Work with us
-              </span>
+             <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+  Work with us
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0"></span>
+</span>
             </div>
             <h2 className="font-display font-bold text-white text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.15]">
               Ready to build something great?

@@ -85,9 +85,9 @@ export default function ProcessSection() {
       <div className="relative mx-auto max-w-7xl">
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-3 mb-14">
-          <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white w-fit uppercase tracking-widest">
-            How It Works
-          </span>
+           <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+  How we work
+<span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-[50%] bg-cyan-600"></span></span>
           <h2 className="font-display font-bold text-white text-[clamp(1.75rem,4vw,2.5rem)] leading-tight">
             Simple Process. Fast Results.
           </h2>
