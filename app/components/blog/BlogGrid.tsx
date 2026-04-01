@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { useState } from 'react';
@@ -15,8 +16,8 @@ export default function BlogGrid({ posts = [] }: { posts?: any[] }) {
   const sidebarPosts = posts.slice(5, 15); // The other available blogs (max 10)
 
   return (
-    <section className="bg-(--bg-page) relative w-full pt-16 pb-24">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+    <section className="bg-(--bg-page) relative w-full pt-12 pb-16">
+      <div className="max-w-7xl mx-auto px-3 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         
         {/* ── LEFT COLUMN: MAIN LIST (8 COLS) ──────────────── */}
         <div className="lg:col-span-8 flex flex-col gap-8">
@@ -41,15 +42,15 @@ export default function BlogGrid({ posts = [] }: { posts?: any[] }) {
                     <span 
                       key={cat}
                       style={{ color: categoryColors[cat] ?? 'var(--color-cyan)' }}
-                      className="px-3 py-1 bg-(--bg-page) rounded-sm border border-[var(--border-default)] font-semibold text-[11px] font-semibold tracking-widest uppercase"
+                      className="px-2 py-1 bg-(--bg-page) rounded-sm border border-[var(--border-default)]  text-[10px] font-semibold  lowercase"
                     >
                       {cat}
                     </span>
                   ))}
                 </div>
                 
-                <h3 className="font-semibold font-bold text-[clamp(1.15rem,2vw,1.35rem)] text-(--text-primary) leading-[1.3]">
-                  <Link href={p.href} className="hover:text-electric transition-colors duration-200">
+                <h3 className=" font-bold text-[clamp(1.15rem,2vw,1.35rem)] text-(--text-primary) leading-[1.3]">
+                  <Link href={p.href} className="hover:text-cyan transition-colors duration-200">
                     {p.title}
                   </Link>
                 </h3>
@@ -68,7 +69,7 @@ export default function BlogGrid({ posts = [] }: { posts?: any[] }) {
                   <span className="text-(--text-secondary)">{p.readTime || '5 min read'}</span>
                 </div>
 
-                <Link href={p.href} className="mt-3 font-semibold font-semibold text-[13px] text-[var(--accent)] hover:text-cyan flex items-center gap-2 group/btn self-start transition-colors duration-200">
+                <Link href={p.href} className="mt-3 font-semibold text-[13px]  text-cyan flex items-center gap-2 group/btn self-start transition-colors duration-200">
                   Read More
                   <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
                 </Link>

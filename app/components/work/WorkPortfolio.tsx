@@ -45,7 +45,7 @@ export const allCaseStudies: CaseStudy[] = [
     client: 'Agesteph', 
     filter: 'Web Design',
     description: 'Web and product design for Agesteph, delivering a clean, user-focused interface and a cohesive digital experience across multiple packages, tailored to support scalability and brand consistency.',
-    images: ['/portfolio/agesteph/agesteph1.png', '/portfolio/agesteph/agesteph4.png', '/portfolio/agesteph/agesteph3.png',  '/portfolio/agesteph/agesteph5R.png'],
+    images: ['/portfolio/agesteph/agesteph1.png', '/portfolio/agesteph/agesteph4.png', '/portfolio/agesteph/agesteph3.png',  '/portfolio/agesteph/agesteph5.png'],
     link: 'https://agesteph.com/'
   },
   
@@ -66,7 +66,7 @@ export const allCaseStudies: CaseStudy[] = [
     client: 'Agesteph Skincare Brand',
     filter: 'Social Media',
     description: 'Managed and grew the Agesteph Skincare Instagram page by creating and structuring skincare-focused content, highlighting product benefits, educating audiences on routines, and building consistent brand storytelling to improve engagement and customer trust.',
-    images: ['/portfolio/agestephsm/agestephsm.png', '/portfolio/agestephsm/agestephsm1.png'],
+    images: ['/portfolio/agestephSM/agestephsm.png', '/portfolio/agestephSM/agestephsm1.png'],
     link:'https://www.instagram.com/agesteph.skincare/'
   },
   { 

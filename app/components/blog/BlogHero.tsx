@@ -4,7 +4,7 @@ const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 export default function BlogHero() {
   return (
-      <section className="relative flex items-center justify-center w-full min-h-[40vh] lg:min-h-[45vh] pt-[100px] pb-12 lg:pt-[120px] lg:pb-16 overflow-hidden bg-navy">
+      <section className="relative flex items-center justify-center w-full min-h-[40vh] lg:min-h-[45vh] pt-[70px] pb-12 lg:pt-[100px] lg:pb-16 overflow-hidden bg-navy">
 
       {/* ── Background art ── */}
       <div className="pointer-events-none absolute inset-0">
@@ -44,9 +44,10 @@ export default function BlogHero() {
           transition={{ duration: 0.65, ease: EASE }}
           className="flex max-w-2xl flex-col items-start gap-5"
         >
-          <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-            Noplin Insights
-          </span>
+                  <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+ Noplin Insights
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-0 translate-x-0"></span>
+</span>
 
           <h1 className="font-display text-[clamp(2.5rem,5vw,5.5rem)] font-extrabold leading-[1] tracking-[-0.03em] text-white uppercase">
             Insights &<br />Strategy.
@@ -65,7 +66,7 @@ export default function BlogHero() {
            className="hidden lg:flex"
         >
           <div
-            className="group relative flex h-48 w-48 cursor-pointer items-center justify-center rounded-full border border-[var(--border-card)] bg-transparent shadow-sm transition-all duration-500 hover:border-electric hover:bg-(--bg-card) hover:shadow-lg hover:shadow-electric/10 ml-auto"
+            className="group relative flex h-48 w-48 cursor-pointer items-center justify-center rounded-full border border-[var(--border-card)] bg-transparent shadow-sm  ml-auto"
             onClick={() => {
               window.scrollTo({ top: window.innerHeight * 0.7, behavior: 'smooth' });
             }}

@@ -22,11 +22,13 @@ export default function HeroSection({
 
   return (
     <section 
-      className="relative flex min-h-[60vh] flex-col justify-center overflow-hidden bg-[#0D0D2B] pt-[120px] pb-[100px]"
+      className="relative flex min-h-[60vh] flex-col justify-center overflow-hidden bg-[#0D0D2B] pt-[80px] pb-[100px]"
     >
       {/* ── Background Image & Dark Blue Gradient Overlay ── */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${bgImage}')` }} />
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+      // style={{ backgroundImage: `url('${bgImage}')` }}
+       />
       <div 
         className="absolute inset-0 z-0 bg-linear-to-r from-[#0D0D2B]/90 via-[#0D0D2B]/80 to-[#1A56DB]/60"
       />

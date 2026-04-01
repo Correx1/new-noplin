@@ -5,7 +5,7 @@ import { EASE } from './AboutShared';
 
 export default function AboutHero() {
   return (
-    <section className="hero-section relative flex items-center justify-center w-full min-h-[75vh] lg:min-h-[50vh] pt-28 pb-14 lg:pt-[120px] lg:pb-16 overflow-hidden bg-navy">
+    <section className="hero-section relative flex items-center justify-center min-h-[50vh] lg:min-h-[45vh]  pt-20 pb-20 lg:pt-[100px] lg:pb-16  overflow-hidden bg-navy">
       
       {/* ── Background art ── */}
       <div className="pointer-events-none absolute inset-0">
@@ -47,7 +47,7 @@ export default function AboutHero() {
         >
                <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
   About Us
-  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0"></span>
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-0 translate-x-0"></span>
 </span>
 
           <h1 className="font-display text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white">
@@ -56,58 +56,40 @@ export default function AboutHero() {
             Typical Agency.
           </h1>
 
-          <p className="mt-2 font-body text-[18px] leading-[1.6] text-gray-400">
+          <p className="mt-2 font-body text-[17px] leading-[1.6] text-gray-400">
             We are a results-obsessed team that builds brands that mean something,
             websites that convert, content that engages, and marketing that grows
-            businesses — delivered fast, and with excellence.
-          </p>
+            businesses.</p>
         </motion.div>
 
-        {/* Right card */}
-        <motion.div
-          initial={{ opacity: 0, x: 32 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
-          className="hidden lg:flex relative w-full max-w-[480px] ml-auto"
-        >
-          {/* OFFSET FRAME */}
-          <div className="absolute top-6 left-6 w-full h-full rounded-2xl border-2 border-cyan-400/40 z-0" />
-
-          {/* CONTENT CARD */}
-          <div className="relative z-10 flex aspect-4/3 w-full flex-col overflow-hidden rounded-2xl border border-[var(--border-card)] bg-(--bg-card) shadow-xl">
-            <div className="flex items-center gap-3 border-b border-[var(--border-card)] px-5 py-4">
-              <svg className="h-4 w-4 text-(--text-muted)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <div className="h-5 w-32 rounded bg-[var(--text-muted)] opacity-20" />
-            </div>
-            <div className="border-b border-[var(--border-card)] px-5 py-3">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-(--text-muted)">Why Choose Us</span>
-            </div>
-            <div className="relative flex-1 overflow-hidden p-5">
-              <div className="pointer-events-none absolute top-0 left-0 right-0 z-10 h-6 bg-linear-to-b from-[var(--bg-card)] to-transparent" />
-              <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-10 h-10 bg-linear-to-t from-[var(--bg-card)] to-transparent" />
-              <div className="flex flex-col gap-5 animate-[scrollList_15s_linear_infinite] hover:[animation-play-state:paused]">
-                {[
-                  { id: 'results', val: 'Results-First Focus' },
-                  { id: 'speed', val: 'Fast Turnarounds' },
-                  { id: 'design', val: 'Premium UI/UX' },
-                  { id: 'seo', val: 'Built-in SEO' },
-                  { id: 'growth', val: 'Scalable Architecture' },
-                  { id: 'support', val: 'Ongoing Partnership' },
-                  { id: 'roi', val: 'High ROI Focus' },
-                  { id: 'results-2', val: 'Results-First Focus' },
-                  { id: 'speed-2', val: 'Fast Turnarounds' },
-                ].map((item) => (
-                  <div key={item.id} className="group flex items-center justify-between">
-                    <span className="font-mono text-[13px] text-(--text-primary)">{item.id}</span>
-                    <span className="font-mono text-[13px] text-(--text-muted) transition-colors group-hover:text-electric">{item.val}</span>
+          {/* Right side - Circular CTA */}
+                <motion.div
+                   initial={{ opacity: 0, scale: 0.9 }}
+                   animate={{ opacity: 1, scale: 1 }}
+                   transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
+                   className="hidden lg:flex"
+                >
+                  <div
+                    className="group relative flex h-48 w-48 cursor-pointer items-center justify-center rounded-full border border-[var(--border-card)] bg-transparent shadow-sm  ml-auto"
+                    onClick={() => {
+                      window.scrollTo({ top: window.innerHeight * 0.7, behavior: 'smooth' });
+                    }}
+                  >
+                     <div className="flex flex-col items-center gap-3 text-center">
+                        <span className="font-display text-[11px] font-bold uppercase tracking-[0.15em] text-white">
+                         Read More About Us
+                        </span>
+                        <svg 
+                          className="h-6 w-6 text-(--text-muted) transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-electric" 
+                          fill="none" 
+                          viewBox="0 0 24 24" 
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 19L19 5M19 5H8M19 5V16" />
+                        </svg>
+                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </motion.div>
+                </motion.div>
       </div>
 
       <style>{`

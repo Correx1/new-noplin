@@ -29,7 +29,7 @@ const departments: Dept[] = [
   {
     id: 'development', label: 'Development', headline: 'Websites & Apps That Work',
     desc: 'High-performance digital products engineered for scale, speed, and maximum conversions.',
-    media: '/portfolio/work.mp4', mediaType: 'video', href: '/services#development',
+    media: '/portfolio/webapp.png', mediaType: 'image', href: '/services#development',
     subservices: [
       { name: 'Website Design', desc: 'Bespoke, conversion-optimized websites.', href: '/services/website-design' },
       { name: 'E-Commerce Development', desc: 'High-performance online stores built to sell.', href: '/services/ecommerce' },

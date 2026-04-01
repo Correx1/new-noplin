@@ -31,7 +31,7 @@ export default function SocialProofStrip() {
                 src={c.svg}
                 alt={c.name}
                 className="max-w-[100px] max-h-[32px] object-contain"
-                style={{  opacity: 0.6 }}
+                style={{ filter:'grayscale(90%)', opacity: 0.47 }}
               />
             </div>
           ))}

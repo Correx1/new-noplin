@@ -15,7 +15,7 @@ const projects = [
     desc: 'High-performance websites built to scale and convert. We engineer complete brand ecosystems.',
     category: 'Website Design',
     href: '/work',
-    image: '/portfolio/site.png',
+    image: '/portfolio/luxury-lighting/luxury-lighting.png',
   },
   {
     id: 'p2',
@@ -24,7 +24,7 @@ const projects = [
     desc: 'Visual systems that cut through the noise. Positioning your company as the premium choice.',
     category: 'Brand Identity',
     href: '/work',
-    image: '/portfolio/branding-main.png',
+    image: '/portfolio/branding/Elegant-cosmetics3.png',
   },
   {
     id: 'p3',
@@ -33,7 +33,7 @@ const projects = [
     desc: 'Data-driven campaigns designed to acquire high-value customers at scale.',
     category: 'Marketing',
     href: '/work',
-    image: '/portfolio/work.mp4',
+    image: '/portfolio/agestephSM/agestephsm.png',
   },
   {
     id: 'p4',
@@ -42,7 +42,7 @@ const projects = [
     desc: 'Intuitive web applications solving real business challenges smoothly.',
     category: 'Custom Software',
     href: '/work',
-    image: '/portfolio/site.png',
+    image: '/portfolio/kuviva/kuviva.png',
   },
 ];
 

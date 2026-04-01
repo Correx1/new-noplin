@@ -32,7 +32,16 @@ export const getPostBySlugQuery = groq`
     excerpt,
     "date": coalesce(publishedAt, _createdAt),
     "mainImage": mainImage.asset->url,
-    body,
+    body[] {
+      ...,
+      _type == "image" => {
+        ...,
+        "asset": asset->{
+          url,
+          "dimensions": metadata.dimensions
+        }
+      }
+    },
     "categories": categories[]->title,
     author->{
       name,

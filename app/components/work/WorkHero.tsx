@@ -6,7 +6,7 @@ const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 export default function WorkHero() {
   return (
-    <section className="hero-section relative flex items-center justify-center w-full min-h-[75vh] lg:min-h-[50vh] pt-28 pb-14 lg:pt-[120px] lg:pb-16 overflow-hidden bg-navy">
+    <section className="hero-section relative flex items-center justify-center w-full min-h-[50vh] lg:min-h-[45vh]  pt-20 pb-20 lg:pt-[100px] lg:pb-16  overflow-hidden bg-navy">
       {/* ── Background art ── */}
       <div className="pointer-events-none absolute inset-0">
         <svg
@@ -44,14 +44,13 @@ export default function WorkHero() {
           transition={{ duration: 0.65, ease: EASE }}
           className="flex max-w-2xl flex-col items-start gap-6"
         >
-          <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-            Portfolio
-          </span>
+           <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+  Portfolio
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-0 translate-x-0"></span>
+</span>
 
-          <h1 className="font-display text-[clamp(2.4rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white">
-            Our Work Speaks
-     
-            for Itself.
+          <h1 className="font-display text-[clamp(2.4rem,5vw,4.0rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white">
+            Our Work Speaks for Itself.
           </h1>
 
           <p className="mt-2 font-body text-[17px] leading-[1.6] text-gray-400">
@@ -60,32 +59,34 @@ export default function WorkHero() {
           </p>
         </motion.div>
 
-        {/* Right side – Single image (shorter on mobile) */}
-        <motion.div
-          initial={{ opacity: 0, x: 32 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
-          className="hidden lg:flex relative mt-10 w-full max-w-[480px] ml-auto items-center justify-center lg:mt-0 lg:justify-end"
-        >
-          {/* Subtle glow */}
-          <div className="absolute right-16 top-1/2 h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-electric opacity-15 blur-[140px]" />
-
-          {/* OFFSET FRAME */}
-          <div className="absolute top-6 left-6 w-full h-full rounded-2xl border-2 border-cyan-400/40" />
-
-          {/* VIDEO CARD */}
-          <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] w-full bg-[--bg-card]">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 h-full w-full object-cover"
-            >
-              <source src="/portfolio/work.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </motion.div>
+        {/* Right side - Circular CTA */}
+              <motion.div
+                 initial={{ opacity: 0, scale: 0.9 }}
+                 animate={{ opacity: 1, scale: 1 }}
+                 transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
+                 className="hidden lg:flex"
+              >
+                <div
+                  className="group relative flex h-48 w-48 cursor-pointer items-center justify-center rounded-full border border-[var(--border-card)] bg-transparent shadow-sm  ml-auto"
+                  onClick={() => {
+                    window.scrollTo({ top: window.innerHeight * 0.7, behavior: 'smooth' });
+                  }}
+                >
+                   <div className="flex flex-col items-center gap-3 text-center">
+                      <span className="font-display text-[11px] font-bold uppercase tracking-[0.15em] text-white">
+                      Our Work
+                      </span>
+                      <svg 
+                        className="h-6 w-6 text-(--text-muted) transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-electric" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 19L19 5M19 5H8M19 5V16" />
+                      </svg>
+                   </div>
+                </div>
+              </motion.div>
       </div>
     </section>
   );

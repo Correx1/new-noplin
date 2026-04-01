@@ -12,7 +12,7 @@ const values = [
 
 export default function AboutValues() {
   return (
-    <section className="relative bg-(--bg-section-alt) py-10 overflow-hidden">
+    <section className="relative bg-(--bg-section-alt) py-6 overflow-hidden">
 
       {/* Subtle background texture */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#00000006_1px,transparent_1px),linear-gradient(to_bottom,#00000006_1px,transparent_1px)] bg-[size:64px_64px]" />

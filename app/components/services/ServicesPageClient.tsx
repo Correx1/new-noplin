@@ -197,7 +197,7 @@ export default function ServicesPageClient() {
 
       {/* ── HERO (MODIFIED) ── */}
     {/* ── HERO ── */}
-<section className="relative flex items-center justify-center w-full min-h-[50vh] lg:min-h-[45vh] pt-28 pb-20 lg:pt-[120px] lg:pb-16 overflow-hidden bg-navy">
+<section className="relative flex items-center justify-center w-full min-h-[50vh] lg:min-h-[45vh]  pt-20 pb-20 lg:pt-[100px] lg:pb-16 overflow-hidden bg-navy">
       {/* ── Background art ── */}
       <div className="pointer-events-none absolute inset-0">
         <svg
@@ -261,33 +261,35 @@ What we do
 
     </motion.div>
 
-    {/* VIDEO SIDE */}
-  {/* Right side – Single image (shorter on mobile) */}
-        <motion.div
-          initial={{ opacity: 0, x: 32 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
-          className="hidden sm:flex relative mt-10 w-full max-w-[480px] ml-auto items-center justify-center lg:mt-0 lg:justify-end"
-        >
-          {/* Subtle glow */}
-          <div className="absolute right-16 top-1/2 h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-electric opacity-15 blur-[140px]" />
-
-          {/* OFFSET FRAME */}
-          <div className="absolute top-6 left-6 w-full h-full rounded-2xl border-2 border-cyan-400/40" />
-
-          {/* VIDEO CARD */}
-          <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] w-full bg-[--bg-card]">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 h-full w-full object-cover"
-            >
-              <source src="/images/hero.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </motion.div>
+    
+   {/* Right side - Circular CTA */}
+         <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
+            className="hidden lg:flex"
+         >
+           <div
+             className="group relative flex h-48 w-48 cursor-pointer items-center justify-center rounded-full border border-[var(--border-card)] bg-transparent shadow-sm  ml-auto"
+             onClick={() => {
+               window.scrollTo({ top: window.innerHeight * 0.7, behavior: 'smooth' });
+             }}
+           >
+              <div className="flex flex-col items-center gap-3 text-center">
+                 <span className="font-display text-[11px] font-bold uppercase tracking-[0.15em] text-white">
+                 Our Services
+                 </span>
+                 <svg 
+                   className="h-6 w-6 text-(--text-muted) transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-electric" 
+                   fill="none" 
+                   viewBox="0 0 24 24" 
+                   stroke="currentColor"
+                 >
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 19L19 5M19 5H8M19 5V16" />
+                 </svg>
+              </div>
+           </div>
+         </motion.div>
 
   </div>
 
@@ -295,10 +297,10 @@ What we do
      
 
       {/* ── SERVICES LIST ── */}
-      <section className="bg-(--bg-page) py-20 lg:py-28">
+      <section className="bg-(--bg-page) py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-6">
 
-          <div className="mb-4 pb-10 border-b border-(--border-default)">
+          <div className=" border-b border-(--border-default)">
             <h2 className="font-display font-bold text-[clamp(2.8rem,5vw,5rem)] leading-[1] tracking-tight text-(--text-primary)">
               Our Services
             </h2>

@@ -6,7 +6,89 @@ import { categoryColors } from '../../components/blog/BlogData';
 import BlogCTA from '../../components/blog/BlogCTA';
 import { client } from '../../../sanity/lib/client';
 import { getPostBySlugQuery, getRelatedPostsQuery } from '../../../sanity/lib/queries';
-import { PortableText } from '@portabletext/react';
+import { PortableText, PortableTextComponents } from '@portabletext/react';
+
+// Custom renderers for Portable Text blocks (handles inline images added inside the blog editor)
+const portableTextComponents: PortableTextComponents = {
+  types: {
+    image: ({ value }: { value: { asset?: { url: string; dimensions?: { width: number; height: number } }; alt?: string } }) => {
+      if (!value?.asset?.url) return null;
+      const { url } = value.asset;
+      return (
+        <figure className="my-10">
+          <div className="relative w-full aspect-16/12 lg:aspect-21/9 rounded-xl overflow-hidden mb-2 border border-gray-200">
+            <Image
+              src={url}
+              alt={value.alt || ''}
+              fill
+              className="object-fit"
+              sizes="(max-width: 768px) 100vw, 800px"
+            />
+          </div>
+          {/* {value.alt && (
+            <figcaption
+              className="mt-3 text-center text-[13px] text-gray-500 italic"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              {value.alt}
+            </figcaption>
+          )} */}
+        </figure>
+      );
+    },
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="list-disc list-outside pl-6 my-6 space-y-2 text-[#3f3f46]">{children}</ul>
+    ),
+    number: ({ children }) => (
+      <ol className="list-decimal list-outside pl-6 my-6 space-y-2 text-[#3f3f46]">{children}</ol>
+    ),
+  },
+  listItem: {
+    bullet: ({ children }) => (
+      <li className="text-[17px] leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>{children}</li>
+    ),
+    number: ({ children }) => (
+      <li className="text-[17px] leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>{children}</li>
+    ),
+  },
+  marks: {
+    link: ({ value, children }: { value?: { href?: string; blank?: boolean }; children: React.ReactNode }) => {
+      const href = value?.href || '#';
+      const isExternal = href.startsWith('http');
+      return (
+        <a
+          href={href}
+          target={isExternal ? '_blank' : undefined}
+          rel={isExternal ? 'noopener noreferrer' : undefined}
+          className="text-cyan-500 underline underline-offset-2 decoration-cyan-500/40 hover:text-cyan-400 hover:decoration-cyan-400 transition-colors duration-200"
+        >
+          {children}
+        </a>
+      );
+    },
+    strong: ({ children }) => <strong className="font-bold text-[#09090b]">{children}</strong>,
+    em: ({ children }) => <em className="italic text-[#3f3f46]">{children}</em>,
+  },
+  block: {
+    normal: ({ children }) => (
+      <p className="text-[17px] leading-relaxed text-justify text-[#3f3f46] " style={{ fontFamily: 'var(--font-body)' }}>{children}</p>
+    ),
+    h2: ({ children }) => (
+      <h2 className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-[#09090b] mt-10 mb-4 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>{children}</h2>
+    ),
+    h3: ({ children }) => (
+      <h3 className="text-[clamp(1.2rem,2vw,1.6rem)] font-bold text-[#09090b] mt-8 mb-3 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>{children}</h3>
+    ),
+    h4: ({ children }) => (
+      <h4 className="text-[1.1rem] font-bold text-[#09090b] mt-6 mb-2" style={{ fontFamily: 'var(--font-display)' }}>{children}</h4>
+    ),
+    blockquote: ({ children }) => (
+      <blockquote className="border-l-4 border-cyan-500 pl-5 my-8 italic text-[#52525b] text-[17px] leading-relaxed">{children}</blockquote>
+    ),
+  },
+};
 
 export const revalidate = 60; // 60 seconds
 
@@ -40,7 +122,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-    <main className="bg-white min-h-screen pt-[120px] pb-[120px]">
+    <main className="bg-white min-h-screen pt-10">
       <article className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         
         {/* ── LEFT COLUMN: MAIN CONTENT (8 COLS) ──────────────── */}
@@ -101,9 +183,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                Yes, you CAN insert images directly inside this text editor in Sanity, 
                and they will render exactly where you place them between paragraphs. 
           */}
-          <div className="prose prose-lg max-w-none text-[#3f3f46]" style={{ fontFamily: 'var(--font-body)', lineHeight: 1.8 }}>
+          <div className="max-w-none text-[#3f3f46]" style={{ fontFamily: 'var(--font-body)', lineHeight: 1.8 }}>
             {post.body ? (
-              <PortableText value={post.body} />
+              <PortableText value={post.body} components={portableTextComponents} />
             ) : (
               <>
                 <p className="text-xl font-medium leading-relaxed text-[#09090b] mb-8">

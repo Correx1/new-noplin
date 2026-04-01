@@ -8,7 +8,7 @@ const ceo = {
   name: 'Godwin Chibuike',
   role: 'CEO & Lead Strategist',
   bio: 'Leads brand identity, pitch decks, and visual strategy while driving the overall creative vision and maintaining design excellence across all client engagements.',
-  image: '/team/ceo.png',
+  image: '/team/CEO.png',
 };
 
 const team = [
@@ -35,7 +35,7 @@ export default function AboutTeam() {
       <div className="relative mx-auto max-w-7xl px-6">
 
         {/* ════════════════ CEO FEATURE ════════════════ */}
-        <div className="mb-32">
+        <div className="">
 
           {/* Section label */}
           <motion.div
@@ -83,14 +83,14 @@ export default function AboutTeam() {
               transition={{ duration: 0.65, ease: EASE, delay: 0.12 }}
               className="flex flex-col gap-7 pb-6"
             >
-              <h2 className="font-semibold text-5xl font-bold leading-[1.1] text-(--text-primary) sm:text-6xl">
+              <h2 className="text-5xl font-bold leading-[1.1] text-(--text-primary) sm:text-6xl">
                 Meet the<br />
                 <span className="text-cyan">Visionary</span>
               </h2>
 
               <div>
-                <p className="font-semibold text-2xl font-bold text-(--text-primary)">{ceo.name}</p>
-                <p className="mt-1 font-semibold text-[11px] font-semibold uppercase tracking-widest text-cyan">
+                <p className="font-semibold text-2xl  text-(--text-primary)">{ceo.name}</p>
+                <p className="mt-1 font-semibold text-[11px] uppercase tracking-widest text-cyan">
                   {ceo.role}
                 </p>
               </div>

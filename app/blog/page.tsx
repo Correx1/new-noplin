@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Metadata } from 'next';
 import BlogPageClient from '../components/blog/BlogPageClient';
 import { client } from '../../sanity/lib/client';
