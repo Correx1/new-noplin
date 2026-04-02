@@ -6,7 +6,7 @@ const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 export default function ContactHero() {
   return (
-    <section className="hero-section relative flex items-center justify-center w-full min-h-[40vh] lg:min-h-[45vh] pt-[100px] pb-12 lg:pt-[120px] lg:pb-16 overflow-hidden border-b border-(--grid-line-color) bg-navy z-0">
+    <section className="hero-section relative flex items-center justify-center w-full min-h-[40vh] lg:min-h-[45vh] pt-[50px] pb-10 lg:pt-[90px] lg:pb-12 overflow-hidden border-b border-(--grid-line-color) bg-navy z-0">
       
       {/* ── Background art ── */}
       <div className="pointer-events-none absolute inset-0">
@@ -43,9 +43,10 @@ export default function ContactHero() {
           transition={{ duration: 0.5, ease: EASE }} 
           className="flex items-center mb-6"
         >
-          <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-            Start your project
-          </span>
+                   <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+ Contact Us
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-0 translate-x-0"></span>
+</span>
         </motion.div>
         
         <motion.h1 
@@ -54,16 +55,16 @@ export default function ContactHero() {
           transition={{ duration: 0.6, ease: EASE, delay: 0.05 }} 
           className="text-4xl md:text-6xl lg:text-7xl max-w-4xl font-display font-bold text-white leading-[1.05] tracking-tight"
         >
-          Lets build something <span className="text-electric">extraordinary</span> together.
+          Tell us what you need. <span className="text-cyan">We&apos;ll handle the rest.</span>
         </motion.h1>
         
         <motion.p 
           initial={{ opacity: 0, y: 12 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.5, ease: EASE, delay: 0.1 }} 
-          className="mt-8 max-w-xl font-(--font-body) text-lg text-gray-400 leading-relaxed"
+          className="mt-8 max-w-xl font-(--font-body) text-[15px] text-gray-400 leading-relaxed"
         >
-          Fill out the brief below to help us understand your needs. We review every submission manually and will respond within two business hours.
+          Share a few details about your project or goals and get a feedback in 2 hours
         </motion.p>
       </div>
     </section>

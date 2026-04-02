@@ -227,6 +227,12 @@ export default function Navbar() {
         {/* CTA + Hamburger */}
         <div className="flex items-center gap-3">
 
+          {/* Desktop CTA — hidden on mobile, always in dropdown instead */}
+          <div className="hidden lg:block">
+            <Link href="/contact" className="btn btn-primary px-5 py-2.5 text-sm">
+              Get a Free Quote
+            </Link>
+          </div>
 
           <button
             className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 relative z-50"
@@ -256,7 +262,7 @@ export default function Navbar() {
             initial={{ height: 0 }}
             animate={{ height: 'calc(100vh - 76px)' }}
             exit={{ height: 0 }}
-            className="bg-[#0D0D2B] border-t border-white/10 overflow-hidden flex flex-col"
+            className="bg-[#0D0D2B] border-t border-white/10 overflow-y-auto flex flex-col"
           >
             <div className="px-6 pt-6 pb-6 space-y-4 overflow-y-auto flex-1">
 

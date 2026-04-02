@@ -12,14 +12,11 @@ const ceo = {
 };
 
 const team = [
-  { name: 'Gilbert', role: 'Backend Developer', image: '/team/Rex.png' },
-  { name: 'Funke', role: 'Content & SEO Specialist', image: '/team/Rex.png' },
-  { name: 'Benedict', role: 'Marketing Strategist', image: '/team/Rex.png' },
-    { name: 'Chukwu Raphael', role: 'Frontend Developer', image: '/team/Rex.png' },
-  { name: 'Jessica', role: 'Client Success Manager', image: '/team/Rex.png' },
-    { name: 'Malachy', role: 'Product Designer', image: '/team/Rex.png' },
-  { name: 'Vera', role: 'Client Success & Outreach', image: '/team/Rex.png' },
-  { name: 'Sophia', role: 'UX Researcher', image: '/team/Rex.png' },
+    { name: 'Blessing Umahi', role: 'Accountant', image: '/team/blessing.png' },
+  { name: 'Chukwu Raphael', role: 'Project Manager', image: '/team/Rex.png' },
+  { name: 'Gilbert Ozioma', role: 'Lead Developer', image: '/team/gilbert.png' },
+  { name: 'Funke Sanusi', role: 'Content & SEO Specialist', image: '/team/funke.png' },
+    { name: 'Malachy Monday', role: 'Product Designer', image: '/team/malachy.png' },
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
@@ -68,7 +65,7 @@ export default function AboutTeam() {
                   src={ceo.image}
                   alt={ceo.name}
                   fill
-                  className="object-cover grayscale"
+                  className="object-cover "
                 />
                 {/* Tinted overlay */}
                 <div className="absolute inset-0 bg-linear-to-t from-zinc-900/70 via-zinc-900/10 to-transparent" />
@@ -122,30 +119,31 @@ export default function AboutTeam() {
         </div>
 
         {/* ════════════════ TEAM HEADER ════════════════ */}
-        {/* <motion.div
+         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: EASE }}
-          className="mb-14 flex flex-col items-center text-center gap-4"
+          className=" mt-14 flex flex-col items-center text-center gap-4"
         >
           <div>
             <div className="mb-4">
-              <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 w-fit uppercase tracking-widest">
-                Our Experts
-              </span>
+                       <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+  Our Team
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-1/2 -translate-x-1/2"></span>
+</span>
             </div>
-            <h2 className="font-semibold text-4xl font-bold text-(--text-primary) sm:text-5xl">
+            <h2 className=" text-4xl font-bold text-(--text-primary) sm:text-5xl">
               The People Behind<br className="hidden sm:block" /> the Results
             </h2>
           </div>
           <p className="max-w-md font-(--font-body) text-[15px] text-(--text-secondary)">
             A cross-functional team built to deliver end-to-end excellence.
           </p>
-        </motion.div> */}
+        </motion.div> 
 
         {/* ════════════════ TEAM GRID ════════════════ */}
-        {/* <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+<div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto mt-10">
           {team.map((member, i) => (
             <motion.div
               key={member.name}
@@ -153,26 +151,26 @@ export default function AboutTeam() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: i * 0.06, ease: EASE }}
-              className="group relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100 transition-all duration-500 hover:border-zinc-400"
-            > */}
+              className="w-[calc(50%-8px)] md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] group relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100 transition-all duration-500 hover:border-zinc-400"
+            >
               {/* Image */}
-              {/* <div className="relative aspect-4/5 overflow-hidden rounded-t-[15px]">
+               <div className="relative aspect-4/5 overflow-hidden rounded-t-[15px]">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                  className="object-cover  "
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#0A101D] via-[#0A101D]/40 to-transparent" />
-              </div> */}
+              </div> 
 
               {/* Info */}
-              {/* <div className="absolute bottom-0 left-0 w-full px-4 py-4 rounded-b-2xl">
-                <p className="font-semibold font-semibold text-white text-[15px] leading-tight">{member.name}</p>
+              <div className="absolute bottom-0 left-0 w-full px-4 py-4 rounded-b-2xl">
+                <p className="font-semibold text-white text-[15px] leading-tight">{member.name}</p>
                 <p className="mt-1 font-semibold text-[10px] uppercase tracking-widest text-[#94A3B8]">
                   {member.role}
                 </p>
-              </div> */}
+              </div> 
 
               {/* Hover arrow badge */}
               <div className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-cyan opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
@@ -180,11 +178,11 @@ export default function AboutTeam() {
               </div>
 
               {/* Top cyan line reveal */}
-              {/* <span className="absolute left-0 top-0 h-[2px] w-0 bg-cyan transition-all duration-500 group-hover:w-full z-10" />
+              <span className="absolute left-0 top-0 h-[2px] w-0 bg-cyan transition-all duration-500 group-hover:w-full z-10" />
             </motion.div>
           ))}
         </div>
-*/}
+
       </div>
     </section> 
   );

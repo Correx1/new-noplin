@@ -1,14 +1,11 @@
 'use client';
 
 const clients = [
+    { name: 'Health-emergency',   svg: '/logos/Health-emergency.png' },
    { name: 'Veekay',    svg: '/logos/veekay.png' },
-  { name: 'Luxury lighting',  svg: '/logos/luxury-lighting.png' },
   { name: 'africa-smes', svg: '/logos/africa-smes.png' },
   { name: 'divinecrown', svg: '/logos/divinecrown.png' },
-  { name: 'Bluvon',  svg: '/logos/Bluvon.png' },
   { name: 'Happylife',   svg: '/logos/Happylife.png' },
-  { name: 'Health-emergency',   svg: '/logos/Health-emergency.png' },
-  { name: 'Purim',   svg: '/logos/Purim.png' },
   { name: 'schoolpilot',   svg: '/logos/schoolpilot.png' },
 ];
 
@@ -31,7 +28,7 @@ export default function SocialProofStrip() {
                 src={c.svg}
                 alt={c.name}
                 className="max-w-[100px] max-h-[32px] object-contain"
-                style={{ filter:'grayscale(90%)', opacity: 0.47 }}
+                style={{  opacity: 0.8 }}
               />
             </div>
           ))}
