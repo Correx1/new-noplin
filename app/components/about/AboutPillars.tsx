@@ -9,14 +9,14 @@ const pillars = [
     title: 'Solid',
     subtitle: 'Built to Last',
     body: 'Every deliverable is crafted for longevity, ensuring your business foundation is unshakeable.',
-    glow: '#1A56DB',
+    glow: '#F29E0B',
   },
   {
     Icon: Leaf,
     title: 'Sustainable',
     subtitle: 'Future-Proof',
     body: 'We design systems and solutions that endure across generations.',
-    glow: '#10B981',
+    glow: '#F29E0B',
   },
   {
     Icon: TrendingUp,
@@ -30,7 +30,7 @@ const pillars = [
     title: 'Systematic',
     subtitle: 'Efficiency Engineered',
     body: 'Smart, repeatable processes ensure maximum impact with minimal effort.',
-    glow: '#8B5CF6',
+    glow: '#F29E0B',
   },
 ];
 
@@ -64,9 +64,9 @@ export default function AboutPillars() {
           <path d="M140 0 C 560 200, 740 560, 1080 800" stroke="url(#curveGrad)" strokeWidth="2" opacity="0.5" />
         </svg>
 
-        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-amber-500/15 blur-3xl" />
         <div className="absolute left-[62%] top-[46%] h-36 w-36 rounded-full bg-blue-500/15 blur-[80px]" />
-        <div className="absolute left-[42%] top-[78%] h-24 w-24 rounded-full bg-cyan-400/15 blur-2xl" />
+        <div className="absolute left-[42%] top-[78%] h-24 w-24 rounded-full bg-amber-500/15 blur-2xl" />
       </div>
 
       {/* Content */}
@@ -81,9 +81,9 @@ export default function AboutPillars() {
           className="mb-14 text-center sm:mb-16"
         >
           <div className="mb-4">
-                  <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+                  <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-amber-500 w-fit uppercase">
   Our foundation
-  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-1/2 -translate-x-1/2"></span>
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-amber-600 left-1/2 -translate-x-1/2"></span>
 </span>
           </div>
           <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold leading-tight text-white">
@@ -111,7 +111,7 @@ export default function AboutPillars() {
               
               <div className="relative z-10 flex-1">
                 <h3 className="font-display text-xl font-bold text-white lg:text-2xl">{p.title}</h3>
-                <p className="mt-1 font-body text-[13px] font-semibold uppercase tracking-wide text-cyan-300/90">
+                <p className="mt-1 font-body text-[13px] font-semibold uppercase tracking-wide text-amber-500/90">
                   {p.subtitle}
                 </p>
                 <p className="mt-3 font-body text-[15px] leading-relaxed text-slate-300">

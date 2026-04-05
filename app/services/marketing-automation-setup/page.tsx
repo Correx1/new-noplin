@@ -20,7 +20,7 @@ export default function ServicePage() {
     title: "Multi-Trigger Automation Blueprints",
     description: "Complex Zapier or Make scenarios linking your disparate SaaS tools into one automated system—triggered by lead form submissions, payment events, or user behavior.",
     icon: "gear",
-    color: "orange"
+    color: "amber"
   },
   {
     title: "Error Handling & Fallback Logic",

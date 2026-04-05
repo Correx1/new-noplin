@@ -12,7 +12,7 @@ export default function FAQ({ faqs }: FAQProps) {
     <section className="py-16 bg-(--bg-section)">
       <div className="max-w-3xl mx-auto px-6">
         <div className="flex flex-col items-center text-center gap-3 mb-12">
-          <span className="font-display text-[11px] font-semibold tracking-[0.14em] uppercase text-cyan-400">
+          <span className="font-display text-[11px] font-semibold tracking-[0.14em] uppercase text-amber-500">
             FAQ
           </span>
           <h2 className="font-display font-bold text-(--text-primary) text-[clamp(1.75rem,4vw,2.5rem)] leading-tight">
@@ -35,13 +35,13 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         onClick={() => setOpen(v => !v)}
         className="flex w-full items-center justify-between py-5 text-left gap-4 group"
       >
-        <span className="font-display font-semibold text-[15px] text-(--text-primary) group-hover:text-cyan-400 transition-colors duration-200">
+        <span className="font-display font-semibold text-[15px] text-(--text-primary) group-hover:text-amber-500 transition-colors duration-200">
           {q}
         </span>
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.2 }}
-          className="shrink-0 w-7 h-7 rounded-full border border-(--border-default) flex items-center justify-center text-(--text-muted) group-hover:border-cyan-400 group-hover:text-cyan-400 transition-colors duration-200"
+          className="shrink-0 w-7 h-7 rounded-full border border-(--border-default) flex items-center justify-center text-(--text-muted) group-hover:border-amber-500 group-hover:text-amber-500 transition-colors duration-200"
         >
           <Plus size={14} />
         </motion.span>

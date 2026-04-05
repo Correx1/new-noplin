@@ -27,7 +27,7 @@ export default function AboutTeam() {
 
       {/* ── Decorative background grid ── */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line-color)_1px,transparent_1px)] bg-[size:48px_48px] opacity-50" />
-      <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-px w-2/3 bg-linear-to-r from-transparent via-cyan/60 to-transparent" />
+      <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-px w-2/3 bg-linear-to-r from-transparent via-amber/60 to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-6">
 
@@ -42,7 +42,7 @@ export default function AboutTeam() {
             transition={{ duration: 0.5, ease: EASE }}
             className="mb-12 flex items-center gap-4"
           >
-            <span className="h-px flex-1 max-w-[60px] bg-cyan-500/50" />
+            <span className="h-px flex-1 max-w-[60px] bg-amber-500/50" />
            
           </motion.div>
 
@@ -57,8 +57,8 @@ export default function AboutTeam() {
               className="relative mx-auto w-72 sm:w-80 lg:w-88"
             >
               {/* Corner accents */}
-              <span className="absolute -left-3 -top-3 h-12 w-12 rounded-tl-2xl border-l-2 border-t-2 border-cyan-500" />
-              <span className="absolute -bottom-3 -right-3 h-12 w-12 rounded-br-2xl border-b-2 border-r-2 border-cyan-500" />
+              <span className="absolute -left-3 -top-3 h-12 w-12 rounded-tl-2xl border-l-2 border-t-2 border-amber-500" />
+              <span className="absolute -bottom-3 -right-3 h-12 w-12 rounded-br-2xl border-b-2 border-r-2 border-amber-500" />
 
               <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl">
                 <Image
@@ -82,12 +82,12 @@ export default function AboutTeam() {
             >
               <h2 className="text-5xl font-bold leading-[1.1] text-(--text-primary) sm:text-6xl">
                 Meet the<br />
-                <span className="text-cyan">Visionary</span>
+                <span className="text-amber-500">Visionary</span>
               </h2>
 
               <div>
                 <p className="font-semibold text-2xl  text-(--text-primary)">{ceo.name}</p>
-                <p className="mt-1 font-semibold text-[11px] uppercase tracking-widest text-cyan">
+                <p className="mt-1 font-semibold text-[11px] uppercase tracking-widest text-amber-500">
                   {ceo.role}
                 </p>
               </div>
@@ -107,7 +107,7 @@ export default function AboutTeam() {
                     key={label}
                     href="#"
                     aria-label={label}
-                    className="group flex h-11 w-11 items-center justify-center rounded-full border border-zinc-300 text-zinc-500 transition-all duration-300 hover:border-cyan-500 hover:bg-cyan-500/10 hover:text-cyan-500"
+                    className="group flex h-11 w-11 items-center justify-center rounded-full border border-zinc-300 text-zinc-500 transition-all duration-300 hover:border-amber-500 hover:bg-amber-500/10 hover:text-amber-500"
                   >
                     <Icon size={17} />
                   </a>
@@ -128,9 +128,9 @@ export default function AboutTeam() {
         >
           <div>
             <div className="mb-4">
-                       <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+                       <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-amber-500 w-fit uppercase">
   Our Team
-  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-1/2 -translate-x-1/2"></span>
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-amber-600 left-1/2 -translate-x-1/2"></span>
 </span>
             </div>
             <h2 className=" text-4xl font-bold text-(--text-primary) sm:text-5xl">
@@ -151,8 +151,7 @@ export default function AboutTeam() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: i * 0.06, ease: EASE }}
-              className="w-[calc(50%-8px)] md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] group relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100 transition-all duration-500 hover:border-zinc-400"
-            >
+    className="w-[50%] md:w-[48%] lg:w-[30%] group relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100 transition-all duration-500 hover:border-zinc-400"            > 
               {/* Image */}
                <div className="relative aspect-4/5 overflow-hidden rounded-t-[15px]">
                 <Image
@@ -173,12 +172,12 @@ export default function AboutTeam() {
               </div> 
 
               {/* Hover arrow badge */}
-              <div className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-cyan opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
-                <ArrowUpRight size={13} className="text-navy" />
+              <div className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-amber-500 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
+                <ArrowUpRight size={13} className="text-gray-950" />
               </div>
 
-              {/* Top cyan line reveal */}
-              <span className="absolute left-0 top-0 h-[2px] w-0 bg-cyan transition-all duration-500 group-hover:w-full z-10" />
+              {/* Top amber line reveal */}
+              <span className="absolute left-0 top-0 h-[2px] w-0 bg-amber-500 transition-all duration-500 group-hover:w-full z-10" />
             </motion.div>
           ))}
         </div>

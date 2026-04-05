@@ -55,7 +55,7 @@ export default function PricingGrid() {
                         onClick={() => setActiveService(svc)}
                         className={`w-full text-left py-1.5 px-3 -ml-3 rounded-md text-[14px] transition-colors ${
                           activeService.name === svc.name
-                            ? 'bg-(--bg-card) text-electric font-medium'
+                            ? 'bg-(--bg-card) text-amber-500 font-medium'
                             : 'text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-card)'
                         }`}
                       >
@@ -123,7 +123,7 @@ export default function PricingGrid() {
                               }}
                               className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] transition-colors ${
                                 active
-                                  ? 'bg-electric/5 text-electric font-semibold'
+                                  ? 'bg-electric/5 text-amber-500 font-semibold'
                                   : 'hover:bg-(--bg-section) text-(--text-primary)'
                               }`}
                             >
@@ -189,7 +189,7 @@ export default function PricingGrid() {
                     <ul className="mt-6 flex flex-col gap-3.5">
                       {t.includes.map((f) => (
                         <li key={f} className="flex items-start gap-3">
-                          <span className="w-[18px] h-[18px] mt-0.5 bg-electric/10 text-electric rounded-full flex items-center justify-center">
+                          <span className="w-[18px] h-[18px] mt-0.5 bg-electric/10 text-amber-500 rounded-full flex items-center justify-center">
                             ✓
                           </span>
                           <span className="text-[15px]">{f}</span>

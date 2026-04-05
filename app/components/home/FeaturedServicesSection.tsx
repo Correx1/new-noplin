@@ -68,7 +68,7 @@ function ServiceItem({ s, i }: { s: typeof services[0]; i: number }) {
 
       <Link
         href={s.href}
-        className="font-display text-[14px] font-semibold text-amber-400 hover:text-amber-300 transition-colors w-fit mt-1"
+        className="font-display text-[14px] font-semibold text-amber-600 hover:text-amber-500 transition-colors w-fit mt-1"
       >
         Learn more →
       </Link>
@@ -78,7 +78,7 @@ function ServiceItem({ s, i }: { s: typeof services[0]; i: number }) {
 
 export default function FeaturedServicesSection() {
   return (
-    <section className="relative overflow-hidden bg-navy py-[140px] [clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <section className="relative overflow-hidden bg-gray-950 py-[140px] [clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       {/* === BACKGROUND ART === */}
       <div className="pointer-events-none absolute inset-0">
         {/* Curved glowing paths */}
@@ -118,18 +118,18 @@ export default function FeaturedServicesSection() {
         </svg>
 
         {/* Bubble anchors */}
-        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-amber-500/15 blur-3xl" />
         <div className="absolute left-[62%] top-[46%] h-36 w-36 rounded-full bg-blue-500/15 blur-[80px]" />
-        <div className="absolute left-[42%] top-[78%] h-24 w-24 rounded-full bg-cyan-400/15 blur-2xl" />
+        <div className="absolute left-[42%] top-[78%] h-24 w-24 rounded-full bg-amber-500/15 blur-2xl" />
       </div>
 
       {/* === CONTENT === */}
       <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-20">
         {/* LEFT */}
         <div className="lg:col-span-4 flex flex-col gap-6">
-          <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+          <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-amber-500 w-fit uppercase">
 More Services
-<span className="absolute  left-0 bottom-0 h-[2px] w-[50%] bg-cyan-600"></span></span>
+<span className="absolute  left-0 bottom-0 h-[2px] w-[50%] bg-amber-600"></span></span>
           
 
           <h2 className="font-display font-extrabold text-white text-[clamp(2.2rem,4vw,3.0rem)] leading-[1.1]">
@@ -162,7 +162,7 @@ More Services
           <div className="md:col-span-2">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white text-navy font-display font-semibold text-[14px] hover:bg-white/90 transition"
+              className="inline-flex items-center gap-2 px-6 py-2 rounded-lg bg-white text-navy font-display font-semibold text-[14px] hover:bg-white/90 transition"
             >
               View all services →
             </Link>

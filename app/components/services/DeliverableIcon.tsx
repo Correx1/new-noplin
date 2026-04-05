@@ -7,7 +7,7 @@ type IconType =
   | 'chart' | 'calendar' | 'brush' | 'shield' | 'cart' 
   | 'play' | 'pen' | 'star' | 'chat' | 'gear';
 
-type ColorVariant = 'purple' | 'green' | 'pink' | 'blue' | 'yellow' | 'orange';
+type ColorVariant = 'purple' | 'green' | 'pink' | 'blue' | 'yellow' | 'amber';
 
 interface DeliverableIconProps {
   type: IconType | string;
@@ -21,7 +21,7 @@ const colorMap: Record<ColorVariant, { primary: string, secondary: string }> = {
   pink: { primary: '#FFB4B4', secondary: '#F472B6' },
   blue: { primary: '#C1EFFF', secondary: '#60A5FA' },
   yellow: { primary: '#FDF7C3', secondary: '#FBBF24' },
-  orange: { primary: '#FFDEB4', secondary: '#F59E0B' },
+  amber: { primary: '#FFDEB4', secondary: '#F59E0B' },
 };
 
 const STROKE = "#3A3F58";

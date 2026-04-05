@@ -105,7 +105,7 @@ export default function ContactForm() {
           >
             {status === 'done' ? (
               <div className="flex flex-col items-center justify-center text-center gap-6 py-20 bg-(--bg-card) border border-(--border-card) rounded-2xl">
-                <div className="w-16 h-16 rounded-full bg-cyan-500/10 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-amber-500/10 flex items-center justify-center">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgb(6 182 212)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
                 <div>
@@ -114,7 +114,7 @@ export default function ContactForm() {
                     We&apos;ll review your brief and follow up within 2 hours.
                   </p>
                 </div>
-                <button onClick={() => setStatus('idle')} className="mt-2 text-cyan-500 hover:underline text-sm font-medium">
+                <button onClick={() => setStatus('idle')} className="mt-2 text-amber-500 hover:underline text-sm font-medium">
                   Submit another inquiry
                 </button>
               </div>
@@ -124,7 +124,7 @@ export default function ContactForm() {
 
                   {/* Personal Details */}
                   <div className="flex flex-col gap-8">
-                    <h3 className="text-[13px] font-bold tracking-widest uppercase text-cyan-500 pb-4 border-b border-(--border-card)">Personal Details</h3>
+                    <h3 className="text-[13px] font-bold tracking-widest uppercase text-amber-500 pb-4 border-b border-(--border-card)">Personal Details</h3>
                     <div className="grid sm:grid-cols-2 gap-8">
                       <FormField control={form.control} name="fullName" render={({ field }) => (
                         <FormItem>
@@ -161,7 +161,7 @@ export default function ContactForm() {
 
                   {/* Project Details */}
                   <div className="flex flex-col gap-8 mt-4">
-                    <h3 className="text-[13px] font-bold tracking-widest uppercase text-cyan-500 pb-4 border-b border-(--border-card)">Project Details</h3>
+                    <h3 className="text-[13px] font-bold tracking-widest uppercase text-amber-500 pb-4 border-b border-(--border-card)">Project Details</h3>
                     <FormField control={form.control} name="service" render={({ field }) => (
                       <FormItem>
                         <FormLabel>Primary Service *</FormLabel>
@@ -191,7 +191,7 @@ export default function ContactForm() {
                     <button
                       type="submit"
                       disabled={status === 'sending'}
-                      className={`inline-flex items-center gap-2.5 px-7 py-3 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold text-[14px] tracking-wide rounded-none transition-colors duration-200 ${status === 'sending' ? 'opacity-60 cursor-not-allowed' : ''}`}
+                      className={`btn-primary inline-flex items-center gap-2.5 px-7 py-3 bg-amber-500 hover:bg-amber-500 text-white font-semibold text-[14px] tracking-wide rounded-none transition-colors duration-200 ${status === 'sending' ? 'opacity-60 cursor-not-allowed' : ''}`}
                     >
                       {status === 'sending' ? 'Submitting…' : 'Submit Inquiry'}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -215,12 +215,12 @@ export default function ContactForm() {
               <p className="text-[11px] font-bold tracking-widest uppercase text-(--text-muted)">Reach Us Directly</p>
               <div className="flex flex-col gap-5">
                 <a href="mailto:hello@noplindigital.com" className="group flex items-center gap-4 border-b border-(--border-card) pb-5">
-                  <div className="w-10 h-10 flex items-center justify-center border border-(--border-card) rounded-full shrink-0 group-hover:border-cyan-500 group-hover:text-cyan-500 text-(--text-muted) transition-colors">
+                  <div className="w-10 h-10 flex items-center justify-center border border-(--border-card) rounded-full shrink-0 group-hover:border-amber-500 group-hover:text-amber-500 text-(--text-muted) transition-colors">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   </div>
                   <div>
                     <p className="text-[11px] uppercase tracking-widest text-(--text-muted) mb-0.5">Email</p>
-                    <p className="text-[15px] font-semibold text-(--text-primary) group-hover:text-cyan-500 transition-colors">hello@noplindigital.com</p>
+                    <p className="text-[15px] font-semibold text-(--text-primary) group-hover:text-amber-500 transition-colors">hello@noplindigital.com</p>
                   </div>
                 </a>
                 <div className="flex items-center gap-4 border-b border-(--border-card) pb-5">
@@ -246,8 +246,8 @@ export default function ContactForm() {
                 ].map(({ n, title, desc }) => (
                   <div key={n} className="flex gap-5 pb-7 last:pb-0">
                     <div className="flex flex-col items-center">
-                      <div className="w-8 h-8 rounded-full border-2 border-cyan-500 flex items-center justify-center shrink-0 bg-(--bg-page)">
-                        <span className="text-[10px] font-bold text-cyan-500">{n}</span>
+                      <div className="w-8 h-8 rounded-full border-2 border-amber-500 flex items-center justify-center shrink-0 bg-(--bg-page)">
+                        <span className="text-[10px] font-bold text-amber-500">{n}</span>
                       </div>
                       <div className="w-px flex-1 bg-(--border-card) mt-1" />
                     </div>
@@ -266,7 +266,7 @@ export default function ContactForm() {
               <div className="flex items-center gap-3">
                 {socials.map((s) => (
                   <Link key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
-                    className="w-10 h-10 flex items-center justify-center border border-(--border-card) rounded-full text-(--text-muted) hover:border-cyan-500 hover:text-cyan-500 transition-all duration-200"
+                    className="w-10 h-10 flex items-center justify-center border border-(--border-card) rounded-full text-(--text-muted) hover:border-amber-500 hover:text-amber-500 transition-all duration-200"
                   >
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d={s.icon}/></svg>
                   </Link>

@@ -5,17 +5,17 @@
 // ═══════════════════════════════════════════════════════════════════
 
 // ⚙️ CONFIGURATION — Update these before deploying
-const SHEET_ID   = "YOUR_GOOGLE_SHEET_ID_HERE";  // From the Sheet URL
+const SHEET_ID = "YOUR_GOOGLE_SHEET_ID_HERE"; // From the Sheet URL
 const SHEET_NAME = "Inquiries";
 const ADMIN_EMAIL = "hello@noplindigital.com";
-const SITE_NAME   = "Noplin Digital";
-const SITE_URL    = "https://noplindigital.com";
+const SITE_NAME = "Noplin Digital";
+const SITE_URL = "https://noplindigital.com";
 
 // ─── Brand Colors (Noplin Digital) ───────────────────────────────
-const CYAN    = "#06B6D4";
-const NAVY    = "#0D0D2B";
-const CYAN_BG = "#ECFEFF";
-const CYAN_MID = "#0E7490";
+const amber = "#06B6D4";
+const NAVY = "#0D0D2B";
+const amber_BG = "#ECFEFF";
+const amber_MID = "#0E7490";
 
 // ═══════════════════════════════════════════════════════════════════
 //  MAIN HANDLER — receives POST from /api/contact
@@ -34,22 +34,29 @@ function doPost(e) {
     }
 
     const fullName = data.fullName || data.name || "—";
-    const email    = data.email    || "—";
-    const company  = data.company  || "—";
-    const phone    = data.phone    || "—";
-    const service  = data.service  || "—";
-    const message  = data.message  || "—";
+    const email = data.email || "—";
+    const company = data.company || "—";
+    const phone = data.phone || "—";
+    const service = data.service || "—";
+    const message = data.message || "—";
 
     // ── 1. Write to Google Sheet ──────────────────────────────────
-    const sheet = SpreadsheetApp
-      .openById(SHEET_ID)
-      .getSheetByName(SHEET_NAME);
+    const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
 
     if (!sheet) throw new Error(`Sheet "${SHEET_NAME}" not found`);
 
     // Add header row if sheet is empty
     if (sheet.getLastRow() === 0) {
-      const headers = ["Timestamp", "Full Name", "Email", "Company", "Phone", "Service Requested", "Brief / Message", "Status"];
+      const headers = [
+        "Timestamp",
+        "Full Name",
+        "Email",
+        "Company",
+        "Phone",
+        "Service Requested",
+        "Brief / Message",
+        "Status",
+      ];
       sheet.appendRow(headers);
 
       // Style header row
@@ -72,14 +79,23 @@ function doPost(e) {
     }
 
     const timestamp = new Date();
-    const rowData   = [timestamp, fullName, email, company, phone, service, message, "New"];
+    const rowData = [
+      timestamp,
+      fullName,
+      email,
+      company,
+      phone,
+      service,
+      message,
+      "New",
+    ];
     sheet.appendRow(rowData);
 
-    // Style the new data row with cyan highlight on Status cell
-    const newRow      = sheet.getLastRow();
-    const statusCell  = sheet.getRange(newRow, 8);
-    statusCell.setBackground(CYAN_BG);
-    statusCell.setFontColor(CYAN_MID);
+    // Style the new data row with amber highlight on Status cell
+    const newRow = sheet.getLastRow();
+    const statusCell = sheet.getRange(newRow, 8);
+    statusCell.setBackground(amber_BG);
+    statusCell.setFontColor(amber_MID);
     statusCell.setFontWeight("bold");
 
     // Zebra stripe for readability
@@ -91,18 +107,16 @@ function doPost(e) {
     sendConfirmationEmail(fullName, email, company, service, message);
     sendAdminNotification(fullName, email, company, phone, service, message);
 
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: true, message: "Inquiry received!" }))
-      .setMimeType(ContentService.MimeType.JSON);
-
+    return ContentService.createTextOutput(
+      JSON.stringify({ success: true, message: "Inquiry received!" }),
+    ).setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
     Logger.log("doPost error: " + err.toString());
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: false, error: err.toString() }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return ContentService.createTextOutput(
+      JSON.stringify({ success: false, error: err.toString() }),
+    ).setMimeType(ContentService.MimeType.JSON);
   }
 }
-
 
 // ═══════════════════════════════════════════════════════════════════
 //  EMAIL 1 — Confirmation to the client
@@ -130,7 +144,7 @@ function sendConfirmationEmail(fullName, email, company, service, message) {
     margin: 32px auto;
     background: #ffffff;
     border: 1px solid #e4e4e7;
-    border-top: 4px solid ${CYAN};
+    border-top: 4px solid ${amber};
   }
   .header {
     background-color: ${NAVY};
@@ -144,7 +158,7 @@ function sendConfirmationEmail(fullName, email, company, service, message) {
     letter-spacing: -0.5px;
   }
   .logo-dot {
-    color: ${CYAN};
+    color: ${amber};
   }
   .tagline {
     font-size: 12px;
@@ -171,7 +185,7 @@ function sendConfirmationEmail(fullName, email, company, service, message) {
   .summary-box {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-left: 4px solid ${CYAN};
+    border-left: 4px solid ${amber};
     padding: 20px 24px;
     margin: 28px 0;
     border-radius: 0 4px 4px 0;
@@ -181,7 +195,7 @@ function sendConfirmationEmail(fullName, email, company, service, message) {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: ${CYAN_MID};
+    color: ${amber_MID};
     margin-bottom: 14px;
   }
   .summary-row {
@@ -200,7 +214,7 @@ function sendConfirmationEmail(fullName, email, company, service, message) {
   .summary-value { color: #52525b; }
   .message-block {
     background: #f4f4f5;
-    border-left: 3px solid ${CYAN};
+    border-left: 3px solid ${amber};
     padding: 16px 20px;
     margin: 20px 0;
     font-size: 14px;
@@ -214,7 +228,7 @@ function sendConfirmationEmail(fullName, email, company, service, message) {
   }
   .cta-btn {
     display: inline-block;
-    background-color: ${CYAN};
+    background-color: ${amber};
     color: #ffffff !important;
     text-decoration: none;
     padding: 14px 36px;
@@ -241,7 +255,7 @@ function sendConfirmationEmail(fullName, email, company, service, message) {
   }
   .footer-role {
     font-size: 12px;
-    color: ${CYAN};
+    color: ${amber};
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 600;
@@ -299,7 +313,7 @@ function sendConfirmationEmail(fullName, email, company, service, message) {
 
     <p class="text" style="font-size:13px; color:#71717a;">
       If you have any immediate questions, reply to this email or reach us at
-      <a href="mailto:${ADMIN_EMAIL}" style="color:${CYAN};">${ADMIN_EMAIL}</a>.
+      <a href="mailto:${ADMIN_EMAIL}" style="color:${amber};">${ADMIN_EMAIL}</a>.
     </p>
   </div>
 
@@ -329,11 +343,17 @@ function sendConfirmationEmail(fullName, email, company, service, message) {
   }
 }
 
-
 // ═══════════════════════════════════════════════════════════════════
 //  EMAIL 2 — Admin notification (to you)
 // ═══════════════════════════════════════════════════════════════════
-function sendAdminNotification(fullName, email, company, phone, service, message) {
+function sendAdminNotification(
+  fullName,
+  email,
+  company,
+  phone,
+  service,
+  message,
+) {
   const subject = `🔔 New Inquiry: ${fullName} — ${service}`;
 
   const html = `
@@ -354,7 +374,7 @@ function sendAdminNotification(fullName, email, company, phone, service, message
     margin: 32px auto;
     background: #ffffff;
     border: 1px solid #e4e4e7;
-    border-top: 4px solid ${CYAN};
+    border-top: 4px solid ${amber};
   }
   .header {
     background: ${NAVY};
@@ -364,9 +384,9 @@ function sendAdminNotification(fullName, email, company, phone, service, message
     justify-content: space-between;
   }
   .logo { font-size: 18px; font-weight: 700; color: #fff; }
-  .logo span { color: ${CYAN}; }
+  .logo span { color: ${amber}; }
   .badge {
-    background: ${CYAN};
+    background: ${amber};
     color: #fff;
     font-size: 11px;
     font-weight: 700;
@@ -375,11 +395,11 @@ function sendAdminNotification(fullName, email, company, phone, service, message
     text-transform: uppercase;
   }
   .alert-bar {
-    background: ${CYAN_BG};
+    background: ${amber_BG};
     border-bottom: 1px solid #a5f3fc;
     padding: 14px 40px;
     font-size: 14px;
-    color: ${CYAN_MID};
+    color: ${amber_MID};
     font-weight: 600;
   }
   .body { padding: 36px 40px; }
@@ -388,10 +408,10 @@ function sendAdminNotification(fullName, email, company, phone, service, message
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: ${CYAN_MID};
+    color: ${amber_MID};
     margin-bottom: 12px;
     padding-bottom: 8px;
-    border-bottom: 2px solid ${CYAN_BG};
+    border-bottom: 2px solid ${amber_BG};
   }
   .info-grid {
     margin-bottom: 28px;
@@ -413,7 +433,7 @@ function sendAdminNotification(fullName, email, company, phone, service, message
   .message-block {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-left: 4px solid ${CYAN};
+    border-left: 4px solid ${amber};
     padding: 20px 24px;
     font-size: 14px;
     color: #3f3f46;
@@ -429,7 +449,7 @@ function sendAdminNotification(fullName, email, company, phone, service, message
   }
   .btn-primary {
     display: inline-block;
-    background: ${CYAN};
+    background: ${amber};
     color: #ffffff !important;
     text-decoration: none;
     padding: 13px 28px;
@@ -441,8 +461,8 @@ function sendAdminNotification(fullName, email, company, phone, service, message
   .btn-secondary {
     display: inline-block;
     background: transparent;
-    border: 2px solid ${CYAN};
-    color: ${CYAN_MID} !important;
+    border: 2px solid ${amber};
+    color: ${amber_MID} !important;
     text-decoration: none;
     padding: 11px 28px;
     font-weight: 700;
@@ -488,7 +508,7 @@ function sendAdminNotification(fullName, email, company, phone, service, message
       </div>
       <div class="info-row">
         <span class="info-label">Email</span>
-        <span class="info-value"><a href="mailto:${email}" style="color:${CYAN};">${email}</a></span>
+        <span class="info-value"><a href="mailto:${email}" style="color:${amber};">${email}</a></span>
       </div>
       <div class="info-row">
         <span class="info-label">Company</span>
@@ -496,11 +516,11 @@ function sendAdminNotification(fullName, email, company, phone, service, message
       </div>
       <div class="info-row">
         <span class="info-label">Phone / WhatsApp</span>
-        <span class="info-value"><a href="tel:${phone}" style="color:${CYAN};">${phone}</a></span>
+        <span class="info-value"><a href="tel:${phone}" style="color:${amber};">${phone}</a></span>
       </div>
       <div class="info-row">
         <span class="info-label">Service Requested</span>
-        <span class="info-value" style="color:${CYAN_MID}; font-weight:600;">${service}</span>
+        <span class="info-value" style="color:${amber_MID}; font-weight:600;">${service}</span>
       </div>
       <div class="info-row">
         <span class="info-label">Submitted At</span>
@@ -513,13 +533,13 @@ function sendAdminNotification(fullName, email, company, phone, service, message
 
     <div class="action-row">
       <a href="mailto:${email}?subject=Re: Your Noplin Digital Inquiry" class="btn-primary">Reply to ${fullName}</a>
-      <a href="https://wa.me/${phone.replace(/\D/g,'')}" class="btn-secondary">WhatsApp</a>
+      <a href="https://wa.me/${phone.replace(/\D/g, "")}" class="btn-secondary">WhatsApp</a>
     </div>
 
   </div>
 
   <div class="meta-bar">
-    Submitted via the contact form at <a href="${SITE_URL}" style="color:${CYAN};">${SITE_URL}</a>
+    Submitted via the contact form at <a href="${SITE_URL}" style="color:${amber};">${SITE_URL}</a>
   </div>
 
   <div class="footer">
@@ -542,12 +562,11 @@ function sendAdminNotification(fullName, email, company, phone, service, message
   }
 }
 
-
 // ═══════════════════════════════════════════════════════════════════
 //  GET handler — health check (optional)
 // ═══════════════════════════════════════════════════════════════════
 function doGet() {
-  return ContentService
-    .createTextOutput(JSON.stringify({ status: "Noplin Digital contact handler is live." }))
-    .setMimeType(ContentService.MimeType.JSON);
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: "Noplin Digital contact handler is live." }),
+  ).setMimeType(ContentService.MimeType.JSON);
 }

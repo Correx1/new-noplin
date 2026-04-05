@@ -66,7 +66,7 @@ export default function TestimonialSection() {
     <section className="relative py-28 lg:py-36 bg-[#F8FAFC] overflow-hidden">
 
       {/* Soft Background Shapes */}
-      <div className="absolute -top-24 -left-24 w-80 h-80 bg-cyan-200/30 rounded-full blur-3xl"></div>
+      <div className="absolute -top-24 -left-24 w-80 h-80 bg-amber-200/30 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
@@ -103,7 +103,7 @@ export default function TestimonialSection() {
           {testimonials.map((t) => (
             <SwiperSlide key={t._id} className="h-full">
               <motion.div
-                whileHover={{ y: -5 }}
+               
                 className="h-full"
               >
                 <div className="h-[280px] flex flex-col justify-between rounded-xl bg-white p-6 shadow-md border border-gray-100">
@@ -124,7 +124,7 @@ export default function TestimonialSection() {
                         <div className="text-sm font-semibold text-gray-900">
                           {t.customerName}
                         </div>
-                        <div className="text-xs text-cyan-600">
+                        <div className="text-xs text-gray-700">
                           {t.role}
                         </div>
                       </div>
@@ -136,7 +136,7 @@ export default function TestimonialSection() {
                         <svg
                           key={i}
                           className={`w-4 h-4 ${
-                            i < t.rating ? "text-amber-400" : "text-gray-300"
+                            i < t.rating ? "text-amber-500" : "text-gray-300"
                           }`}
                           viewBox="0 0 24 24"
                           fill="currentColor"
@@ -154,7 +154,7 @@ export default function TestimonialSection() {
 
                   {/* Bottom Accent */}
                   <div className="mt-4 flex items-center justify-between">
-                    <div className="h-[2px] w-10 bg-cyan-500"></div>
+                    <div className="h-[2px] w-10 bg-amber-500"></div>
 
                     {/* Quote Icon */}
                     <svg

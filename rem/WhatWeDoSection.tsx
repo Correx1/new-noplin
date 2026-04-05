@@ -30,7 +30,7 @@
 //     href: '/services/web-design',
 //     tags: ['Web Design', 'Web Apps', 'E-Commerce', 'MVP Dev'],
 //     accent: '#06B6D4',
-//     accentClass: 'text-cyan-500',
+//     accentClass: 'text-amber-500',
 //     imgBig: '/portfolio/site.png',
    
 //   },
@@ -195,7 +195,7 @@
 //           className="flex flex-col items-center text-center gap-4 mb-20"
 //         >
 //           <span
-//             className="font-semibold text-[11px] tracking-[0.14em] uppercase text-cyan-500"
+//             className="font-semibold text-[11px] tracking-[0.14em] uppercase text-amber-500"
 //             style={{ fontFamily: 'var(--font-display)' }}
 //           >
 //             What We Do

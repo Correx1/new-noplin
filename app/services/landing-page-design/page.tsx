@@ -26,7 +26,7 @@ export default function ServicePage() {
     title: "Frictionless Conversion UI",
     description: "A stripped-down, laser-focused visual layout that removes competing navigation elements and channels 100% of visitor attention toward the primary call-to-action.",
     icon: "target",
-    color: "orange"
+    color: "amber"
   },
   {
     title: "Conversion Optimization Hooks",

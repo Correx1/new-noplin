@@ -41,7 +41,7 @@ export default function BlogGrid({ posts = [] }: { posts?: any[] }) {
                   {p.categories?.map((cat: string) => (
                     <span 
                       key={cat}
-                      style={{ color: categoryColors[cat] ?? 'var(--color-cyan)' }}
+                      style={{ color: categoryColors[cat] ?? 'var(--color-gray-900)' }}
                       className="px-2 py-1 bg-(--bg-page) rounded-sm border border-[var(--border-default)]  text-[10px] font-semibold  lowercase"
                     >
                       {cat}
@@ -50,7 +50,7 @@ export default function BlogGrid({ posts = [] }: { posts?: any[] }) {
                 </div>
                 
                 <h3 className=" font-bold text-[clamp(1.15rem,2vw,1.35rem)] text-(--text-primary) leading-[1.3]">
-                  <Link href={p.href} className="hover:text-cyan transition-colors duration-200">
+                  <Link href={p.href} className="hover:text-gray-700 transition-colors duration-200">
                     {p.title}
                   </Link>
                 </h3>
@@ -69,7 +69,7 @@ export default function BlogGrid({ posts = [] }: { posts?: any[] }) {
                   <span className="text-(--text-secondary)">{p.readTime || '5 min read'}</span>
                 </div>
 
-                <Link href={p.href} className="mt-3 font-semibold text-[13px]  text-cyan flex items-center gap-2 group/btn self-start transition-colors duration-200">
+                <Link href={p.href} className="mt-3 font-semibold text-[13px]  text-amber-500 flex items-center gap-2 group/btn self-start transition-colors duration-200">
                   Read More
                   <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
                 </Link>
@@ -95,7 +95,7 @@ export default function BlogGrid({ posts = [] }: { posts?: any[] }) {
             <div className="flex justify-center mt-6">
               <button 
                 onClick={() => setVisibleCount(v => v + 3)}
-                className="px-8 py-3 rounded-xl border border-[var(--border-default)] hover:border-electric hover:text-electric text-(--text-primary) font-semibold font-semibold transition-all duration-200 text-sm bg-(--bg-card) shadow-sm flex items-center gap-2 group"
+                className="px-8 py-3 rounded-xl border border-[var(--border-default)] hover:border-amber-500 hover:text-amber-500 text-(--text-primary) font-semibold transition-all duration-200 text-sm bg-(--bg-card) shadow-sm flex items-center gap-2 group"
               >
                 Load More Articles
                 <svg className="w-4 h-4 transition-transform group-hover:translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -110,8 +110,8 @@ export default function BlogGrid({ posts = [] }: { posts?: any[] }) {
         <div className="lg:col-span-4">
           <div className="sticky top-[100px] flex flex-col p-8 rounded-2xl border border-[var(--border-card)] bg-(--bg-card) shadow-sm">
             <div className="border-b border-[var(--border-card)] pb-5 mb-6 flex items-center gap-3">
-              <div className="w-2 h-2 rounded-full bg-electric" />
-              <h3 className="font-semibold font-bold text-[18px] text-(--text-primary)">
+              <div className="w-2 h-2 rounded-full bg-amber-500" />
+              <h3 className="font-semibold  text-[18px] text-(--text-primary)">
                 Other Available Articles
               </h3>
             </div>
@@ -121,12 +121,12 @@ export default function BlogGrid({ posts = [] }: { posts?: any[] }) {
                 <Link key={post.id} href={post.href} className="group flex flex-col gap-2">
                   <div className="flex flex-wrap gap-1">
                     {post.categories?.slice(0, 2).map((cat: string) => (
-                      <span key={cat} className="font-semibold font-semibold text-[10px] tracking-widest uppercase" style={{ color: categoryColors[cat] ?? 'var(--color-cyan)' }}>
+                      <span key={cat} className=" font-semibold text-[10px] tracking-widest uppercase" style={{ color: categoryColors[cat] ?? 'var(--color-amber)' }}>
                         {cat}
                       </span>
                     ))}
                   </div>
-                  <h4 className="font-semibold font-semibold text-[15px] text-(--text-primary) leading-[1.4] transition-colors duration-200 group-hover:text-electric">
+                  <h4 className=" font-semibold text-[15px] text-(--text-primary) leading-[1.4] transition-colors duration-200 group-hover:text-gray-700">
                     {post.title}
                   </h4>
                 </Link>

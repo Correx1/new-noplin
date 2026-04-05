@@ -14,7 +14,7 @@ export default function PricingCallouts() {
     },
     { 
       Icon: Package, 
-      glow: 'var(--cyan)', 
+      glow: 'var(--amber)', 
       title: 'Bundle & Save', 
       body: 'Combine multiple services (e.g. Identity + Web + SEO) for custom bundle pricing. Most clients save 10–20%.',              
       cta: 'Ask About Bundles' 

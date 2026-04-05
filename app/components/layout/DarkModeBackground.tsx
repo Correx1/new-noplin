@@ -47,9 +47,9 @@ export default function DarkModeBackground() {
         <path d="M1080 20 C 640 240, 460 600, 80 780" stroke="url(#dmCurveGrad)" strokeWidth="1.5" opacity="0.3" />
       </svg>
 
-      <div className="absolute left-[16%] top-[18%] h-32 w-32 rounded-full bg-cyan-400/8 blur-3xl" />
+      <div className="absolute left-[16%] top-[18%] h-32 w-32 rounded-full bg-amber-500/8 blur-3xl" />
       <div className="absolute left-[62%] top-[46%] h-40 w-40 rounded-full bg-blue-500/8 blur-[80px]" />
-      <div className="absolute left-[42%] top-[78%] h-28 w-28 rounded-full bg-cyan-400/8 blur-2xl" />
+      <div className="absolute left-[42%] top-[78%] h-28 w-28 rounded-full bg-amber-500/8 blur-2xl" />
       <div className="absolute right-[10%] top-[8%] h-44 w-44 rounded-full bg-blue-600/6 blur-[100px]" />
     </div>
   );

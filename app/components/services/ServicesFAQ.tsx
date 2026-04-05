@@ -43,13 +43,13 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         onClick={() => setOpen((v) => !v)} 
         className="flex w-full items-center justify-between py-6 text-left group transition-colors"
       >
-        <span className="font-semibold font-semibold text-[16px] text-(--text-primary) group-hover:text-electric transition-colors">
+        <span className="font-semibold font-semibold text-[16px] text-(--text-primary) group-hover:text-amber-500 transition-colors">
           {q}
         </span>
         <motion.div 
           animate={{ rotate: open ? 45 : 0 }} 
           transition={{ duration: 0.2 }} 
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-(--bg-card) border border-[var(--border-card)] shrink-0 ml-4 group-hover:bg-electric/10 group-hover:border-electric/30 group-hover:text-electric transition-colors"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-(--bg-card) border border-[var(--border-card)] shrink-0 ml-4 group-hover:bg-electric/10 group-hover:border-electric/30 group-hover:text-amber-500 transition-colors"
         >
           <span className="text-[20px] leading-none mb-0.5" style={{ color: 'inherit' }}>+</span>
         </motion.div>
@@ -79,9 +79,9 @@ export default function ServicesFAQ() {
       <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-start">
         <div className="md:w-1/3 shrink-0">
           <div className="mb-6">
-            <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+            <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-amber-500 w-fit uppercase">
 FAQ
-<span className="absolute left-0 bottom-0 h-[2px] w-[50%] bg-cyan-600"></span></span>
+<span className="absolute left-0 bottom-0 h-[2px] w-[50%] bg-amber-600"></span></span>
           </div>
           <h2 className=" font-bold text-[36px] text-(--text-primary) leading-tight tracking-tight">
             Common <br className="hidden md:block"/> Questions

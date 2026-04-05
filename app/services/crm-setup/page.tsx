@@ -32,7 +32,7 @@ export default function ServicePage() {
     title: "Automated Lifecycle Workflows",
     description: "Intelligent background triggers that automatically send follow-up emails, assign tasks to reps, or alert managers when a high-value deal goes cold.",
     icon: "chart",
-    color: "orange"
+    color: "amber"
   }
 ]}
       whoItsFor="Perfect for businesses, founders, and ambitious teams looking to establish a dominant presence and scale operations with top-tier CRM Setup."

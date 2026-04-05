@@ -5,8 +5,8 @@ import { Target, Globe } from 'lucide-react';
 import { EASE, IconBox } from './AboutShared';
 
 const missionVision = [
-  { label: 'Mission', Icon: Target, glow: '#1A56DB', text: 'Deliver exceptional design, content, and marketing solutions to businesses worldwide — with speed, honesty, and results-first thinking.' },
-  { label: 'Vision',  Icon: Globe,  glow: '#06B6D4', text: 'Become a globally recognized billion-dollar digital services company rooted in African excellence.' },
+  { label: 'Mission', Icon: Target, glow: '#fbbf24', text: 'Deliver exceptional design, content, and marketing solutions to businesses worldwide — with speed, honesty, and results-first thinking.' },
+  { label: 'Vision',  Icon: Globe,  glow: '#fbbf24', text: 'Become a globally recognized billion-dollar digital services company rooted in African excellence.' },
 ];
 
 export default function AboutStoryAndPurpose() {
@@ -23,9 +23,9 @@ export default function AboutStoryAndPurpose() {
             className="flex flex-col gap-2"
           >
             <div className="flex flex-col gap-2">
-       <span className="relative inline-flex items-center text-[13px] font-semibold py-1 tracking-widest text-cyan-500 w-fit uppercase">
+       <span className="relative inline-flex items-center text-[13px] font-semibold py-1 tracking-widest text-amber-500 w-fit uppercase">
   Who we are 
-  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-0 translate-x-0"></span>
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-amber-600 left-0 translate-x-0"></span>
 </span>
               <h2 className="font-display font-bold text-[clamp(1.5rem,4vw,2.75rem)] text-(--text-primary) leading-[1.15]">Built Differently.<br/>Built for Results.</h2>
             </div>
@@ -43,9 +43,9 @@ export default function AboutStoryAndPurpose() {
           {/* Right: Our Purpose */}
           <div className="flex flex-col gap-2">
             <div className="flex flex-col gap-2">
-       <span className="relative inline-flex items-center text-[13px] font-semibold py-1 tracking-widest text-cyan-500 w-fit uppercase">
+       <span className="relative inline-flex items-center text-[13px] font-semibold py-1 tracking-widest text-amber-500 w-fit uppercase">
 The goal
-  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-0 translate-x-0"></span>
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-amber-600 left-0 translate-x-0"></span>
 </span>              <h2 className="font-display font-bold text-[clamp(1.5rem,3vw,2.25rem)] text-(--text-primary) leading-[1.15]">Mission & Vision</h2>
             </div>
             
@@ -58,7 +58,7 @@ The goal
                     <IconBox Icon={item.Icon} glow={item.glow} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="font-display font-semibold text-[13px] uppercase tracking-widest" style={{ color: item.glow }}>{item.label}</p>
+                    <p className="font-display text-[15px] capitalize  font-bold text-gray-900" >{item.label}</p>
                     <p className="font-(--font-body) text-[15px] text-(--text-secondary) leading-[1.6]">{item.text}</p>
                   </div>
                 </motion.div>

@@ -13,7 +13,7 @@ export function SectionHeader({ eyebrow, headline, sub }: { eyebrow: string; hea
       transition={{ duration: 0.55, ease: EASE }}
       className="flex flex-col items-center text-center gap-3 mb-14"
     >
-      <span className="font-semibold font-semibold text-[11px] tracking-[0.14em] uppercase text-electric">{eyebrow}</span>
+      <span className="font-semibold font-semibold text-[11px] tracking-[0.14em] uppercase text-amber-500">{eyebrow}</span>
       <h2 className="font-semibold font-bold text-[clamp(1.5rem,4vw,2.75rem)] text-(--text-primary) leading-[1.15]">{headline}</h2>
       {sub && <p className="font-(--font-body) text-[18px] text-(--text-secondary) max-w-[560px]">{sub}</p>}
     </motion.div>

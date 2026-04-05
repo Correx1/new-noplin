@@ -69,9 +69,14 @@ export default function WhyNoplinSection() {
                 >
 
                   {/* Icon Box (Strong Contrast) */}
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-md shrink-0">
-                    <item.Icon size={20} color="white" strokeWidth={2} />
-                  </div>
+               <div className="w-12 h-12 rounded-xl 
+  bg-gradient-to-br from-amber-500 to-amber-600 
+  flex items-center justify-center 
+  shadow-[0_4px_14px_rgba(251,191,36,0.15)] 
+  shrink-0"
+>
+  <item.Icon size={20} color="white" strokeWidth={2} />
+</div>
 
                   {/* Content */}
                   <div className="flex flex-col gap-2">

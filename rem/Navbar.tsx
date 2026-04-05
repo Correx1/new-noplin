@@ -134,7 +134,7 @@ export default function Navbar() {
                       <div className="grid grid-cols-4 gap-8">
                         {megaMenu.map((col) => (
                           <div key={col.heading}>
-                            <p className="mb-3 text-xs uppercase tracking-widest text-electric font-semibold">
+                            <p className="mb-3 text-xs uppercase tracking-widest text-amber-500 font-semibold">
                               {col.heading}
                             </p>
                             <ul className="space-y-1.5">
@@ -145,12 +145,12 @@ export default function Navbar() {
                                     onClick={() => setMegaOpen(false)}
                                     className={`flex items-center gap-2 px-3 py-2 -ml-3 rounded-lg text-[15px] font-medium transition-colors duration-150 group ${
                                       pathname === svc.href
-                                        ? 'text-electric bg-(--bg-card)'
-                                        : 'text-(--text-secondary) hover:text-electric hover:bg-(--bg-card)'
+                                        ? 'text-amber-500 bg-(--bg-card)'
+                                        : 'text-(--text-secondary) hover:text-amber-500 hover:bg-(--bg-card)'
                                     }`}
                                   >
                                     <span className={`w-1.5 h-1.5 rounded-full shrink-0 transition-colors ${
-                                      pathname === svc.href ? 'bg-cyan' : 'bg-transparent group-hover:bg-cyan'
+                                      pathname === svc.href ? 'bg-amber' : 'bg-transparent group-hover:bg-amber'
                                     }`} />
                                     {svc.label}
                                   </Link>
@@ -167,7 +167,7 @@ export default function Navbar() {
                           Not sure what you need?{' '}
                           <Link
                             href="/contact"
-                            className="text-electric hover:text-cyan hover:underline transition-colors"
+                            className="text-amber-500 hover:text-amber hover:underline transition-colors"
                             onClick={() => setMegaOpen(false)}
                           >
                             Lets talk →
@@ -175,7 +175,7 @@ export default function Navbar() {
                         </p>
                         <Link
                           href="/services"
-                          className="text-xs font-semibold text-electric hover:text-cyan transition-colors"
+                          className="text-xs font-semibold text-amber-500 hover:text-amber transition-colors"
                           onClick={() => setMegaOpen(false)}
                         >
                           View all services →
@@ -208,7 +208,7 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <Link
                 href="/contact"
-                className="hidden lg:inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white rounded-lg transition-all duration-200 bg-electric hover:bg-cyan shadow-md"
+                className="hidden lg:inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white rounded-lg transition-all duration-200 bg-electric hover:bg-amber shadow-md"
               >
                 Get a Free Quote
               </Link>
@@ -296,7 +296,7 @@ export default function Navbar() {
                                 onClick={() => setMobileOpen(false)}
                                 className="flex items-center gap-3 py-2.5 pl-6 text-sm text-(--text-secondary) hover:text-(--text-primary) transition-colors border-b border-(--border-card) last:border-0"
                               >
-                                <span className="w-1.5 h-1.5 rounded-full bg-cyan shrink-0" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-amber shrink-0" />
                                 {svc.label}
                               </Link>
                             </li>
@@ -315,7 +315,7 @@ export default function Navbar() {
                         href={link.href}
                         onClick={() => setMobileOpen(false)}
                         className={`py-3 text-[18px] font-medium transition-colors border-b border-(--border-default) font-display ${
-                          isActive ? 'text-electric' : 'text-(--text-primary) hover:text-electric'
+                          isActive ? 'text-amber-500' : 'text-(--text-primary) hover:text-amber-500'
                         }`}
                       >
                         {link.label}
@@ -329,7 +329,7 @@ export default function Navbar() {
                   <Link
                     href="/contact"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center justify-center w-full py-3.5 text-[15px] text-white rounded-xl transition-all bg-electric hover:bg-cyan shadow-md font-(--font-display)"
+                    className="flex items-center justify-center w-full py-3.5 text-[15px] text-white rounded-xl transition-all bg-electric hover:bg-amber shadow-md font-(--font-display)"
                   >
                     Get a Free Quote
                   </Link>

@@ -37,7 +37,7 @@ export default function PricingPageClient() {
             className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 sm:gap-12"
           >
             <div className="flex flex-col items-center text-center sm:items-start sm:text-left gap-2 flex-1">
-              <span className="font-display text-[10px] font-semibold tracking-[0.16em] uppercase text-cyan-400">
+              <span className="font-display text-[10px] font-semibold tracking-[0.16em] uppercase text-amber-500">
                 Get started
               </span>
               <h2 className="font-display font-bold text-white text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.15]">

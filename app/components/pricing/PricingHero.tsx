@@ -37,7 +37,7 @@ export default function PricingHero() {
           transition={{ duration: 0.7, ease: EASE }}
           className="mb-16 w-full max-w-3xl"
         >
-          <span className="font-display text-[11px] font-semibold tracking-[0.14em] uppercase text-cyan-400 mb-4 block">
+          <span className="font-display text-[11px] font-semibold tracking-[0.14em] uppercase text-amber-500 mb-4 block">
             Pricing Plans
           </span>
           <h1 className="font-display font-bold text-[clamp(2.5rem,5vw,4rem)] leading-[1.05] tracking-tight text-(--text-primary) m-0">

@@ -26,7 +26,7 @@ export default function ServicePage() {
     title: "Custom Webhook Architecture",
     description: "Precisely crafted webhook listeners and event handlers capturing real-time data exchanges between your platforms without data loss or duplication.",
     icon: "gear",
-    color: "orange"
+    color: "amber"
   },
   {
     title: "Error Handling & Fallback Logic",

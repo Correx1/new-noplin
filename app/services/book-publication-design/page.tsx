@@ -20,7 +20,7 @@ export default function ServicePage() {
     title: "Striking Cover Design",
     description: "A brilliantly conceived, typography-rich exterior cover designed meticulously to stand out on crowded Amazon digital shelves and physical displays.",
     icon: "document",
-    color: "orange"
+    color: "amber"
   },
   {
     title: "Typeset Interior Layout",

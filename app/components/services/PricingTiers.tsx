@@ -31,7 +31,7 @@ export default function PricingTiers({ tiers }: PricingProps) {
           transition={{ duration: 0.6, ease: EASE }}
           className="flex flex-col items-center text-center gap-4 mb-20"
         >
-          <span className="font-semibold text-[11px] tracking-[0.14em] uppercase text-cyan-500">
+          <span className="font-semibold text-[11px] tracking-[0.14em] uppercase text-amber-500">
             Pricing
           </span>
 
@@ -59,7 +59,7 @@ export default function PricingTiers({ tiers }: PricingProps) {
                 hover:-translate-y-1
                 ${
                   tier.best
-                    ? 'bg-amber-500/5 border-amber-400/60 shadow-lg shadow-amber-500/10'
+                    ? 'bg-amber-500/5 border-amber-500/60 shadow-lg shadow-amber-500/10'
                     : 'bg-(--bg-card) border-[var(--border-card)] shadow-sm'
                 }
               `}
@@ -89,7 +89,7 @@ export default function PricingTiers({ tiers }: PricingProps) {
               <ul className="mt-4 flex flex-col gap-3 text-[15px] text-(--text-secondary)">
                 {tier.includes.map(point => (
                   <li key={point} className="flex items-start gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-500 shrink-0" />
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0" />
                     <span>{point}</span>
                   </li>
                 ))}
@@ -111,7 +111,7 @@ export default function PricingTiers({ tiers }: PricingProps) {
                 className={`btn mt-4 py-3 text-center transition-colors ${
                   tier.best
                     ? 'btn-primary'
-                    : 'bg-electric/10 text-electric hover:bg-electric hover:text-white'
+                    : 'bg-electric/10 text-amber-500 hover:bg-electric hover:text-white'
                 }`}
               >
                 Get Started →

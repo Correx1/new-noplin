@@ -62,11 +62,11 @@ export default function ComplementaryServices({ services }: Props) {
             >
               <Link
                 href={cs.url}
-                className="group flex flex-col md:flex-row md:items-center justify-between gap-6 py-8 md:py-10 border-b border-(--border-default) transition-colors hover:border-cyan-500/50"
+                className="group flex flex-col md:flex-row md:items-center justify-between gap-6 py-8 md:py-10 border-b border-(--border-default) transition-colors hover:border-amber-500/50"
               >
                 {/* Title */}
                 <div className="md:w-5/12">
-                  <h3 className="text-2xl lg:text-[28px] font-display font-bold text-(--text-primary) group-hover:text-cyan-400 transition-colors duration-300">
+                  <h3 className="text-2xl lg:text-[28px] font-display font-bold text-(--text-primary) group-hover:text-amber-500 transition-colors duration-300">
                     {cs.name}
                   </h3>
                 </div>
@@ -80,7 +80,7 @@ export default function ComplementaryServices({ services }: Props) {
                 
                 {/* Arrow Icon */}
                 <div className="md:w-2/12 flex justify-start md:justify-end">
-                  <div className="w-12 h-12 flex items-center justify-center border border-(--border-card) rounded-full text-(--text-secondary) group-hover:bg-cyan-500 group-hover:border-cyan-500 group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 flex items-center justify-center border border-(--border-card) rounded-full text-(--text-secondary) group-hover:bg-amber-500 group-hover:border-amber-500 group-hover:text-white transition-all duration-300">
                     <ArrowUpRight strokeWidth={2} size={20} className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                   </div>
                 </div>

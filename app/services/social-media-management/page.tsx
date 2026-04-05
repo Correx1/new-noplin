@@ -26,7 +26,7 @@ export default function ServicePage() {
     title: "Community Engagement Management",
     description: "Proactive daily interaction responding to comments, managing DMs, and strategically engaging with related industry accounts to compound organic reach.",
     icon: "chat",
-    color: "orange"
+    color: "amber"
   },
   {
     title: "Monthly Performance Analytics Report",

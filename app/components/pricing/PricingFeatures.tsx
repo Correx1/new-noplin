@@ -83,9 +83,9 @@ export default function PricingFeatures() {
           <path d="M140 0 C 560 200, 740 560, 1080 800" stroke="url(#pfCurveGrad)" strokeWidth="2" opacity="0.5" />
           <path d="M1080 20 C 640 240, 460 600, 80 780" stroke="url(#pfCurveGrad)" strokeWidth="1.5" opacity="0.25" />
         </svg>
-        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-amber-500/15 blur-3xl" />
         <div className="absolute left-[62%] top-[46%] h-36 w-36 rounded-full bg-blue-500/15 blur-[80px]" />
-        <div className="absolute left-[42%] top-[78%] h-24 w-24 rounded-full bg-cyan-400/10 blur-2xl" />
+        <div className="absolute left-[42%] top-[78%] h-24 w-24 rounded-full bg-amber-500/10 blur-2xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -95,7 +95,7 @@ export default function PricingFeatures() {
 
           {/* Left Text */}
           <div className="flex-1 max-w-[500px] w-full flex flex-col gap-6">
-            <span className="font-display text-[11px] font-semibold tracking-[0.14em] uppercase text-cyan-400">
+            <span className="font-display text-[11px] font-semibold tracking-[0.14em] uppercase text-amber-500">
               Enterprise
             </span>
             <h2 className="font-display font-bold text-white text-[clamp(2rem,4vw,3rem)] leading-tight">
@@ -122,7 +122,7 @@ export default function PricingFeatures() {
               className="bg-(--bg-card) border border-(--border-card) rounded-lg p-8 sm:p-10 shadow-(--shadow-card-theme) relative overflow-hidden"
             >
               {/* Subtle top glow inside card */}
-              <div className="pointer-events-none absolute -top-20 -right-20 h-40 w-40 rounded-full bg-cyan-400/10 blur-3xl" />
+              <div className="pointer-events-none absolute -top-20 -right-20 h-40 w-40 rounded-full bg-amber-500/10 blur-3xl" />
 
               <h3 className="font-display font-bold text-[22px] text-(--text-primary)">
                 Build your custom package
@@ -167,7 +167,7 @@ export default function PricingFeatures() {
                   'Post-launch maintenance protocols',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <div className="w-[18px] h-[18px] rounded-full bg-cyan-400/10 text-cyan-400 flex items-center justify-center shrink-0 mt-px">
+                    <div className="w-[18px] h-[18px] rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0 mt-px">
                       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
@@ -194,8 +194,8 @@ export default function PricingFeatures() {
               className="flex flex-col items-start"
             >
               {/* Icon box */}
-              <div className="text-cyan-400 mb-5 flex items-center justify-center p-3 rounded-xl bg-cyan-400/10 border border-cyan-400/20 w-12 h-12 relative">
-                <div className="absolute inset-0 bg-linear-to-br from-cyan-400/20 to-transparent rounded-xl opacity-60" />
+              <div className="text-amber-500 mb-5 flex items-center justify-center p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 w-12 h-12 relative">
+                <div className="absolute inset-0 bg-linear-to-br from-amber-500/20 to-transparent rounded-xl opacity-60" />
                 <div className="relative z-10">{feature.icon}</div>
               </div>
 

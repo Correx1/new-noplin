@@ -62,7 +62,7 @@ const portableTextComponents: PortableTextComponents = {
           href={href}
           target={isExternal ? '_blank' : undefined}
           rel={isExternal ? 'noopener noreferrer' : undefined}
-          className="text-cyan-500 underline underline-offset-2 decoration-cyan-500/40 hover:text-cyan-400 hover:decoration-cyan-400 transition-colors duration-200"
+          className="text-blue-500 underline underline-offset-2 decoration-blue-500/40 hover:text-blue-500 hover:decoration-blue-500 transition-colors duration-200"
         >
           {children}
         </a>
@@ -85,7 +85,7 @@ const portableTextComponents: PortableTextComponents = {
       <h4 className="text-[1.1rem] font-bold text-[#09090b] mt-6 mb-2" style={{ fontFamily: 'var(--font-display)' }}>{children}</h4>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-cyan-500 pl-5 my-8 italic text-[#52525b] text-[17px] leading-relaxed">{children}</blockquote>
+      <blockquote className="border-l-4 border-amber-500 pl-5 my-8 italic text-[#52525b] text-[17px] leading-relaxed">{children}</blockquote>
     ),
   },
 };
@@ -133,7 +133,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {post.categories?.map((cat: string) => (
                 <span 
                   key={cat}
-                  style={{ fontSize: '11px', fontFamily: 'var(--font-display)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: categoryColors[cat] ?? '#06B6D4' }}
+                  style={{ fontSize: '10px', fontFamily: 'var(--font-display)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: categoryColors[cat] ?? 'var(--color-gray-900)' }}
                   className="px-3 py-1 bg-gray-100 rounded-sm"
                 >
                   {cat}
@@ -203,7 +203,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="lg:col-span-4">
           <div className="sticky top-[100px] flex flex-col p-6 rounded-xl border border-gray-200 bg-gray-50 shadow-sm">
             <div className="border-b border-gray-200 pb-4 mb-6 flex items-center gap-3">
-              <div className="w-2 h-2 rounded-full bg-electric" />
+              <div className="w-2 h-2 rounded-full bg-amber-500" />
               <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px', color: '#09090b' }}>
                 Related Articles
               </h3>
@@ -214,12 +214,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <Link key={related.id} href={related.href} className="group flex flex-col gap-1.5 pb-5 border-b border-gray-100 last:border-0 last:pb-0">
                   <div className="flex flex-wrap gap-1 mb-1">
                     {related.categories?.slice(0, 2).map((cat: string) => (
-                      <span key={cat} style={{ fontSize: '10px', fontFamily: 'var(--font-display)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', color: categoryColors[cat] ?? '#06B6D4' }}>
-                        {cat}
-                      </span>
+                     <span 
+                  key={cat}
+                  style={{ fontSize: '10px', fontFamily: 'var(--font-display)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'capitalize', color: categoryColors[cat] ?? 'var(--color-gray-900)' }}
+                  className="px-3 py-1 bg-gray-100 rounded-sm"
+                >
+                  {cat}
+                </span>
                     ))}
                   </div>
-                  <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '15px', color: '#09090b', lineHeight: 1.4 }} className="transition-colors duration-200 group-hover:text-electric">
+                  <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '15px', color: '#09090b', lineHeight: 1.4 }} className="transition-colors duration-200 group-hover:text-gray-700">
                     {related.title}
                   </h4>
                   <div className="flex items-center gap-2 mt-1" style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: '#71717a' }}>
@@ -251,7 +255,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.125rem', color: '#09090b' }}>{post.author?.name || 'Noplin Digital Team'}</h4>
                <span style={{ fontFamily: 'var(--font-display)', fontSize: '12px', color: '#1A56DB', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Author</span>
                {post.author?.bio && (
-                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: '#52525b', lineHeight: 1.6 }} className="mt-3">
+                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-text-amber-500)', lineHeight: 1.6 }} className="mt-3">
                    {post.author.bio}
                  </p>
                )}

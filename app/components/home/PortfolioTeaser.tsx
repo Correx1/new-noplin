@@ -89,7 +89,7 @@ export default function PortfolioTeaser() {
                   {isActive && (
                     <motion.div
                       layoutId="mobileActiveTabPill"
-                      className="absolute inset-0 bg-cyan-500 rounded-md"
+                      className="absolute inset-0 bg-amber-500 rounded-md"
                       transition={{ type: 'spring', stiffness: 250, damping: 25 }}
                     />
                   )}
@@ -134,7 +134,7 @@ export default function PortfolioTeaser() {
                   className="flex items-end justify-between gap-4"
                 >
                   <div className="flex flex-col gap-1">
-                    <span className="font-display text-[10px] font-semibold uppercase tracking-widest text-cyan-400">
+                    <span className="font-display text-[10px] font-semibold uppercase tracking-widest text-amber-500">
                       {activeProject.category}
                     </span>
                     <h3 className="font-display font-bold text-xl text-white leading-tight">
@@ -144,7 +144,7 @@ export default function PortfolioTeaser() {
 
                   <Link
                     href={activeProject.href}
-                    className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-white hover:bg-cyan-400 transition-colors duration-300 shrink-0"
+                    className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-white hover:bg-amber-500 transition-colors duration-300 shrink-0"
                     aria-label={`View ${activeProject.title}`}
                   >
                     <ArrowRight size={18} strokeWidth={2.5} className="text-navy -rotate-45" />
@@ -160,7 +160,7 @@ export default function PortfolioTeaser() {
 
           {/* LEFT: Vertical tab menu */}
           <div className="col-span-4 flex flex-col relative">
-            <div className="absolute top-1/2 -left-20 w-32 h-64 bg-cyan-400/5 blur-3xl -translate-y-1/2 pointer-events-none" />
+            <div className="absolute top-1/2 -left-20 w-32 h-64 bg-amber-500/5 blur-3xl -translate-y-1/2 pointer-events-none" />
 
             <div className="flex flex-col border-l-2 border-slate-200 dark:border-slate-800">
               {projects.map((project, index) => {
@@ -174,7 +174,7 @@ export default function PortfolioTeaser() {
                     {isActive && (
                       <motion.div
                         layoutId="desktopActiveTabIndicator"
-                        className="absolute left-[-2px] inset-y-0 w-[2px] bg-cyan-500 z-10"
+                        className="absolute left-[-2px] inset-y-0 w-[2px] bg-amber-500 z-10"
                         initial={false}
                         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                       />
@@ -193,7 +193,7 @@ export default function PortfolioTeaser() {
                     <div
                       className={`flex items-center justify-center w-8 h-8 rounded-full border transition-all duration-300 shrink-0 ${
                         isActive
-                          ? 'border-cyan-500 text-cyan-500 scale-100 opacity-100 bg-cyan-500/10'
+                          ? 'border-amber-500 text-amber-500 scale-100 opacity-100 bg-amber-500/10'
                           : 'border-transparent text-transparent scale-50 opacity-0 group-hover:scale-75 group-hover:opacity-50 group-hover:text-gray-400 group-hover:border-gray-300'
                       }`}
                     >
@@ -259,7 +259,7 @@ export default function PortfolioTeaser() {
                     className="flex flex-col lg:flex-row lg:items-end justify-between gap-6"
                   >
                     <div className="flex flex-col gap-2 max-w-xl">
-                      <span className="font-display text-[11px] font-semibold uppercase tracking-widest text-cyan-400">
+                      <span className="font-display text-[11px] font-semibold uppercase tracking-widest text-amber-500">
                         {activeProject.category}
                       </span>
                       <h3 className="font-display font-bold text-2xl lg:text-3xl xl:text-4xl text-white leading-tight">
@@ -272,7 +272,7 @@ export default function PortfolioTeaser() {
 
                     <Link
                       href={activeProject.href}
-                      className="group/btn inline-flex items-center justify-center w-14 h-14 xl:w-16 xl:h-16 rounded-full bg-white hover:bg-cyan-400 transition-colors duration-300 shrink-0"
+                      className="group/btn inline-flex items-center justify-center w-14 h-14 xl:w-16 xl:h-16 rounded-full bg-white hover:bg-amber-500 transition-colors duration-300 shrink-0"
                       aria-label={`View ${activeProject.title}`}
                     >
                       <ArrowRight

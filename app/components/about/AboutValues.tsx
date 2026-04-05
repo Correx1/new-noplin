@@ -28,12 +28,12 @@ export default function AboutValues() {
           className="mb-20 flex flex-col gap-3"
         >
           <div className="flex items-center gap-3">
-            <span className="h-px w-12 bg-cyan-400" />
-            <p className="font-display text-[11px] font-semibold tracking-[0.14em] uppercase text-cyan-400">Our Culture</p>
+            <span className="h-px w-12 bg-amber-500" />
+            <p className="font-display text-[11px] font-semibold tracking-[0.14em] uppercase text-amber-500">Our Culture</p>
           </div>
           <h2 className="font-display font-bold text-[clamp(2rem,5vw,3.25rem)] text-(--text-primary) leading-tight max-w-lg">
             Values We<br />
-            <span className="text-cyan-400">Live By</span>
+            <span className="text-amber-500">Live By</span>
           </h2>
         </motion.div>
 
@@ -50,21 +50,21 @@ export default function AboutValues() {
             >
               {/* Number */}
               <div className="col-span-2 sm:col-span-1">
-                <span className="text-xs text-(--text-muted) group-hover:text-cyan-400 transition-colors duration-300">
+                <span className="text-xs text-(--text-muted) group-hover:text-amber-500 transition-colors duration-300">
                   {v.number}
                 </span>
               </div>
 
               {/* Title */}
               <div className="col-span-10 sm:col-span-4">
-                <h3 className="font-display font-bold text-2xl sm:text-3xl text-(--text-primary) group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
+                <h3 className="font-display font-bold text-2xl sm:text-3xl text-(--text-primary) group-hover:text-amber-500 transition-colors duration-300 leading-tight">
                   {v.title}
                 </h3>
               </div>
 
               {/* Divider line — visible on sm+ */}
               <div className="hidden sm:block sm:col-span-1">
-                <span className="block h-px w-full bg-[var(--border-default)] group-hover:bg-cyan/40 transition-colors duration-500" />
+                <span className="block h-px w-full bg-[var(--border-default)] group-hover:bg-amber/40 transition-colors duration-500" />
               </div>
 
               {/* Body */}
@@ -83,7 +83,7 @@ export default function AboutValues() {
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.3 }}
-          className="mt-2 h-px w-full origin-left bg-linear-to-r from-cyan/60 via-cyan/30 to-transparent"
+          className="mt-2 h-px w-full origin-left bg-linear-to-r from-amber/60 via-amber/30 to-transparent"
         />
 
       </div>

@@ -78,7 +78,7 @@ const DIM = '#64748B';
 /* ── Component ─────────────────────────────────────────────── */
 export default function Footer() {
   return (
-    <footer style={{ background: '#0A0A1F', borderTop: '1px solid rgba(26,86,219,0.15)' }}>
+    <footer style={{ background: '#030712', borderTop: '1px solid rgba(26,86,219,0.15)' }}>
       <div className="max-w-7xl mx-auto px-6 py-16">
 
         {/* ── Top row: brand (col-3) | two service super-groups (col-9) ── */}
@@ -110,7 +110,7 @@ export default function Footer() {
                 return (
                   <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="flex items-center justify-center w-8 h-8 rounded-lg border border-slate-400/20 text-slate-400 transition-colors hover:text-white hover:border-cyan-500/50 hover:bg-cyan-500/10"
+                    className="flex items-center justify-center w-8 h-8 rounded-lg border border-slate-400/20 text-slate-400 transition-colors hover:text-white hover:border-amber-500/50 hover:bg-amber-500/10"
                   >
                     <Icon size={15} />
                   </a>
@@ -121,7 +121,7 @@ export default function Footer() {
             {/* CTA */}
             <Link
               href="/contact"
-              className="mt-1 inline-flex items-center gap-1.5 text-[13px] font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+              className="mt-1 inline-flex items-center gap-1.5 text-[13px] font-semibold text-amber-500 hover:text-amber-300 transition-colors"
             >
               Get a free quote <ArrowRight size={13} />
             </Link>
@@ -144,8 +144,8 @@ export default function Footer() {
                   {group.categories.map((cat) => (
                     <div key={cat.heading}>
                       <p
-                        className="text-[10px] uppercase tracking-[0.14em] font-semibold mb-3"
-                        style={{ color: '#22D3EE', fontFamily: 'var(--font-display)' }}
+                        className="text-[10px] uppercase tracking-[0.14em] font-semibold mb-3 text-amber-500"
+                        
                       >
                         {cat.heading}
                       </p>

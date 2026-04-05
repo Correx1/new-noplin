@@ -15,15 +15,17 @@ const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 export default function ProcessSteps({ steps }: Props) {
   return (
-    <section className="bg-navy py-20 px-6">
+    <section className="bg-gray-950 py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <p className="text-electric text-xs uppercase tracking-widest mb-4 text-center md:text-left font-semibold">
-          HOW IT WORKS
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-16 text-center md:text-left tracking-tight">
-          Simple Process. Fast Results.
-        </h2>
+          {/* Header */}
+        <div className="flex flex-col items-center text-center gap-3 mb-14">
+           <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-amber-500 w-fit uppercase">
+  How it works
+<span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-[50%] bg-amber-600"></span></span>
+          <h2 className="font-display font-bold text-white text-[clamp(1.75rem,4vw,2.5rem)] leading-tight">
+            Simple Process. Fast Results.
+          </h2>
+        </div>
 
         {/* Steps */}
         <div className="relative">
@@ -52,8 +54,8 @@ export default function ProcessSteps({ steps }: Props) {
                 </span>
 
                 {/* Icon circle (step number) */}
-                <div className="relative z-10 w-12 h-12 rounded-full bg-electric/20 border border-electric/30 flex items-center justify-center mb-4">
-                  <span className="text-cyan font-bold">{s.step}</span>
+                <div className="relative z-10 w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center mb-4">
+                  <span className="text-amber-500 font-bold">{s.step}</span>
                 </div>
 
                 {/* Step title */}

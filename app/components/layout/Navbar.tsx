@@ -107,7 +107,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0D0D2B] border-b border-white/10">
+    <header className="sticky top-0 z-50 w-full bg-gray-950 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-[76px] flex items-center justify-between">
 
         {/* Logo */}
@@ -127,7 +127,7 @@ export default function Navbar() {
           >
             Home
             <motion.span
-              className="absolute bottom-0 left-4 right-4 h-[1.5px] bg-cyan-400 origin-left rounded-full"
+              className="absolute bottom-0 left-4 right-4 h-[1.5px] bg-amber-500 origin-left rounded-full"
               initial={{ scaleX: 0 }}
               whileHover={{ scaleX: 1 }}
               transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
@@ -161,12 +161,12 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.18 }}
-                  className="absolute left-1/2 -translate-x-1/2 mt-3 w-[1100px] max-w-[90vw] bg-[#12123A] border border-white/10 rounded-2xl shadow-xl p-8"
+                  className="absolute left-1/2 -translate-x-1/2 mt-3 w-[1100px] max-w-[90vw] bg-gray-950 border border-white/10 rounded-2xl shadow-xl p-8"
                 >
                   <div className="grid grid-cols-5 gap-6">
                     {megaMenu.map((col) => (
                       <div key={col.heading}>
-                        <p className="mb-3 text-[11px] uppercase tracking-widest text-cyan-400 font-semibold">
+                        <p className="mb-3 text-[11px] uppercase tracking-widest text-amber-500 font-semibold">
                           {col.heading}
                         </p>
                         <ul className="space-y-1">
@@ -174,9 +174,9 @@ export default function Navbar() {
                             <li key={svc.href}>
                               <Link
                                 href={svc.href}
-                                className="flex items-center gap-2.5 px-2 py-1.5 -ml-2 rounded-lg text-[14px] text-slate-300 hover:text-cyan-400 hover:bg-white/5 transition"
+                                className="flex items-center gap-2.5 px-2 py-1.5 -ml-2 rounded-lg text-[14px] text-slate-300 hover:text-amber-500 hover:bg-white/5 transition"
                               >
-                                <span className="w-1 h-1 bg-cyan-400 rounded-full opacity-50" />
+                                <span className="w-1 h-1 bg-amber-500 rounded-full opacity-50" />
                                 <span className="truncate">{svc.label}</span>
                               </Link>
                             </li>
@@ -189,11 +189,11 @@ export default function Navbar() {
                   <div className="mt-8 pt-5 border-t border-white/10 flex justify-between text-[13px]">
                     <p className="text-slate-400">
                       Not sure what you need?{' '}
-                      <Link href="/contact" className="text-cyan-400 hover:underline font-medium">
+                      <Link href="/contact" className="text-amber-500 hover:underline font-medium">
                         Let’s talk →
                       </Link>
                     </p>
-                    <Link href="/services" className="text-cyan-400 hover:underline font-medium">
+                    <Link href="/services" className="text-amber-500 hover:underline font-medium">
                       View all services →
                     </Link>
                   </div>
@@ -215,7 +215,7 @@ export default function Navbar() {
               {link.label}
               {/* Animated bottom underline on hover */}
               <motion.span
-                className="absolute bottom-0 left-4 right-4 h-[1.5px] bg-cyan-400 origin-left rounded-full"
+                className="absolute bottom-0 left-4 right-4 h-[1.5px] bg-amber-500 origin-left rounded-full"
                 initial={{ scaleX: 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
@@ -273,7 +273,7 @@ export default function Navbar() {
                       <Link
                         href="/services"
                         onClick={() => setMobileOpen(false)}
-                        className="flex-1 py-3 font-medium text-white text-[18px] font-display hover:text-cyan-400"
+                        className="flex-1 py-3 font-medium text-white text-[18px] font-display hover:text-amber-500"
                       >
                         Services
                       </Link>
@@ -310,9 +310,9 @@ export default function Navbar() {
                               <Link
                                 href={svc.href}
                                 onClick={() => setMobileOpen(false)}
-                                className="block pl-6 gap-2 py-1 text-slate-300 hover:text-cyan-400"
+                                className="block pl-6 gap-2 py-1 text-slate-300 hover:text-amber-500"
                               >
-                                <span className="w-1.5 h-1.5 rounded-full bg-cyan shrink-0" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-amber shrink-0" />
                                 {svc.label}
                               </Link>
                             </li>
@@ -328,7 +328,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-white text-[18px] border-b border-white/10 pb-3 hover:text-cyan-400 "
+                  className="block text-white text-[18px] border-b border-white/10 pb-3 hover:text-amber-500 "
                 >
                   {link.label}
                 </Link>

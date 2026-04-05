@@ -62,7 +62,7 @@ export default function PricingTeaser() {
                   transition={{ duration: 0.6, ease: EASE }}
                   className="flex flex-col items-center text-center gap-4 mb-20"
                 >
-                  <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 w-fit uppercase tracking-widest">
+                  <span className="inline-flex items-center text-[12px] font-semibold px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-600 w-fit uppercase tracking-widest">
                         Pricing
                   </span>
                   <h2 className="font-display font-bold text-[clamp(2rem,4vw,2.75rem)] leading-tight text-(--text-primary) max-w-2xl">
@@ -89,7 +89,7 @@ export default function PricingTeaser() {
         hover:-translate-y-1
         ${
           tier.highlight
-            ? 'bg-amber-500/5 border-amber-400/60 shadow-lg shadow-amber-500/10'
+            ? 'bg-amber-500/5 border-amber-500/60 shadow-lg shadow-amber-500/10'
             : 'bg-(--bg-card) border-(--border-card) shadow-sm'
         }
       `}
@@ -124,7 +124,7 @@ export default function PricingTeaser() {
       <ul className="mt-4 flex flex-col gap-3 text-[15px] text-(--text-secondary)">
         {tier.points.map(point => (
           <li key={point} className="flex items-start gap-3">
-            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-500 shrink-0" />
+            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0" />
             <span>{point}</span>
           </li>
         ))}

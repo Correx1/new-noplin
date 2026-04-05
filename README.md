@@ -6,7 +6,7 @@ A high-performance, full-stack agency website built with **Next.js 15**, **TypeS
 
 ## 🌐 Live Site
 
-> **[noplindigital.com](https://noplindigital.com)** *(replace with actual URL)*
+> **[noplindigital.com](https://noplindigital.com)** _(replace with actual URL)_
 
 ---
 
@@ -26,18 +26,18 @@ A high-performance, full-stack agency website built with **Next.js 15**, **TypeS
 
 ## 🛠 Tech Stack
 
-| Layer | Technology |
-|---|---|
-| **Framework** | [Next.js 16](https://nextjs.org/) (App Router) |
-| **Language** | TypeScript |
-| **Styling** | Tailwind CSS v4 + Custom CSS Variables |
-| **Animations** | [Framer Motion](https://www.framer.com/motion/) |
-| **Smooth Scroll** | [Lenis](https://lenis.darkroom.engineering/) |
-| **CMS** | [Sanity v3](https://www.sanity.io/) |
-| **Icons** | [Lucide React](https://lucide.dev/) |
-| **Forms** | React Hook Form + Zod |
-| **Carousel** | Embla Carousel |
-| **UI Primitives** | Radix UI |
+| Layer             | Technology                                      |
+| ----------------- | ----------------------------------------------- |
+| **Framework**     | [Next.js 16](https://nextjs.org/) (App Router)  |
+| **Language**      | TypeScript                                      |
+| **Styling**       | Tailwind CSS v4 + Custom CSS Variables          |
+| **Animations**    | [Framer Motion](https://www.framer.com/motion/) |
+| **Smooth Scroll** | [Lenis](https://lenis.darkroom.engineering/)    |
+| **CMS**           | [Sanity v3](https://www.sanity.io/)             |
+| **Icons**         | [Lucide React](https://lucide.dev/)             |
+| **Forms**         | React Hook Form + Zod                           |
+| **Carousel**      | Embla Carousel                                  |
+| **UI Primitives** | Radix UI                                        |
 
 ---
 
@@ -129,12 +129,12 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🧑‍💻 Available Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start development server |
+| `npm run build` | Build for production     |
+| `npm run start` | Start production server  |
+| `npm run lint`  | Run ESLint               |
 
 ---
 
@@ -156,25 +156,25 @@ node generate_services.js
 
 Key design tokens are defined as CSS variables in `app/globals.css`:
 
-| Token | Purpose |
-|---|---|
-| `--bg-base` | Page background |
-| `--bg-section` | Alternating section backgrounds |
-| `--bg-card` | Card backgrounds |
-| `--text-primary` | Main heading/body text |
-| `--text-secondary` | Supporting/muted text |
-| `--electric` | Brand cyan/electric accent color |
-| `--border-card` | Card border color |
+| Token              | Purpose                           |
+| ------------------ | --------------------------------- |
+| `--bg-base`        | Page background                   |
+| `--bg-section`     | Alternating section backgrounds   |
+| `--bg-card`        | Card backgrounds                  |
+| `--text-primary`   | Main heading/body text            |
+| `--text-secondary` | Supporting/muted text             |
+| `--electric`       | Brand amber/electric accent color |
+| `--border-card`    | Card border color                 |
 
 ### Component Classes
 
-| Class | Usage |
-|---|---|
-| `.btn-primary` | Primary CTA buttons (dark navy text, cyan background) |
-| `.btn-ghost` | Secondary ghost-style buttons |
-| `.force-dark` | Forces dark appearance on sections regardless of OS theme |
-| `.font-display` | Display/heading font |
-| `.font-body` | Body/paragraph font |
+| Class           | Usage                                                     |
+| --------------- | --------------------------------------------------------- |
+| `.btn-primary`  | Primary CTA buttons (dark navy text, amber background)    |
+| `.btn-ghost`    | Secondary ghost-style buttons                             |
+| `.force-dark`   | Forces dark appearance on sections regardless of OS theme |
+| `.font-display` | Display/heading font                                      |
+| `.font-body`    | Body/paragraph font                                       |
 
 ---
 
@@ -183,6 +183,7 @@ Key design tokens are defined as CSS variables in `app/globals.css`:
 Blog posts and potentially other dynamic content are managed via the embedded Sanity Studio at `/studio`.
 
 ### Blog Schema includes:
+
 - Title, slug, excerpt
 - Author + published date
 - Cover image
@@ -193,18 +194,18 @@ Blog posts and potentially other dynamic content are managed via the embedded Sa
 
 ## 🗺 Pages
 
-| Route | Description |
-|---|---|
-| `/` | Homepage |
-| `/services` | All services overview |
+| Route              | Description                         |
+| ------------------ | ----------------------------------- |
+| `/`                | Homepage                            |
+| `/services`        | All services overview               |
 | `/services/[slug]` | Individual service pages (35 total) |
-| `/work` | Portfolio / case studies |
-| `/about` | About Noplin Digital |
-| `/blog` | Blog listing |
-| `/blog/[slug]` | Individual blog post |
-| `/contact` | Contact form |
-| `/pricing` | Pricing tiers |
-| `/studio` | Sanity CMS Studio |
+| `/work`            | Portfolio / case studies            |
+| `/about`           | About Noplin Digital                |
+| `/blog`            | Blog listing                        |
+| `/blog/[slug]`     | Individual blog post                |
+| `/contact`         | Contact form                        |
+| `/pricing`         | Pricing tiers                       |
+| `/studio`          | Sanity CMS Studio                   |
 
 ---
 

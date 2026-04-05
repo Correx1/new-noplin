@@ -20,7 +20,7 @@ export default function ServicePage() {
     title: "3-5 High-Converting Graphics",
     description: "Thumb-stopping static graphics that balance aesthetic appeal with proven direct-response marketing principles to lower your cost-per-click.",
     icon: "target",
-    color: "orange"
+    color: "amber"
   },
   {
     title: "Format Variations",

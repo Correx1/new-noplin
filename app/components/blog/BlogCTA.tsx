@@ -41,7 +41,7 @@ export default function BlogCTA() {
           {/* Left Text Content */}
           <div className="relative z-10 flex flex-col max-w-md gap-3 text-center md:text-left">
             <h2 className="font-semibold font-bold text-[clamp(1.75rem,3vw,2.25rem)] text-white tracking-tight leading-tight">
-              Join the <span className="text-electric">Digital Growth</span> Newsletter
+              Join the <span className="text-amber-500">Digital Growth</span> Newsletter
             </h2>
             <p className="font-(--font-body) text-[15px] sm:text-[15px] text-[#94A3B8] leading-relaxed">
               Get actionable strategies, deep-dives, and technical breakdowns delivered to your inbox every single week. No spam, ever.
@@ -64,7 +64,7 @@ export default function BlogCTA() {
                 <button 
                   type="submit"
                   disabled={status === 'loading' || status === 'success'}
-                  className="btn-electric w-full sm:w-auto mt-2 sm:mt-0 px-6 py-3 sm:py-2.5 rounded-lg text-sm font-semibold font-semibold whitespace-nowrap transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed" 
+                  className="btn-primary w-full sm:w-auto mt-2 sm:mt-0 px-6 py-3 sm:py-2.5 rounded-lg text-sm font-semibold font-semibold whitespace-nowrap transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed" 
                 >
                   {status === 'loading' ? 'Joining...' : status === 'success' ? 'Subscribed!' : 'Subscribe'}
                 </button>

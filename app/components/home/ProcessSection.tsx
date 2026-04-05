@@ -77,7 +77,7 @@ export default function ProcessSection() {
           <path d="M1080 20 C 640 240, 460 600, 80 780" stroke="url(#procCurveGrad)" strokeWidth="1.5" opacity="0.3" />
         </svg>
         {/* Blur bubbles */}
-        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-amber-500/15 blur-3xl" />
         <div className="absolute left-[62%] top-[46%] h-36 w-36 rounded-full bg-blue-500/15 blur-[80px]" />
         <div className="absolute right-[10%] top-[8%] h-40 w-40 rounded-full bg-blue-600/10 blur-[100px]" />
       </div>
@@ -85,9 +85,9 @@ export default function ProcessSection() {
       <div className="relative mx-auto max-w-7xl">
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-3 mb-14">
-           <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+           <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-amber-500 w-fit uppercase">
   How we work
-<span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-[50%] bg-cyan-600"></span></span>
+<span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-[50%] bg-amber-600"></span></span>
           <h2 className="font-display font-bold text-white text-[clamp(1.75rem,4vw,2.5rem)] leading-tight">
             Simple Process. Fast Results.
           </h2>
@@ -128,8 +128,8 @@ export default function ProcessSection() {
                 </span>
 
                 {/* Icon circle */}
-                <div className="relative z-10 mx-auto lg:mx-0 w-12 h-12 rounded-full bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center mb-5">
-                  <step.icon size={20} className="text-cyan-400" />
+                <div className="relative z-10 mx-auto lg:mx-0 w-12 h-12 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mb-5">
+                  <step.icon size={20} className="text-amber-500" />
                 </div>
 
                 {/* Label */}

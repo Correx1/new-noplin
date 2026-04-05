@@ -76,9 +76,9 @@ export default function PricingFeatures() {
           <path d="M140 0 C 560 200, 740 560, 1080 800" stroke="url(#pfCurveGrad)" strokeWidth="2" opacity="0.5" />
           <path d="M1080 20 C 640 240, 460 600, 80 780" stroke="url(#pfCurveGrad)" strokeWidth="1.5" opacity="0.25" />
         </svg>
-        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-amber-500/15 blur-3xl" />
         <div className="absolute left-[62%] top-[46%] h-36 w-36 rounded-full bg-blue-500/15 blur-[80px]" />
-        <div className="absolute left-[42%] top-[78%] h-24 w-24 rounded-full bg-cyan-400/10 blur-2xl" />
+        <div className="absolute left-[42%] top-[78%] h-24 w-24 rounded-full bg-amber-500/10 blur-2xl" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
@@ -112,8 +112,8 @@ export default function PricingFeatures() {
                 className="flex flex-col items-start"
               >
                 {/* Icon box */}
-                <div className="text-cyan-400 mb-5 flex items-center justify-center p-3 rounded-xl bg-cyan-400/10 border border-cyan-400/20 w-12 h-12 relative">
-                  <div className="absolute inset-0 bg-linear-to-br from-cyan-400/20 to-transparent rounded-xl opacity-60" />
+                <div className="text-amber-500 mb-5 flex items-center justify-center p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 w-12 h-12 relative">
+                  <div className="absolute inset-0 bg-linear-to-br from-amber-500/20 to-transparent rounded-xl opacity-60" />
                   <div className="relative z-10">{feature.icon}</div>
                 </div>
 

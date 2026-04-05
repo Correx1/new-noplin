@@ -20,13 +20,13 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         onClick={() => setOpen((v) => !v)} 
         className="flex w-full items-center justify-between py-6 text-left group transition-colors"
       >
-        <span className="font-semibold font-semibold text-[16px] text-(--text-primary) group-hover:text-electric transition-colors">
+        <span className="font-semibold font-semibold text-[16px] text-(--text-primary) group-hover:text-amber-500 transition-colors">
           {q}
         </span>
         <motion.div 
           animate={{ rotate: open ? 45 : 0 }} 
           transition={{ duration: 0.2 }} 
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-(--bg-card) border border-[var(--border-card)] shrink-0 ml-4 group-hover:bg-electric/10 group-hover:border-electric/30 group-hover:text-electric transition-colors"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-(--bg-card) border border-[var(--border-card)] shrink-0 ml-4 group-hover:bg-electric/10 group-hover:border-electric/30 group-hover:text-amber-500 transition-colors"
         >
           <span className="text-[20px] leading-none mb-0.5" style={{ color: 'inherit' }}>+</span>
         </motion.div>

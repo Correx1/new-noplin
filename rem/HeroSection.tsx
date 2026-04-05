@@ -28,7 +28,7 @@ export default function HeroSection() {
       style={{ paddingTop: '72px', minHeight: '82vh' }}
     >
       {/* ── Background layers ───────────────────────────────── */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 bg-navy overflow-hidden">
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 bg-gray-950 overflow-hidden">
         
         {/* Moving Background Image */}
         <div className="absolute inset-0 w-[110%] h-[110%] -top-[5%] -left-[5%] animate-[panRight_30s_ease-in-out_infinite]">
@@ -70,7 +70,7 @@ export default function HeroSection() {
 
             {/* Badge */}
             <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0}>
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium border border-cyan-400/40 bg-cyan-400/[0.08] text-cyan-400 font-(--font-body) tracking-[0.02em]">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium border border-amber-500/40 bg-amber-500/[0.08] text-amber-500 font-(--font-body) tracking-[0.02em]">
                 Results-First Digital Agency 
               </span>
             </motion.div>
@@ -156,7 +156,7 @@ export default function HeroSection() {
                   key={badge}
                   className="flex items-center gap-2 text-xs text-(--text-secondary) font-(--font-body)"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 inline-block shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block shrink-0" />
                   {badge}
                 </span>
               ))}

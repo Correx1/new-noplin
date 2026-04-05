@@ -17,7 +17,7 @@ export default function ServiceInfo({
   whoItsFor,
 }: ServiceInfoProps) {
   return (
-    <section className="py-16 bg-(--bg-page) relative border-t border-(--border-default)">
+    <section className="py-12 bg-(--bg-page) relative border-t border-(--border-default)">
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10 lg:gap-16">
 
@@ -30,19 +30,19 @@ export default function ServiceInfo({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="border-[3px] border-(--text-primary) shadow-[8px_8px_0px_var(--text-primary)] bg-(--bg-card) p-8 lg:p-14 rounded-none relative z-10"
+            className="border-[3px] border-(--text-primary) shadow-[8px_8px_0px_var(--text-primary)] bg-(--bg-card) p-5 lg:p-8 rounded-none relative z-10"
           >
             <div className="mb-6">
-                  <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+                  <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-amber-500 w-fit uppercase">
  The service
-  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600  md:left-0 md:translate-x-0"></span>
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-amber-600  md:left-0 md:translate-x-0"></span>
 </span>
            
             </div>
-            <h2 className="text-[clamp(2rem,4vw,3rem)] font-display font-bold text-(--text-primary) tracking-tight mb-6 leading-[1.1]">
+            <h2 className="text-[clamp(1.5rem,4vw,2.5rem)] font-display font-bold text-(--text-primary) tracking-tight mb-3 leading-[1.1]">
               What we do
             </h2>
-            <p className="text-[17px] lg:text-[18px] leading-relaxed text-(--text-secondary) font-(--font-body)">
+            <p className="text-[15px] lg:text-[16px] leading-relaxed text-(--text-secondary) font-(--font-body)">
               {about}
             </p>
           </motion.div>
@@ -53,19 +53,19 @@ export default function ServiceInfo({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
-            className="border-[3px] border-(--text-primary) shadow-[8px_8px_0px_var(--text-primary)] bg-(--bg-card) p-8 lg:p-14 rounded-none mt-8 lg:mt-32 relative z-0"
+            className="border-[3px] border-(--text-primary) shadow-[8px_8px_0px_var(--text-primary)] bg-(--bg-card) p-5 lg:p-8 rounded-none mt-8 lg:mt-32 relative z-0"
           >
             <div className="mb-6">
-                 <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+                 <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-amber-500 w-fit uppercase">
   Ideal 
-  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600  md:left-0 md:translate-x-0"></span>
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-amber-600  md:left-0 md:translate-x-0"></span>
 </span>
            
             </div>
-            <h3 className="text-[clamp(2rem,4vw,3rem)] font-display font-bold text-(--text-primary) tracking-tight mb-6 leading-[1.1]">
+            <h3 className="text-[clamp(1.5rem,4vw,2.5rem)] font-display font-bold text-(--text-primary) tracking-tight mb-6 leading-[1.1]">
               Who is this for?
             </h3>
-            <p className="text-[17px] lg:text-[18px] leading-relaxed text-(--text-secondary) font-(--font-body)">
+            <p className="text-[15px] lg:text-[16px] leading-relaxed text-(--text-secondary) font-(--font-body)">
               {whoItsFor}
             </p>
           </motion.div>
@@ -75,7 +75,7 @@ export default function ServiceInfo({
         <div className="w-full h-px bg-(--border-default)" />
 
         {/* BOTTOM SECTION: Deliverables Grid */}
-        <div className="pt-2 lg:pt-4">
+        <div className=" ">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -84,9 +84,9 @@ export default function ServiceInfo({
             className="mb-6 max-w-2xl mx-auto flex flex-col items-center text-center"
           >
             <div className="mb-3">
-                 <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+                 <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-amber-500 w-fit uppercase">
   Deliverables
-  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600 left-1/2 -translate-x-1/2  "></span>
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-amber-600 left-1/2 -translate-x-1/2  "></span>
 </span>
            
             </div>

@@ -144,7 +144,7 @@ export default function AboutPageClient() {
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-center justify-between group">
                       <span className="font-mono text-[13px] text-(--text-primary)">{item.id}</span>
-                      <span className="font-mono text-[13px] text-(--text-muted) transition-colors group-hover:text-electric">{item.val}</span>
+                      <span className="font-mono text-[13px] text-(--text-muted) transition-colors group-hover:text-amber-500">{item.val}</span>
                     </div>
                   ))}
                 </div>

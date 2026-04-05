@@ -32,7 +32,7 @@ export default function ServicePage() {
     title: "Order Bump & Upsell Logic",
     description: "Strategically placed one-click upsell offers that increase your average order value without adding friction to the core purchase decision.",
     icon: "rocket",
-    color: "orange"
+    color: "amber"
   }
 ]}
       whoItsFor="Perfect for businesses, founders, and ambitious teams looking to establish a dominant presence and scale operations with top-tier Sales Funnel Design."

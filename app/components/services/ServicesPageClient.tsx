@@ -58,16 +58,18 @@ const departments = [
     sub: 'High-performance digital products engineered for scale and conversions.',
     services: [
       { name: 'A-Grade Website Design', desc: 'Bespoke, conversion-optimized websites that serve as your ultimate digital storefront.', href: '/services/a-grade-website-design' },
-      { name: 'Landing Page Design', desc: 'Highly focused, standalone pages engineered specifically for targeted campaigns.', href: '/services/landing-page-design' },
-      { name: 'Landing Page Hosting & Setup', desc: 'Secure, fast hosting configuration specifically for standalone landing pages.', href: '/services/landing-page-hosting-&-setup' },
-      { name: 'Sales Funnel Design', desc: 'Strategic, multi-step user journeys crafted to maximize customer acquisition.', href: '/services/sales-funnel-design' },
-      { name: 'Funnel Hosting & Setup', desc: 'End-to-end deployment for complex conversion funnels matching your tech stack.', href: '/services/funnel-hosting-&-setup' },
       { name: 'Web Hosting', desc: 'Reliable, lightning-fast commercial hosting architectures.', href: '/services/web-hosting' },
+      { name: 'Landing Page Design', desc: 'Highly focused, standalone pages engineered specifically for targeted campaigns.', href: '/services/landing-page-design' },
+      { name: 'Sales Funnel Design', desc: 'Strategic, multi-step user journeys crafted to maximize customer acquisition.', href: '/services/sales-funnel-design' },
+      { name: 'Landing Page Hosting & Setup', desc: 'Secure, fast hosting configuration specifically for standalone landing pages.', href: '/services/landing-page-hosting-&-setup' },
+      { name: 'Funnel Hosting & Setup', desc: 'End-to-end deployment for complex conversion funnels matching your tech stack.', href: '/services/funnel-hosting-&-setup' },
+           { name: 'MVP Development', desc: 'Rapid deployment of Minimum Viable Products for agile startups.', href: '/services/mvp-development' },
+
       { name: 'WordPress Development', desc: 'Custom, scalable content management systems built on the world\'s leading platform.', href: '/services/wordpress-development' },
       { name: 'E-Commerce Development', desc: 'High-performance online stores designed to maximize sales and streamline checkout.', href: '/services/e-commerce-development' },
       { name: 'Custom Web Application', desc: 'Robust, scalable web apps built to solve complex business challenges.', href: '/services/custom-web-application' },
-      { name: 'MVP Development', desc: 'Rapid deployment of Minimum Viable Products for agile startups.', href: '/services/mvp-development' },
-      { name: 'Custom API Development', desc: 'Tailored backend interconnectivity supporting robust application integrations.', href: '/services/custom-api-development' },
+           { name: 'API Development', desc: 'Tailored backend interconnectivity supporting robust application integrations.', href: '/services/custom-api-development' },
+
       { name: 'Third-Party Integration', desc: 'Secure, seamless connections between your platforms and external microservices.', href: '/services/third-party-integration' },
       { name: 'Website Hosting Setup', desc: 'Complete deployment configuration, domain binding, and structural setup.', href: '/services/website-hosting-setup' },
       { name: 'Debugging & Maintenance', desc: 'Ongoing technical support to keep your digital assets running flawlessly.', href: '/services/debugging-&-maintenance' },
@@ -137,10 +139,10 @@ function DepartmentBlock({ dept }: { dept: (typeof departments)[0] }) {
                 key={svc.name}
                 href={svc.href}
                 onMouseEnter={() => setActiveIdx(i)}
-                className={`px-3 xl:px-4 py-1.5 xl:py-2 rounded-md border text-[14px] sm:text-[15px] xl:text-[16px] font-medium transition-all duration-200 ${
+                className={`px-3 xl:px-4 py-1.5 xl:py-2 rounded-md border text-[14px] md:text-[15px]  font-medium transition-all duration-200 ${
                   activeIdx === i
-                    ? 'bg-cyan-500 border-cyan-500 text-white'
-                    : 'border-(--border-default) text-(--text-secondary) hover:border-cyan-400 hover:text-cyan-400'
+                    ? 'bg-amber-500 border-amber-500 '
+                    : 'border-(--border-default) text-(--text-secondary) hover:border-amber-500 hover:text-amber-500'
                 }`}
               >
                 {svc.name}
@@ -159,9 +161,10 @@ function DepartmentBlock({ dept }: { dept: (typeof departments)[0] }) {
               transition={{ duration: 0.2 }}
               className="flex flex-col gap-3"
             >
-              <p className="text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.14em] text-cyan-500">
-                {dept.label}
-              </p>
+                    <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-gray-950 w-fit uppercase">
+  {dept.label}
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-gray-900  left-0 translate-x-0"></span>
+</span>
 
               <p className="font-body text-[14px] sm:text-[15px] xl:text-[16px] text-(--text-muted) leading-relaxed border-b border-(--border-default) pb-4">
                 {dept.sub}
@@ -177,7 +180,7 @@ function DepartmentBlock({ dept }: { dept: (typeof departments)[0] }) {
 
               <Link
                 href={activeService.href}
-                className="inline-flex items-center gap-1.5 text-[14px] sm:text-[15px] font-semibold text-amber-500 hover:text-amber-400 transition-colors mt-2"
+                className="inline-flex items-center gap-1.5 text-[14px] sm:text-[15px] font-semibold text-amber-500 hover:text-amber-500 transition-colors mt-2"
               >
                 Learn more <ArrowRight size={14} />
               </Link>
@@ -197,7 +200,7 @@ export default function ServicesPageClient() {
 
       {/* ── HERO (MODIFIED) ── */}
     {/* ── HERO ── */}
-<section className="relative flex items-center justify-center w-full min-h-[50vh] lg:min-h-[45vh]  pt-20 pb-20 lg:pt-[100px] lg:pb-16 overflow-hidden bg-navy">
+  <section className="hero-section relative flex items-center justify-center w-full min-h-[50vh] lg:min-h-[50vh]  pt-16 pb-20 lg:pt-[100px] lg:pb-24  overflow-hidden bg-gray-950">
       {/* ── Background art ── */}
       <div className="pointer-events-none absolute inset-0">
         <svg
@@ -221,79 +224,65 @@ export default function ServicesPageClient() {
           <path d="M80 40 C 520 220, 700 580, 1120 760" stroke="url(#heroGrad)" strokeWidth="3" filter="url(#heroGlow)" />
           <path d="M140 0 C 560 200, 740 560, 1080 800" stroke="url(#heroGrad)" strokeWidth="2" opacity="0.5" />
         </svg>
-        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="absolute left-[16%] top-[18%] h-28 w-28 rounded-full bg-amber-500/15 blur-3xl" />
         <div className="absolute left-[62%] top-[46%] h-36 w-36 rounded-full bg-blue-500/15 blur-[80px]" />
-        <div className="absolute left-[42%] top-[78%] h-24 w-24 rounded-full bg-cyan-400/15 blur-2xl" />
+        <div className="absolute left-[42%] top-[78%] h-24 w-24 rounded-full bg-amber-500/15 blur-2xl" />
       </div>
 
-  <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-    {/* TEXT SIDE */}
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.65, ease: EASE }}
-      className="flex flex-col gap-6"
-    >
-
-    <span className="relative inline-flex items-center text-[13px] font-semibold  py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
-What we do
-              <span className="absolute left-0 bottom-0 h-[2px] w-[50%] bg-cyan-600"></span>
-            </span>
-
-      <h1 className="font-display text-[clamp(2.4rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white">
-        Digital Growth, Delivered.
-      </h1>
-
-      <p className="mt-2 font-body text-[17px] leading-[1.6] text-gray-400 max-w-[500px]">
-        We design brands, build high-performance websites, and run marketing
-        systems that turn attention into customers.
-      </p>
-
-      <div className="pt-2">
-        <Link
-          href="/contact"
-          className="btn btn-primary"
+      {/* Content */}
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 px-6 lg:grid-cols-[1fr_500px] lg:gap-20">
+        {/* Left copy */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, ease: EASE }}
+          className="flex max-w-2xl flex-col items-start gap-6"
         >
-          Request a consultation <ArrowRight size={16} />
-        </Link>
+           <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-amber-500 w-fit uppercase">
+  What we do
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-amber-600 left-0 translate-x-0"></span>
+</span>
+
+          <h1 className="font-display text-[clamp(2.4rem,5vw,4.0rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white">
+          Delivering Digital Growth.
+          </h1>
+
+          <p className="mt-2 font-body text-[17px] leading-[1.6] text-gray-400">
+              We design brands, build high-performance websites,
+              and run marketing systems that turn attention into customers.
+          </p>
+        </motion.div>
+
+        {/* Right side - Circular CTA */}
+              <motion.div
+                 initial={{ opacity: 0, scale: 0.9 }}
+                 animate={{ opacity: 1, scale: 1 }}
+                 transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
+                 className="hidden lg:flex"
+              >
+                <div
+                  className="group relative flex h-48 w-48 cursor-pointer items-center justify-center rounded-full border border-[var(--border-card)] bg-transparent shadow-sm  ml-auto"
+                  onClick={() => {
+                    window.scrollTo({ top: window.innerHeight * 0.7, behavior: 'smooth' });
+                  }}
+                >
+                   <div className="flex flex-col items-center gap-3 text-center">
+                      <span className="font-display text-[11px] font-bold uppercase tracking-[0.15em] text-white">
+                      Our Services
+                      </span>
+                      <svg 
+                        className="h-6 w-6 text-(--text-muted) transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-amber-500" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 19L19 5M19 5H8M19 5V16" />
+                      </svg>
+                   </div>
+                </div>
+              </motion.div>
       </div>
-
-    </motion.div>
-
-    
-   {/* Right side - Circular CTA */}
-         <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
-            className="hidden lg:flex"
-         >
-           <div
-             className="group relative flex h-48 w-48 cursor-pointer items-center justify-center rounded-full border border-[var(--border-card)] bg-transparent shadow-sm  ml-auto"
-             onClick={() => {
-               window.scrollTo({ top: window.innerHeight * 0.7, behavior: 'smooth' });
-             }}
-           >
-              <div className="flex flex-col items-center gap-3 text-center">
-                 <span className="font-display text-[11px] font-bold uppercase tracking-[0.15em] text-white">
-                 Our Services
-                 </span>
-                 <svg 
-                   className="h-6 w-6 text-(--text-muted) transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-electric" 
-                   fill="none" 
-                   viewBox="0 0 24 24" 
-                   stroke="currentColor"
-                 >
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 19L19 5M19 5H8M19 5V16" />
-                 </svg>
-              </div>
-           </div>
-         </motion.div>
-
-  </div>
-
-</section>
+    </section>
      
 
       {/* ── SERVICES LIST ── */}
@@ -301,7 +290,7 @@ What we do
         <div className="max-w-7xl mx-auto px-6">
 
           <div className=" border-b border-(--border-default)">
-            <h2 className="font-display font-bold text-[clamp(2.8rem,5vw,5rem)] leading-[1] tracking-tight text-(--text-primary)">
+            <h2 className="font-display font-bold text-[clamp(2.4rem,5vw,4rem)] leading-[1] tracking-tight text-(--text-primary)">
               Our Services
             </h2>
           </div>

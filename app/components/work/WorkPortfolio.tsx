@@ -172,7 +172,7 @@ function CaseStudyCarousel({ images, name }: { images: string[], name: string })
             key={idx}
             onClick={() => emblaApi?.scrollTo(idx)}
             className={`w-2.5 h-2.5 rounded-full transition-all duration-300 shadow-md ${
-              idx === selectedIndex ? 'bg-electric w-8' : 'bg-white/70 hover:bg-white/100'
+              idx === selectedIndex ? 'bg-amber-500 w-8' : 'bg-white/70 hover:bg-white/100'
             }`}
             aria-label={`Go to slide ${idx + 1}`}
           />
@@ -195,7 +195,7 @@ export default function WorkPortfolio() {
             {filters.map((f) => (
               <button key={f} onClick={() => setActive(f)}
                 className={`flex-shrink-0 px-4 py-1.5 rounded-md text-[13px] font-semibold transition-all duration-150 ${
-                  active === f ? 'bg-cyan-500 text-[#0A0A1F]' : 'bg-transparent text-(--text-secondary) hover:text-(--text-primary)'
+                  active === f ? 'bg-amber-500 text-[#0A0A1F]' : 'bg-transparent text-(--text-secondary) hover:text-(--text-primary)'
                 }`}>
                 {f}
               </button>
@@ -227,9 +227,9 @@ export default function WorkPortfolio() {
               {/* Content Side */}
               <div className="w-full lg:w-[45%] flex flex-col gap-5 p-7 lg:p-0">
                 <div className="flex flex-col gap-2">
-                     <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-cyan-500 w-fit uppercase">
+                     <span className="relative inline-flex items-center text-[13px] font-semibold py-1.5 tracking-widest text-amber-500 w-fit uppercase">
   {cs.tag}
-  <span className="absolute bottom-0 h-[2px] w-[50%] bg-cyan-600  left-0 translate-x-0"></span>
+  <span className="absolute bottom-0 h-[2px] w-[50%] bg-amber-600  left-0 translate-x-0"></span>
 </span>
            
                   <h3 className="font-display font-bold text-[clamp(1.5rem,2.5vw,2rem)] text-(--text-primary) leading-[1.2] mt-1">{cs.name}</h3>
@@ -243,7 +243,7 @@ export default function WorkPortfolio() {
                 {/* <ul className="flex flex-col gap-2.5 mt-1">
                   {cs.highlights.map((highlight, hIdx) => (
                     <li key={hIdx} className="flex items-start gap-2.5">
-                      <div className="mt-1.5 flex-shrink-0 text-cyan-400">
+                      <div className="mt-1.5 flex-shrink-0 text-amber-500">
                         <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor">
                           <circle cx="12" cy="12" r="8" />
                         </svg>
@@ -254,7 +254,7 @@ export default function WorkPortfolio() {
                 </ul> */}
 
                 {cs.link && (
-                  <a href={cs.link} target="_blank" rel="noopener noreferrer" className="mt-2 text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-1 self-start font-semibold text-[14px] group">
+                  <a href={cs.link} target="_blank" rel="noopener noreferrer" className="mt-2 text-amber-500 hover:text-amber-300 transition-colors inline-flex items-center gap-1 self-start font-semibold text-[14px] group">
                     View Project
                     <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                   </a>

@@ -20,7 +20,7 @@ const config: Config = {
           light: "#2563EB",
           dark: "#1345B4",
         },
-        cyan: {
+        amber: {
           DEFAULT: "#06B6D4",
           light: "#22D3EE",
           dark: "#0891B2",
@@ -65,7 +65,7 @@ const config: Config = {
       },
       boxShadow: {
         "glow-blue": "0 0 24px rgba(26,86,219,0.4)",
-        "glow-cyan": "0 0 16px rgba(6,182,212,0.3)",
+        "glow-amber": "0 0 16px rgba(6,182,212,0.3)",
         "glow-blue-lg": "0 0 48px rgba(26,86,219,0.5)",
         card: "0 4px 32px rgba(13,13,43,0.5)",
       },
