@@ -151,7 +151,7 @@ export default function AboutTeam() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: i * 0.06, ease: EASE }}
-    className="w-[50%] md:w-[48%] lg:w-[30%] group relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100 transition-all duration-500 hover:border-zinc-400"            > 
+              className="w-[calc(50%-8px)] md:w-[calc(33.333%-11px)] group relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100 transition-all duration-500 hover:border-zinc-400"            > 
               {/* Image */}
                <div className="relative aspect-4/5 overflow-hidden rounded-t-[15px]">
                 <Image
@@ -164,9 +164,9 @@ export default function AboutTeam() {
               </div> 
 
               {/* Info */}
-              <div className="absolute bottom-0 left-0 w-full px-4 py-4 rounded-b-2xl">
-                <p className="font-semibold text-white text-[15px] leading-tight">{member.name}</p>
-                <p className="mt-1 font-semibold text-[10px] uppercase tracking-widest text-[#94A3B8]">
+              <div className="absolute bottom-0 left-0 w-full px-3 py-3 md:px-4 md:py-4 rounded-b-2xl bg-gradient-to-t from-black/80 to-transparent">
+                <p className="font-semibold text-white text-[13px] md:text-[15px] leading-tight truncate">{member.name}</p>
+                <p className="mt-0.5 md:mt-1 font-semibold text-[9px] md:text-[10px] uppercase tracking-widest text-[#94A3B8] leading-tight line-clamp-2">
                   {member.role}
                 </p>
               </div> 

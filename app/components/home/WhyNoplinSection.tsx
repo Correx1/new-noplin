@@ -61,7 +61,7 @@ export default function WhyNoplinSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, ease: EASE, delay: i * 0.05 }}
                   className={`
-                    flex gap-5 p-8 items-start
+                    flex gap-5 p-4 items-start
                     border-t border-gray-100
                     ${!isLeft ? 'md:border-l' : ''}
                     
