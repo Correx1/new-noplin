@@ -20,7 +20,7 @@ const departments: Dept[] = [
     desc: 'Everything your brand needs to look premium and be remembered — from cohesive social identities to investor-ready pitch decks.',
     media: '/portfolio/branding-main.png', mediaType: 'image', href: '/services#design',
     subservices: [
-      { name: 'Social Branding', desc: 'Cohesive, premium social media identities that stand out.', href: '/services/social-branding' },
+      { name: 'Social Branding', desc: 'Cohesive, premium social media identities that stand out.', href: '/services/social-branding'},
       { name: 'Ad Creatives', desc: 'High-converting video and static ad designs.', href: '/services/ad-creatives-video' },
       { name: 'UI/UX Design', desc: 'Intuitive interfaces for frictionless digital experiences.', href: '/services/ui-ux-design' },
       { name: 'Pitch Deck Design', desc: 'Investor-ready presentations built to win rooms.', href: '/services/pitch-deck' },

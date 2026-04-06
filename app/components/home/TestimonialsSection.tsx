@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import Image from "next/image";
-
 import * as React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,49 +13,40 @@ type Testimonial = {
   testimonialText: string;
   rating: number;
   order: number;
-  image: string;
 };
 
 const testimonials: Testimonial[] = [
   {
     _id: "1",
-    customerName: "Emeka Okafor",
-    role: "Founder, TechNaira",
-    testimonialText:
-      "Noplin Digital transformed our online presence completely. The website they built for us has driven a 3× increase in qualified leads within the first month.",
+    customerName: "Rock Art",
+    role: "Saudi Arabia",
+    testimonialText: "One of the best designers and designs. Amazing work and thank you for the good job.",
     rating: 5,
     order: 0,
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     _id: "2",
-    customerName: "Amina Suleiman",
-    role: "CEO, Kano Fresh Foods",
-    testimonialText:
-      "Our brand identity went from forgettable to something we are genuinely proud of. The social branding package was worth every naira — and then some.",
+    customerName: "Mr. Chukwudi Emeh",
+    role: "Divine Crown Ltd.",
+    testimonialText: "All our branding, website and developent services are handled by Noplin and it has been nothing short of Amazing. They have never failed to produce outstanding quality work.",
     rating: 5,
     order: 1,
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
     _id: "3",
-    customerName: "Chidi Nwosu",
-    role: "Marketing Director, BrightPath",
-    testimonialText:
-      "The paid ads campaign they ran for us beat our ROAS target by 60%. Real specialists who understand African markets and global platforms.",
+    customerName: "Mrs. Goodness Anih",
+    role: "AE Luxury lightings",
+    testimonialText: "Amazing work from Noplin. They work is great.",
     rating: 5,
     order: 2,
-    image: "https://randomuser.me/api/portraits/men/76.jpg",
   },
   {
     _id: "4",
-    customerName: "Fatimah Abdullahi",
-    role: "COO, Novara Logistics",
-    testimonialText:
-      "From strategy to execution — the team at Noplin is sharp, fast, and detail-obsessed. Exactly what a growing business needs.",
+    customerName: "Mr. Paschal Achunine",
+    role: "hei.org.ng",
+    testimonialText: "We have worked with Noplin for over decade and their always reliable and deliver excellent work. Highly Recommended.",
     rating: 5,
     order: 3,
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
   },
 ];
 
@@ -106,37 +95,33 @@ export default function TestimonialSection() {
                
                 className="h-full"
               >
-                <div className="h-[280px] flex flex-col justify-between rounded-xl bg-white p-6 shadow-md border border-gray-100">
-
-                  {/* Top */}
+                <div className="h-[300px] md:h-[280px] flex flex-col justify-between rounded-xl bg-white p-7 shadow-sm border border-zinc-100">
+                  {/* Top Content */}
                   <div>
-                    {/* Profile */}
-                    <div className="flex items-center gap-4 mb-4">
-                      <Image
-                        width={100}
-                        height={100}
-                        src={t.image}
-                        alt={t.customerName}
-                        className="w-14 h-14 rounded-full object-cover border border-gray-200"
-                      />
+                    {/* Quote Icon */}
+                    <svg
+                      className="w-8 h-8 text-amber-500/20 mb-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+                    </svg>
+                    
+                    {/* Text */}
+                    <p className="text-[14px] text-(--text-secondary) leading-relaxed font-medium italic">
+                      &quot;{t.testimonialText}&quot;
+                    </p>
+                  </div>
 
-                      <div>
-                        <div className="text-sm font-semibold text-gray-900">
-                          {t.customerName}
-                        </div>
-                        <div className="text-xs text-gray-700">
-                          {t.role}
-                        </div>
-                      </div>
-                    </div>
-
+                  {/* Bottom User Info */}
+                  <div className="mt-4 pt-4 border-t border-zinc-100 flex flex-col gap-2">
                     {/* Stars */}
-                    <div className="flex gap-1 mb-3">
+                    <div className="flex gap-1">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <svg
                           key={i}
                           className={`w-4 h-4 ${
-                            i < t.rating ? "text-amber-500" : "text-gray-300"
+                            i < t.rating ? "text-amber-400" : "text-gray-200"
                           }`}
                           viewBox="0 0 24 24"
                           fill="currentColor"
@@ -146,24 +131,14 @@ export default function TestimonialSection() {
                       ))}
                     </div>
 
-                    {/* Text */}
-                    <p className="text-sm text-gray-600 leading-relaxed line-clamp-4">
-                      “{t.testimonialText}”
-                    </p>
-                  </div>
-
-                  {/* Bottom Accent */}
-                  <div className="mt-4 flex items-center justify-between">
-                    <div className="h-[2px] w-10 bg-amber-500"></div>
-
-                    {/* Quote Icon */}
-                    <svg
-                      className="w-8 h-8 text-gray-200"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
-                    </svg>
+                    <div>
+                      <div className="text-[14px] font-bold text-(--text-primary)">
+                        {t.customerName}
+                      </div>
+                      <div className="text-[12px] font-medium text-gray-700 tracking-wider mt-0.5">
+                        {t.role}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
