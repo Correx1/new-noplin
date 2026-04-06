@@ -166,7 +166,7 @@ export default function AboutTeam() {
               {/* Info */}
               <div className="absolute bottom-0 left-0 w-full px-3 py-3 md:px-4 md:py-4 rounded-b-2xl bg-gradient-to-t from-black/80 to-transparent">
                 <p className="font-semibold text-white text-[13px] md:text-[15px] leading-tight truncate">{member.name}</p>
-                <p className="mt-0.5 md:mt-1 font-semibold text-[9px] md:text-[10px] uppercase tracking-widest text-[#94A3B8] leading-tight line-clamp-2">
+                <p className="mt-0.5 md:mt-1 font-semibold text-[9px] md:text-[10px] capitalize tracking-widest text-[#94A3B8] leading-tight line-clamp-2">
                   {member.role}
                 </p>
               </div> 
