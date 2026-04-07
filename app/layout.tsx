@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import { Space_Grotesk, DM_Sans } from 'next/font/google';
 import { Suspense } from 'react';
 import './globals.css';
 import ThemeProvider from './components/providers/ThemeProvider';
@@ -10,20 +9,25 @@ import GoogleAnalytics from './components/analytics/GoogleAnalytics';
 import MetaPixel from './components/analytics/MetaPixel';
 import { OrganizationSchema } from './components/seo/JsonLd';
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
+import localFont from 'next/font/local';
+
+const spaceGrotesk = localFont({
+  src: [
+    { path: '../public/fonts/SpaceGrotesk-Medium.woff2', weight: '500' },
+    { path: '../public/fonts/SpaceGrotesk-SemiBold.woff2', weight: '600' },
+    { path: '../public/fonts/SpaceGrotesk-Bold.woff2', weight: '700' },
+  ],
   variable: '--font-display',
   display: 'swap',
-  preload: false,
 });
 
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500'],
+const dmSans = localFont({
+  src: [
+    { path: '../public/fonts/DMSans-Regular.woff2', weight: '400' },
+    { path: '../public/fonts/DMSans-Medium.woff2', weight: '500' },
+  ],
   variable: '--font-body',
   display: 'swap',
-  preload: false,
 });
 
 export const viewport: Viewport = {
