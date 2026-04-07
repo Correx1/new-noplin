@@ -15,6 +15,7 @@ const spaceGrotesk = Space_Grotesk({
   weight: ['500', '600', '700'],
   variable: '--font-display',
   display: 'swap',
+  preload: false,
 });
 
 const dmSans = DM_Sans({
@@ -22,6 +23,7 @@ const dmSans = DM_Sans({
   weight: ['400', '500'],
   variable: '--font-body',
   display: 'swap',
+  preload: false,
 });
 
 export const viewport: Viewport = {
