@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 // Replace with actual WhatsApp number e.g. 2348012345678
-const WHATSAPP_NUMBER = 'PHONENUMBER';
+const WHATSAPP_NUMBER = '+2349037109764';
 const WHATSAPP_MSG = encodeURIComponent("Hi Noplin Digital! I'd like to discuss a project.");
 
 export default function WhatsAppButton() {

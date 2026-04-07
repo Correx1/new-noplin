@@ -40,7 +40,7 @@ export default function ServicePage() {
   {
     step: "01",
     title: "Platform selection consultation",
-    description: "We analyze your product catalog complexity, fulfillment needs, and growth plans to recommend the optimal eCommerce platform—Shopify, WooCommerce, or a custom build."
+    description: "We analyze your product catalog complexity, fulfillment needs, and growth plans to recommend the optimal eCommerce platform, Shopify, WooCommerce, or a custom build."
   },
   {
     step: "02",

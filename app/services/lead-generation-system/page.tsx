@@ -45,7 +45,7 @@ export default function ServicePage() {
   {
     step: "02",
     title: "Design lead capture assets",
-    description: "We build dedicated opt-in pages with compelling lead magnets—free audits, exclusive guides, or live training events—that give prospects a clear reason to exchange their contact information."
+    description: "We build dedicated opt-in pages with compelling lead magnets free audits, exclusive guides, or live training events that give prospects a clear reason to exchange their contact information."
   },
   {
     step: "03",

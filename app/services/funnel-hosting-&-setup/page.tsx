@@ -50,7 +50,7 @@ export default function ServicePage() {
   {
     step: "03",
     title: "Code the funnel pages",
-    description: "We translate every step of the funnel—optin, sales, checkout, upsell, thank-you—into clean, lightweight code that renders perfectly across all devices and browsers."
+    description: "We translate every step of the funnel, optin, sales, checkout, upsell, thank-you into clean, lightweight code that renders perfectly across all devices and browsers."
   },
   {
     step: "04",
@@ -103,7 +103,7 @@ export default function ServicePage() {
     answer: "Yes. We integrate your funnel with Klaviyo, Mailchimp, ActiveCampaign, or ConvertKit so opt-ins and purchases trigger the right automated sequences automatically."
   },
   {
-    question: "Who hosts the funnel—you or me?",
+    question: "Who hosts the funnel, you or me?",
     answer: "You own and control the hosting. We set everything up on your accounts (AWS, Vercel, or Netlify) so you are never dependent on us for access to your live funnel."
   },
   {

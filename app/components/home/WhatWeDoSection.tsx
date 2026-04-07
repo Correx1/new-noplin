@@ -17,7 +17,7 @@ type Dept = {
 const departments: Dept[] = [
   {
     id: 'design', label: 'Design', headline: 'Brand & Visual Identity',
-    desc: 'Everything your brand needs to look premium and be remembered — from cohesive social identities to investor-ready pitch decks.',
+    desc: 'Everything your brand needs to look premium and be remembered, from cohesive social identities to investor-ready pitch decks.',
     media: '/portfolio/branding-main.png', mediaType: 'image', href: '/services#design',
     subservices: [
       { name: 'Social Branding', desc: 'Cohesive, premium social media identities that stand out.', href: '/services/social-branding'},
@@ -39,7 +39,7 @@ const departments: Dept[] = [
   },
   {
     id: 'marketing', label: 'Marketing', headline: 'Growth That Scales',
-    desc: 'Data-driven marketing strategies that actually move the needle — lower costs, higher authority.',
+    desc: 'Data-driven marketing strategies that actually move the needle.',
     media: '/portfolio/marketing.png', mediaType: 'image', href: '/services#marketing',
     subservices: [
       { name: 'Social Media Management', desc: 'End-to-end channel management and community growth.', href: '/services/social-management' },
@@ -118,7 +118,7 @@ export default function WhatWeDoSection() {
                     {dept.headline}
                   </h2>
 
-                  <p className="text-[15px] lg:text-[17px] text-gray-500 leading-relaxed">
+                  <p className="text-[14px] md:text-[16px] text-gray-500 leading-relaxed">
                     {dept.desc}
                   </p>
 

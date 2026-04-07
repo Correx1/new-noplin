@@ -92,7 +92,7 @@ export default function ServicePage() {
   },
   {
     question: "What software do you design the deck in?",
-    answer: "We can design in PowerPoint, Apple Keynote, Google Slides, or Figma—whichever platform you and your team are most comfortable using."
+    answer: "We can design in PowerPoint, Apple Keynote, Google Slides, or Figma whichever platform you and your team are most comfortable using."
   },
   {
     question: "Can you sign an NDA before we share our business plan?",

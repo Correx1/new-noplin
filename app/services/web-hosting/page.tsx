@@ -50,7 +50,7 @@ export default function ServicePage() {
   {
     step: "03",
     title: "Install & configure runtimes",
-    description: "We set up the exact server environment your application needs—Node.js, PHP, Python, Nginx, MySQL, or Redis—configured and tuned for optimal performance."
+    description: "We set up the exact server environment your application needs, Node.js, PHP, Python, Nginx, MySQL, or Redis configured and tuned for optimal performance."
   },
   {
     step: "04",
@@ -108,7 +108,7 @@ export default function ServicePage() {
   },
   {
     question: "Can you migrate my existing site to new hosting?",
-    answer: "Yes. We handle the complete transfer—copying files, migrating databases, updating DNS records, and installing SSL certificates—with zero downtime using a carefully managed blue-green deployment approach."
+    answer: "Yes. We handle the complete transfer, copying files, migrating databases, updating DNS records, and installing SSL certificates with zero downtime using a carefully managed blue-green deployment approach."
   }
 ]}
     />

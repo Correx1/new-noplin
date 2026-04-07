@@ -18,7 +18,7 @@ export default function ServicePage() {
       whatItIncludes={[
   {
     title: "Multi-Step Funnel Architecture",
-    description: "A strategically sequenced set of pages—optin, sales, upsell, downsell, and thank-you—engineered to maximize the revenue extracted from every single visitor.",
+    description: "A strategically sequenced set of pages, optin, sales, upsell, downsell, and thank-you engineered to maximize the revenue extracted from every single visitor.",
     icon: "chart",
     color: "green"
   },
@@ -50,7 +50,7 @@ export default function ServicePage() {
   {
     step: "03",
     title: "Design every funnel page",
-    description: "We design each page step in the sequence—optin page, VSL page, checkout, one-time offers—using visual hierarchy that naturally guides users toward the next step."
+    description: "We design each page step in the sequence, optin page, VSL page, checkout, one-time offers using visual hierarchy that naturally guides users toward the next step."
   },
   {
     step: "04",

@@ -45,7 +45,7 @@ export default function ServicePage() {
   {
     step: "02",
     title: "Wireframe the conversion layout",
-    description: "We map the page's visual hierarchy—hero, benefits section, social proof placement, and CTA positioning—specifically optimized for fast scrolling and rapid decision-making."
+    description: "We map the page's visual hierarchy, hero, benefits section, social proof placement, and CTA positioning specifically optimized for fast scrolling and rapid decision-making."
   },
   {
     step: "03",
@@ -96,7 +96,7 @@ export default function ServicePage() {
   },
   {
     question: "How is this different from a website homepage?",
-    answer: "A homepage serves multiple purposes and has full navigation. A landing page is engineered for one singular action—signing up, purchasing, or booking—with everything else stripped out to prevent distraction."
+    answer: "A homepage serves multiple purposes and has full navigation. A landing page is engineered for one singular action—signing up, purchasing, or booking with everything else stripped out to prevent distraction."
   },
   {
     question: "Can you design landing pages for product launches?",

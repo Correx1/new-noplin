@@ -41,7 +41,7 @@ export default function WhyNoplinSection() {
           </h2>
 
           <p className="text-gray-600 max-w-md mx-auto mt-4">
-            Eight principles that define how we work — and why clients keep coming back.
+            Eight principles that define how we work and why clients keep coming back.
           </p>
         </motion.div>
 

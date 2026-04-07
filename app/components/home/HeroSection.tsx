@@ -105,7 +105,7 @@ export default function HeroSection() {
         <div className="max-w-5xl mx-auto px-6 py-5 flex flex-col items-center gap-3 text-center">
 
           <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400">
-            Trusted by startups, SMEs &amp; growing businesses — Africa &amp; beyond
+            Trusted by startups, SMEs &amp; growing businesses in Africa &amp; beyond
           </p>
 
           <div className="w-6 h-px bg-gray-200" />

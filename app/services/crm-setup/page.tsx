@@ -40,7 +40,7 @@ export default function ServicePage() {
   {
     step: "01",
     title: "Audit your actual sales process",
-    description: "We interview your sales reps and sales managers to understand how deals actually get closed—not how they are supposed to—so we model the CRM around real workflows."
+    description: "We interview your sales reps and sales managers to understand how deals actually get closed, not how they are supposed to, so we model the CRM around real workflows."
   },
   {
     step: "02",
@@ -60,7 +60,7 @@ export default function ServicePage() {
   {
     step: "05",
     title: "Configure automation workflows",
-    description: "We build smart triggers—deal stage changes, email opens, inactivity alerts—that automatically assign tasks, send internal notifications, and keep your pipeline moving."
+    description: "We build smart triggers deal stage changes, email opens, inactivity alerts that automatically assign tasks, send internal notifications, and keep your pipeline moving."
   },
   {
     step: "06",

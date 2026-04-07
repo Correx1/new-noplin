@@ -40,7 +40,7 @@ export default function PricingTiers({ tiers }: PricingProps) {
           </h2>
 
           <p className="font-(--font-body) text-[17px] text-(--text-secondary) max-w-md">
-            Clear tiers designed to match your stage — from first launch to full-scale execution.
+            Clear tiers designed to match your stage, from first launch to full-scale execution.
           </p>
         </motion.div>
 

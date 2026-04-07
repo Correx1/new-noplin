@@ -5,7 +5,7 @@ import { EASE } from './AboutShared';
 
 const values = [
   { title: 'Client First', body: 'Your results are our results. We never separate the two.', number: '01' },
-  { title: 'No Excuses', body: "We deliver. If something isn't right, we fix it — no arguments.", number: '02' },
+  { title: 'No Excuses', body: "We deliver. If something isn't right, we fix it, no arguments.", number: '02' },
   { title: 'Grow Daily', body: 'Every team member is committed to being better tomorrow than today.', number: '03' },
   { title: 'Have Fun', body: 'We love what we do. That energy flows into everything we create.', number: '04' },
 ];

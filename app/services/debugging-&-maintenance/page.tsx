@@ -45,7 +45,7 @@ export default function ServicePage() {
   {
     step: "02",
     title: "Trace the root cause",
-    description: "We follow the error backwards through the call stack—from the UI through the API to the database—to isolate the exact line or logic responsible for the failure."
+    description: "We follow the error backwards through the call stack from the UI through the API to the database to isolate the exact line or logic responsible for the failure."
   },
   {
     step: "03",

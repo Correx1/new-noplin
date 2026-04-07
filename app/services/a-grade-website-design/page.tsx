@@ -102,7 +102,7 @@ export default function ServicePage() {
   },
   {
     question: "Is SEO included in the design?",
-    answer: "Technical on-page SEO is built directly into the site foundation—including site speed optimization, proper alt tags, metadata structure, and mobile responsiveness."
+    answer: "Technical on-page SEO is built directly into the site foundation, including site speed optimization, proper alt tags, metadata structure, and mobile responsiveness."
   },
   {
     question: "What platform do you build on?",

@@ -40,7 +40,7 @@ export default function ServicePage() {
   {
     step: "01",
     title: "Define ideal influencer profile",
-    description: "We work with you to build the exact criteria for potential partners—niche alignment, minimum engagement rate, audience demographic breakdown, and geographic focus."
+    description: "We work with you to build the exact criteria for potential partners niche alignment, minimum engagement rate, audience demographic breakdown, and geographic focus."
   },
   {
     step: "02",

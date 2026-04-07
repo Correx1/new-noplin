@@ -36,7 +36,7 @@ const services = [
   'Authority Content (SEO)', 'Conversion Copy', 'Revenue Email System',
   'Video Script & Editing', 'Corporate Comms Suite',
   'Social Growth Engine', 'Precision Ad Campaigns', 'Digital Strategy Consulting',
-  'Not sure yet — help me decide',
+  'Not sure yet, help me decide',
 ];
 
 const socials = [
@@ -240,7 +240,7 @@ export default function ContactForm() {
               <p className="text-[11px] font-bold tracking-widest uppercase text-(--text-muted)">What Happens Next</p>
               <div className="flex flex-col gap-0">
                 {[
-                  { n: '01', title: 'We review your brief', desc: 'A real team member reads every submission — no bots.' },
+                  { n: '01', title: 'We review your brief', desc: 'A real team member reads every submission.' },
                   { n: '02', title: 'We reach out within 2 hrs', desc: 'Expect a reply via email or WhatsApp during business hours.' },
                   { n: '03', title: 'We propose a plan', desc: 'A tailored scope, timeline, and investment breakdown.' },
                 ].map(({ n, title, desc }) => (

@@ -50,12 +50,12 @@ export default function ServicePage() {
   {
     step: "03",
     title: "Frontend development",
-    description: "We code the user interface using React or Next.js, ensuring global state management is error-free, load times are blazing, and every component is reusable."
+    description: "We develop the user interface using the best stack, ensuring load times are blazing."
   },
   {
     step: "04",
     title: "API & 3rd-party integration",
-    description: "We connect the required external services—such as Stripe for payments, SendGrid for email, Twilio for SMS, or OpenAI for AI features."
+    description: "We connect the required external services such as Stripe for payments, SendGrid for email, Twilio for SMS, or OpenAI for AI features."
   },
   {
     step: "05",
@@ -92,7 +92,7 @@ export default function ServicePage() {
   },
   {
     question: "How is this different from a normal website?",
-    answer: "A website is informational. A web application handles complex user interactivity, data processing, authentication, and business logic—like a SaaS dashboard or a booking platform."
+    answer: "A website is informational. A web application handles complex user interactivity, data processing, authentication, and business logic like a SaaS dashboard or a booking platform."
   },
   {
     question: "Will I own all the source code?",

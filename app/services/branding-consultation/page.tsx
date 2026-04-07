@@ -24,7 +24,7 @@ export default function ServicePage() {
   },
   {
     title: "Voice & Tone Guidelines",
-    description: "A detailed linguistic rulebook defining exactly how your brand communicates—the vocabulary it uses, the emotions it evokes, and the personality it projects across all channels.",
+    description: "A detailed linguistic rulebook defining exactly how your brand communicates, the vocabulary it uses, the emotions it evokes, and the personality it projects across all channels.",
     icon: "pen",
     color: "yellow"
   },
@@ -45,7 +45,7 @@ export default function ServicePage() {
   {
     step: "02",
     title: "Define brand archetype & positioning",
-    description: "We identify the archetypal character your brand embodies—whether that is the Expert, the Rebel, the Nurturer, or another—and build your positioning around that core personality."
+    description: "We identify the archetypal character your brand embodies whether that is the Expert, the Rebel, the Nurturer, or another and build your positioning around that core personality."
   },
   {
     step: "03",
@@ -92,7 +92,7 @@ export default function ServicePage() {
   },
   {
     question: "Is this about logo and colors or something deeper?",
-    answer: "This consultation goes far deeper than visual identity. It establishes the strategic brand foundation—positioning, messaging, voice, and values—that all visual work should then translate and express."
+    answer: "This consultation goes far deeper than visual identity. It establishes the strategic brand foundation—positioning, messaging, voice, and values that all visual work should then translate and express."
   },
   {
     question: "We already have a logo. Do we still need this?",

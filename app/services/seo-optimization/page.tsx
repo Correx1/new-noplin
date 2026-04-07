@@ -40,7 +40,7 @@ export default function ServicePage() {
   {
     step: "01",
     title: "Audit site infrastructure thoroughly",
-    description: "We deploy enterprise crawlers to identify critical technical failures—broken internal links, missing metadata, lazy-loading issues, and duplicate content causing keyword cannibalization."
+    description: "We deploy enterprise crawlers to identify critical technical failures, broken internal links, missing metadata, lazy-loading issues, and duplicate content causing keyword cannibalization."
   },
   {
     step: "02",

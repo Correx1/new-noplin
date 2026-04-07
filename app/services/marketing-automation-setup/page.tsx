@@ -18,7 +18,7 @@ export default function ServicePage() {
       whatItIncludes={[
   {
     title: "Multi-Trigger Automation Blueprints",
-    description: "Complex Zapier or Make scenarios linking your disparate SaaS tools into one automated system—triggered by lead form submissions, payment events, or user behavior.",
+    description: "Complex Zapier or Make scenarios linking your disparate SaaS tools into one automated system triggered by lead form submissions, payment events, or user behavior.",
     icon: "gear",
     color: "amber"
   },
@@ -40,7 +40,7 @@ export default function ServicePage() {
   {
     step: "01",
     title: "Map manual processes & bottlenecks",
-    description: "We interview your operations and marketing teams to document every repetitive manual task—data entry, lead routing, follow-up emails—that consumes time without adding strategic value."
+    description: "We interview your operations and marketing teams to document every repetitive manual task data entry, lead routing, follow-up emails that consumes time without adding strategic value."
   },
   {
     step: "02",

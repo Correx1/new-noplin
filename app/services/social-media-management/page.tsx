@@ -65,7 +65,7 @@ export default function ServicePage() {
   {
     step: "06",
     title: "Engage & grow community actively",
-    description: "We moderate your timeline in real time—responding to key comments, engaging with industry hashtags, and strategically interacting with accounts in your target audience's following list."
+    description: "We moderate your timeline in real time responding to key comments, engaging with industry hashtags, and strategically interacting with accounts in your target audience's following list."
   }
 ]}
       complementaryServices={[

@@ -40,7 +40,7 @@ export default function ServicePage() {
   {
     step: "01",
     title: "Map the software ecosystem",
-    description: "We interview your operations team to document every tool in your stack—CRM, payment processor, email platform, analytics—and understand the exact data flow you need."
+    description: "We interview your operations team to document every tool in your stack—CRM, payment processor, email platform, analytics and understand the exact data flow you need."
   },
   {
     step: "02",
@@ -60,7 +60,7 @@ export default function ServicePage() {
   {
     step: "05",
     title: "Conduct edge-case testing",
-    description: "We deliberately trigger failure scenarios—API timeouts, malformed data, duplicate events—to verify the error handling and retry logic behaves correctly under stress."
+    description: "We deliberately trigger failure scenarios, API timeouts, malformed data, duplicate events to verify the error handling and retry logic behaves correctly under stress."
   },
   {
     step: "06",

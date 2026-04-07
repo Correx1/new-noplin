@@ -17,7 +17,7 @@ const valueProps = [
   {
     icon: Layers,
     title: 'Full-Funnel Execution',
-    desc: 'From the first impression to the closed deal — we cover every stage with strategic, cohesive work.',
+    desc: 'From the first impression to the closed deal, we cover every stage with strategic, cohesive work.',
   },
   {
     icon: TrendingUp,

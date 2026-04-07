@@ -24,7 +24,7 @@ export default function ServicePage() {
   },
   {
     title: "Lead Magnet Assets",
-    description: "Highly valuable downloadable resources—checklists, whitepapers, templates, or guides—designed to capture qualified email addresses from your target readership.",
+    description: "Highly valuable downloadable resources checklists, whitepapers, templates, or guides designed to capture qualified email addresses from your target readership.",
     icon: "target",
     color: "blue"
   },

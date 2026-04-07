@@ -45,7 +45,7 @@ export default function ServicePage() {
   {
     step: "02",
     title: "Map automated sequence architecture",
-    description: "We design the full automation blueprint—Welcome Series, Lead Nurture sequences, Abandoned Cart flows, Win-Back campaigns, and post-purchase upsell chains."
+    description: "We design the full automation blueprint, wselcome Series, Lead Nurture sequences, Abandoned Cart flows, Win-Back campaigns, and post-purchase upsell chains."
   },
   {
     step: "03",
@@ -60,7 +60,7 @@ export default function ServicePage() {
   {
     step: "05",
     title: "Configure segmentation & logic",
-    description: "We build conditional branching inside your platform—Klaviyo, ActiveCampaign, or Mailchimp—so each subscriber receives emails triggered by their specific behavior rather than a generic blast."
+    description: "We build conditional branching inside your platform like Klaviyo, ActiveCampaign, or Mailchimp, so each subscriber receives emails triggered by their specific behavior rather than a generic blast."
   },
   {
     step: "06",

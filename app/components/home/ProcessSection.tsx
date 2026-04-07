@@ -21,13 +21,13 @@ const steps = [
     num: "03",
     icon: Zap,
     label: "We Get to Work",
-    body: "50% deposit secures your project. You sign a brief. We kick off immediately — no weeks of back-and-forth.",
+    body: "50% deposit secures your project. You sign a brief. We kick off immediately, no weeks of back-and-forth.",
   },
   {
     num: "04",
     icon: Rocket,
     label: "Delivery & Growth",
-    body: "Fast, professional delivery. 30-day post-project support. Most clients come back — we make it easy to stay.",
+    body: "Fast, professional delivery. 30-day post-project support. Most clients come back, we make it easy to stay.",
   },
 ];
 

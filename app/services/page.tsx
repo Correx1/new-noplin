@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ServicesPageClient from '../components/services/ServicesPageClient';
 
 export const metadata: Metadata = {
-  title: 'All Services | Noplin Digital — Digital Agency',
+  title: 'All Services | Noplin Digital',
   description: '15 premium digital services across design, web development, content, and marketing. Clear pricing, fast delivery. Serving clients globally.',
 };
 

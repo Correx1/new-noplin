@@ -5,7 +5,7 @@ import { Target, Globe } from 'lucide-react';
 import { EASE, IconBox } from './AboutShared';
 
 const missionVision = [
-  { label: 'Mission', Icon: Target, glow: '#fbbf24', text: 'Deliver exceptional design, content, and marketing solutions to businesses worldwide — with speed, honesty, and results-first thinking.' },
+  { label: 'Mission', Icon: Target, glow: '#fbbf24', text: 'Deliver exceptional design, content, and marketing solutions to businesses worldwide, with speed, honesty, and results-first thinking.' },
   { label: 'Vision',  Icon: Globe,  glow: '#fbbf24', text: 'Become a globally recognized billion-dollar digital services company rooted in African excellence.' },
 ];
 
@@ -31,11 +31,11 @@ export default function AboutStoryAndPurpose() {
             </div>
             <div className="flex flex-col gap-4">
               <p className="font-(--font-body) text-[17px] justify-center text-(--text-secondary) leading-[1.85]">
-                Noplin Digital is a premium full-service digital agency built to serve ambitious businesses — from early-stage startups to established companies — that want real, measurable results from their digital investments.
+                Noplin Digital is a premium full-service digital agency built to serve ambitious businesses, from early-stage startups to established companies that want real, measurable results from their digital investments.
               </p>
               <p className="font-(--font-body)justify-center text-[17px] text-(--text-secondary) leading-[1.85]">
               We specialize in brand identity, web design and development, content creation,
-              and digital marketing. We are not a typical agency. We don&apos;t drag out timelines, hide behind jargon, or disappear after a project ends. We build long-term relationships with clients who want to grow — and we grow with them.
+              and digital marketing. We are not a typical agency. We don&apos;t drag out timelines, hide behind jargon, or disappear after a project ends. We build long-term relationships with clients who want to grow, and we grow with them.
               </p>
             </div>
           </motion.div>

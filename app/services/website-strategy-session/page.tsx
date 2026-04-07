@@ -50,12 +50,12 @@ export default function ServicePage() {
   {
     step: "03",
     title: "Map out the ideal site architecture",
-    description: "We collaboratively design the right page structure for your goals—whether that means consolidating a bloated site, building new service pages, or restructuring navigation for clarity."
+    description: "We collaboratively design the right page structure for your goals swhether that means consolidating a bloated site, building new service pages, or restructuring navigation for clarity."
   },
   {
     step: "04",
     title: "Define technology recommendations",
-    description: "We advise on the right platform and tech stack for your specific needs, team capabilities, and budget—whether that is WordPress, Next.js, Webflow, or Shopify."
+    description: "We advise on the right platform and tech stack for your specific needs, team capabilities, and budget, whether that is WordPress, Next.js, Webflow, or Shopify."
   },
   {
     step: "05",
@@ -96,7 +96,7 @@ export default function ServicePage() {
   },
   {
     question: "How is this different from a Digital Marketing Consultation?",
-    answer: "A Digital Marketing Consultation covers your entire marketing ecosystem. A Website Strategy Session focuses specifically on the website itself—its structure, messaging, UX, and conversion architecture."
+    answer: "A Digital Marketing Consultation covers your entire marketing ecosystem. A Website Strategy Session focuses specifically on the website itself. Its structure, messaging, UX, and conversion architecture."
   },
   {
     question: "Will you build the site after the strategy session?",

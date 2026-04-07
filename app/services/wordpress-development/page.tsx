@@ -45,7 +45,7 @@ export default function ServicePage() {
   {
     step: "02",
     title: "Configure staging environment",
-    description: "We set up an isolated staging server and install a clean, minimal WordPress core with only the essential plugins required for the project—nothing more."
+    description: "We set up an isolated staging server and install a clean, minimal WordPress core with only the essential plugins required for the project, nothing more."
   },
   {
     step: "03",

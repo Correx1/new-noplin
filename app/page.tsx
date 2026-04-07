@@ -6,7 +6,6 @@ import WhyNoplinSection from './components/home/WhyNoplinSection';
 import ProcessSection from './components/home/ProcessSection';
 import PortfolioTeaser from './components/home/PortfolioTeaser';
 import TestimonialsSection from './components/home/TestimonialsSection';
-import PricingTeaser from './components/home/PricingTeaser';
 import FinalCTASection from './components/home/FinalCTASection';
 import PricingFeatures from './components/home/PricingFeatures';
 

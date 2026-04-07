@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: 'How do payments work?',
-    a: 'Most projects require a 50% deposit to begin and the remaining 50% upon completion. For ongoing services such as marketing retainers or content management, billing is done monthly in advance.'
+    a: 'Most projects require a 60% deposit to begin and the remaining 40% upon completion. For ongoing services such as marketing retainers or content management, billing is done monthly in advance.'
   },
   {
     q: 'Do you offer payment plans?',

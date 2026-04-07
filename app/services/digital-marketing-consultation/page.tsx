@@ -45,7 +45,7 @@ export default function ServicePage() {
   {
     step: "02",
     title: "Identify funnel bottlenecks",
-    description: "During the strategy session, we systematically identify exactly where your current funnel is losing high-intent prospects—traffic, conversion, retention, or monetization."
+    description: "During the strategy session, we systematically identify exactly where your current funnel is losing high-intent prospects traffic, conversion, retention, or monetization."
   },
   {
     step: "03",
@@ -65,7 +65,7 @@ export default function ServicePage() {
   {
     step: "06",
     title: "Connect to specialist execution teams",
-    description: "We route you directly to the right Noplin specialists—Ads, SEO, Web—to begin implementing the strategy immediately after the consultation is complete."
+    description: "We route you directly to the right Noplin specialists for Ads, SEO, Web to begin implementing the strategy immediately after the consultation is complete."
   }
 ]}
       complementaryServices={[
