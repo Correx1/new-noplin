@@ -14,7 +14,7 @@ const ceo = {
 const team = [
     { name: 'Blessing Umahi', role: 'Accountant', image: '/team/blessing.png' },
   { name: 'Chukwu Raphael', role: 'Project Manager', image: '/team/Rex.png' },
-  { name: 'Gilbert Ozioma', role: 'Lead Developer', image: '/team/gilbert.png' },
+  { name: 'Gilbert Ozioma', role: 'CTO & Lead Developer', image: '/team/gilbert.png' },
   { name: 'Funke Sanusi', role: 'Content & SEO Specialist', image: '/team/funke.png' },
     { name: 'Malachy Monday', role: 'Product Designer', image: '/team/malachy.png' },
 ];

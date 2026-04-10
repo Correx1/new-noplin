@@ -94,10 +94,8 @@ export default function Footer() {
               For ambitious businesses that want real growth.
             </p>
 
-            <div className="flex flex-col gap-2.5 text-[13px]" style={{ color: MUTED, fontFamily: 'var(--font-body)' }}>
-              <span className="flex items-center gap-2">
-                <MapPin size={13} className="shrink-0" /> London, United Kingdom
-              </span>
+            <div className="flex flex-col gap-2 text-[13px]" style={{ color: MUTED, fontFamily: 'var(--font-body)' }}>
+             
               <a href="mailto:hello@noplin.com" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Mail size={13} className="shrink-0" /> hello@noplin.com
               </a>
